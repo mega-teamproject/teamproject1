@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+
+.idPw {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.idPw input {
+  padding: 15px;
+  border: 1px solid #d6deeb;
+  border-bottom: none;
+}
+
+.idPw input.inputId {
+  border-radius: 5px 5px 0 0;
+}
+
+.idPwMenu {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d6deeb;
+  padding: 10px 5px;
+  font-size: 0.7rem;
+  color: #666;
+  border-radius: 0 0 5px 5px;
+}
+
+.idPwMenu .checkbox {
+  margin-left: 5px;
+}
+
+.idPwMenu .checkbox input {
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+}
+
+.idPwMenu .findIdPw {
+  display: flex;
+}
+
+.findIdPw p {
+  margin: 0;
+  padding: 5px;
+}
