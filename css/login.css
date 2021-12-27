@@ -59,6 +59,15 @@ h3 a {
   margin-left: 5px;
 }
 
+.idPwMenu .checkbox label {
+  cursor: pointer;
+}
+
+.idPwMenu .checkbox:hover {
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
 .idPwMenu .checkbox input {
   width: 15px;
   height: 15px;
@@ -73,6 +82,10 @@ h3 a {
 .findIdPw a {
   text-decoration: none;
   color: #666;
+}
+
+.findIdPw a:hover {
+  color: #1f8ce6;
 }
 
 .findIdPw p {
