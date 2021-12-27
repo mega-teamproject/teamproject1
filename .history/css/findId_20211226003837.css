@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+
+.alert {
+  width: 450px;
+  margin: 0 auto;
+  background-color: #000;
+  color: palevioletred;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.alert span {
+  display: inline-block;
+}
+
+.findId {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  margin: 0 auto;
+}

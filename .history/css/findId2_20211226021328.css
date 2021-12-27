@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+
+section {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 550;
+}
+section p {
+  margin: 0;
+}
