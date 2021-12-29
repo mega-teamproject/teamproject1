@@ -6,8 +6,6 @@
   /* alert border rgb(250, 186, 179) */
   /* alert color rgb(230, 73, 56) */
   /* focus color rgb(31, 140, 230) */
-  /* button check rgb(219, 239, 255) */
-  /* button check border rgb(158, 167, 173) */
   box-sizing: border-box;
 }
 
@@ -146,7 +144,7 @@ input[id="female_box"] + label {
   cursor: pointer;
 }
 
-.gender input[type="checkbox"] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -156,6 +154,10 @@ span#male_choice {
   left: 30px;
   color: #738096;
   cursor: pointer;
+}
+
+span#male_choice:hover {
+  border: 1px solid #9ea7ad;
 }
 
 span#female_choice {
@@ -169,45 +171,20 @@ span#female_choice {
 .terms {
   border: 1px solid #d6deeb;
   margin-top: 20px;
-  background-color: white;
-  width: 100%;
+  display: flex;
+  flex-flow: column;
 }
-
-.terms input {
-  width: 20px;
-}
-
 .allAgree {
   border-bottom: 1px solid #d6deeb;
-}
-
-.terms .pad {
-  padding: 10px;
-  color: #738096;
-  font-size: 0.9em;
-  letter-spacing: -1px;
-}
-
-.terms .pad:hover,
-.terms .pad:hover a {
-  color: black;
 }
 
 .terms .agree {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .terms .m-l {
-  margin-left: 20px;
-}
-
-.terms a {
-  font-size: 0.8em;
-  letter-spacing: 0;
-  text-decoration: none;
-  color: #9ea7ad;
+  margin-left: 30px;
 }
 
 button.submit-login {

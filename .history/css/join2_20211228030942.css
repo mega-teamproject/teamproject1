@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+form input {
+  padding: 15px;
+  border: 1px solid #d6deeb;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+input.mt-b {
+  margin-bottom: 10px;
+}
+
+input#pwd {
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+input#pwdCheck {
+  border-radius: 0 0 4px 4px;
+}
+
+.birth-gender {
+  display: flex;
+}
+
+.birth-gender input[type="checkbox"] {
+  width: 30px;
+}
+
+.terms {
+  border: 1px solid #d6deeb;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column;
+}
+.allAgree {
+  border-bottom: 1px solid #d6deeb;
+}
+
+.terms .agree {
+  display: flex;
+  align-items: center;
+}
+
+.terms .m-l {
+  margin-left: 30px;
+}
+
+button.submit-login {
+  width: 100%;
+  padding: 16px 14px;
+  margin: 20px 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  background-color: #1f8ce6;
+  border: 1px solid #0077d9;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 570;
+  box-shadow: 0 1px 1px 0 rgb(31 140 230 / 30%);
+}

@@ -185,12 +185,7 @@ span#female_choice {
   padding: 10px;
   color: #738096;
   font-size: 0.9em;
-  letter-spacing: -1px;
-}
-
-.terms .pad:hover,
-.terms .pad:hover a {
-  color: black;
+  letter-spacing: 0.5px;
 }
 
 .terms .agree {
@@ -200,14 +195,7 @@ span#female_choice {
 }
 
 .terms .m-l {
-  margin-left: 20px;
-}
-
-.terms a {
-  font-size: 0.8em;
-  letter-spacing: 0;
-  text-decoration: none;
-  color: #9ea7ad;
+  margin-left: 30px;
 }
 
 button.submit-login {

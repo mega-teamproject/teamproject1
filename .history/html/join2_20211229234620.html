@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>insert page title</title>
     <link rel="stylesheet" href="../css/join2.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
     <div class="container">
@@ -61,56 +55,51 @@
           <span class="focus">이름 입력</span>
           <p class="alert">
             <i class="fas fa-exclamation-circle"></i>
+
             이름을 입력해주세요.
           </p>
         </div>
         <div class="mt-b">
           <p id="label">선택 입력</p>
-          <div class="birth-gender relative">
+          <div class="birth-gender">
             <div class="birth">
               <input type="text" />
-              <span class="placeholder">출생년도</span>
               <span class="focus">예: 1981</span>
             </div>
             <div class="gender">
-              <input type="checkbox" id="male_box" value="남" />
-              <label for="male_box"></label>
-              <span id="male_choice">남</span>
-
-              <input type="checkbox" id="female_box" value="여" />
-              <label for="female_box"></label>
-              <span id="female_choice">여</span>
+              <label for="gender">
+                <input type="checkbox" name="gender" value="남" />
+                <!-- <span>남</span> -->
+              </label>
+              <label for="gender">
+                <input type="checkbox" name="gender" value="여" />
+                <!-- <span>여</span> -->
+              </label>
             </div>
           </div>
         </div>
         <div class="terms">
-          <div class="allAgree pad">
+          <div class="allAgree agree">
             <input type="checkbox" name="all" id="all" />
-            <label for="all">선택 포함 전체 약관 동의</label>
+            <h4>선택 포함 전체 약관 동의</h4>
           </div>
-          <div class="termAgree pad agree m-l space">
-            <div>
-              <input type="checkbox" name="term" id="term" />
-              <span>이용약관 동의(필수)</span>
-            </div>
+          <div class="termAgree agree m-l space">
+            <input type="checkbox" name="term" id="term" />
+            <p>이용약관 동의(필수)</p>
             <a href="#">약관보기 ></a>
           </div>
-          <div class="alarmAgree pad m-l">
+          <div class="alarmAgree agree m-l">
             <input type="checkbox" name="alarm" id="alarm" />
-            <span>이벤트, 혜택 알림 수신 동의(선택)</span>
+            <p>이벤트, 혜택 알림 수신 동의(선택)</p>
           </div>
-          <div class="infoAgree pad agree m-l space">
-            <div>
-              <input type="checkbox" name="info" id="info" />
-              <span>성별, 생년 정보 제공 동의(선택)</span>
-            </div>
+          <div class="infoAgree agree m-l space">
+            <input type="checkbox" name="info" id="info" />
+            <p>성별, 생년 정보 제공 동의(선택)</p>
             <a href="#">내용확인 ></a>
           </div>
-          <div class="personalAgree pad agree space">
-            <div>
-              <input type="checkbox" name="personalInfo" id="personalInfo" />
-              <span>개인 정보 수집 및 이용 동의(필수)</span>
-            </div>
+          <div class="personalAgree agree space">
+            <input type="checkbox" name="personalInfo" id="personalInfo" />
+            <p>개인 정보 수집 및 이용 동의(필수)</p>
             <a href="#">내용확인 ></a>
           </div>
         </div>

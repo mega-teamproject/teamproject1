@@ -169,28 +169,14 @@ span#female_choice {
 .terms {
   border: 1px solid #d6deeb;
   margin-top: 20px;
+  /* display: flex; */
+  /* flex-flow: column; */
   background-color: white;
-  width: 100%;
 }
-
-.terms input {
-  width: 20px;
-}
-
 .allAgree {
   border-bottom: 1px solid #d6deeb;
-}
-
-.terms .pad {
-  padding: 10px;
-  color: #738096;
-  font-size: 0.9em;
-  letter-spacing: -1px;
-}
-
-.terms .pad:hover,
-.terms .pad:hover a {
-  color: black;
+  display: flex;
+  text-align: left;
 }
 
 .terms .agree {
@@ -200,14 +186,7 @@ span#female_choice {
 }
 
 .terms .m-l {
-  margin-left: 20px;
-}
-
-.terms a {
-  font-size: 0.8em;
-  letter-spacing: 0;
-  text-decoration: none;
-  color: #9ea7ad;
+  margin-left: 30px;
 }
 
 button.submit-login {

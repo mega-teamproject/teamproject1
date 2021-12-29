@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insert page title</title>
+    <link rel="stylesheet" href="../css/join2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h3>
+          <a href="index.html">RIDIBOOKS</a>
+        </h3>
+      </header>
+      <form action="">
+        <input type="text" class="mt-b" placeholder="아이디" />
+        <input type="password" name="pwd" id="pwd" placeholder="비밀번호" />
+        <input
+          type="password"
+          name="pwdCheck"
+          id="pwdCheck"
+          placeholder="비밀번호 확인"
+          class="mt-b"
+        />
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          class="mt-b"
+          placeholder="이메일 주소"
+        />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="mt-b"
+          placeholder="이름"
+        />
+        <div class="birth&gender mt-b">
+          <p>선택 입력</p>
+          <div>
+            <input type="text" placeholder="출생년도" />
+            <input type="checkbox" name="gender" value="남" />
+            <span>남</span>
+            <input type="checkbox" name="gender" value="여" />
+            <span>여</span>
+          </div>
+        </div>
+        <div class="terms">
+          <div class="allAgree agree">
+            <input type="checkbox" name="all" id="all" />
+            <h4>선택 포함 전체 약관 동의</h4>
+          </div>
+          <div class="termAgree agree m-l space">
+            <input type="checkbox" name="term" id="term" />
+            <p>이용약관 동의(필수)</p>
+            <a href="#">약관보기 ></a>
+          </div>
+          <div class="alarmAgree agree m-l">
+            <input type="checkbox" name="alarm" id="alarm" />
+            <p>이벤트, 혜택 알림 수신 동의(선택)</p>
+          </div>
+          <div class="infoAgree agree m-l space">
+            <input type="checkbox" name="info" id="info" />
+            <p>성별, 생년 정보 제공 동의(선택)</p>
+            <a href="#">내용확인 ></a>
+          </div>
+          <div class="personalAgree agree space">
+            <input type="checkbox" name="personalInfo" id="personalInfo" />
+            <p>개인 정보 수집 및 이용 동의(필수)</p>
+            <a href="#">내용확인 ></a>
+          </div>
+        </div>
+        <div class="complete">
+          <button
+            class="submit-login"
+            type="button"
+            onclick="location.href='join2.html'"
+          >
+            회원 가입 완료
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

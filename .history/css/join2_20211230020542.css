@@ -188,11 +188,6 @@ span#female_choice {
   letter-spacing: -1px;
 }
 
-.terms .pad:hover,
-.terms .pad:hover a {
-  color: black;
-}
-
 .terms .agree {
   display: flex;
   align-items: center;
