@@ -84,7 +84,7 @@ form .relative span.focus {
 }
 
 p.alert {
-  display: none;
+  /* display: none; */
   color: rgb(230, 73, 56);
   font-size: 0.8em;
   letter-spacing: -1px;

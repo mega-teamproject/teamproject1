@@ -63,10 +63,6 @@ form .relative {
   position: relative;
 }
 
-form .mb {
-  margin-bottom: 10px;
-}
-
 form .relative span.placeholder {
   position: absolute;
   top: 15px;
@@ -84,12 +80,15 @@ form .relative span.focus {
 }
 
 p.alert {
-  display: none;
+  /* display: none; */
   color: rgb(230, 73, 56);
   font-size: 0.8em;
   letter-spacing: -1px;
   margin: 0;
-  margin-left: 5px;
+}
+
+input.mt-b {
+  margin-bottom: 10px;
 }
 
 input#pwd {
@@ -107,12 +106,11 @@ input#pwdCheck {
   border-radius: 0 0 4px 4px;
 }
 
-.birth-gender-wrapper p#label {
+.mt-b p#label {
   font-size: 0.8em;
   color: #94a2b8;
   margin: 0;
   margin-bottom: 5px;
-  letter-spacing: -1px;
 }
 
 .birth-gender {

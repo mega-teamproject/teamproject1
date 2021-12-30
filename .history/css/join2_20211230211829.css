@@ -84,12 +84,11 @@ form .relative span.focus {
 }
 
 p.alert {
-  display: none;
+  /* display: none; */
   color: rgb(230, 73, 56);
   font-size: 0.8em;
   letter-spacing: -1px;
   margin: 0;
-  margin-left: 5px;
 }
 
 input#pwd {
