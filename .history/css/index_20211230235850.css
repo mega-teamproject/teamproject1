@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  /* 일반로맨스판타지만화BL hover color #0077D9 */
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #1f8ce6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  margin-left: 10px;
+}
+
+.search h1 {
+  color: white;
+  font-size: 1.1em;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.search h1#opacity {
+  opacity: 0.5;
+  border-left: 1px solid;
+  padding-left: 10px;
+}
+
+.joinLogin {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.joinLogin button.btn {
+  border-radius: 4px;
+  padding: 5px 7px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.joinLogin button.borderBtn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #99d1ff;
+}
+
+.joinLogin button.whiteBtn {
+  background-color: white;
+  color: #1f8ce6;
+  border: 1px solid white;
+}
+
+.relative input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 40px;
+}
+.relative input:focus {
+  outline: none;
+}
+
+.relative {
+  position: relative;
+  margin: 0 10px;
+}
+
+.relative span {
+  color: #808991;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.header nav {
+  padding: 1px;
+}
+
+nav ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.menu nav ul li a {
+  color: #40474d;
+}
+
+.menu nav ul li a.bluetxt {
+  color: #0077d9;
+  font-weight: bold;
+}
+
+.mainSlide {
+  margin-top: 20px;
+  display: flex;
+  margin-left: -150px;
+}
+
+.mainSlide .item {
+  margin: 0 5px;
+}
+
+.mainSlide .item img {
+  width: 350px;
+  height: 200px;
+  display: block;
+  border-radius: 5px;
+}
+
+.icons {
+  width: 100%;
+}
+
+.icons ul {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+.icons ul li {
+  background-color: black;
+  border-radius: 20px;
+  width: 50px;
+}
+
+.icons ul li img {
+  display: block;
+  width: 100%;
+}
+
+.icons ul li#color1 {
+  background: #e8cb99;
+}

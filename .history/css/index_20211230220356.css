@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #1f8ce6;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search h1 {
+  color: white;
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+
+.search h1#opacity {
+  opacity: 0.5;
+  border-left: 1px solid;
+}
+
+.search input {
+  width: 400px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+}

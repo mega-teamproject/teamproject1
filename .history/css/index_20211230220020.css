@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #1f8ce6;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search hr {
+  border: none;
+  height: 5px;
+  width: 5px;
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-size: 1.4em;
+}
+
+h1#opacity {
+  opacity: 0.5;
+}

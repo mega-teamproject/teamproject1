@@ -1,0 +1,17 @@
+* {
+  /* input hover border 색 #9ea7ad */
+  /* input border #D6DEEB */
+  /* input내 span color #303538 */
+  /* focus border #1F8CE6 */
+  /* alert border rgb(250, 186, 179) */
+  /* alert color rgb(230, 73, 56) */
+  /* focus color rgb(31, 140, 230) */
+  /* button check rgb(219, 239, 255) */
+  /* button check border rgb(158, 167, 173) */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
