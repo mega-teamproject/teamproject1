@@ -7,10 +7,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 .header {
   background-color: #1f8ce6;
 }
@@ -225,7 +221,7 @@ footer .footer-menu1 a:first-child {
 }
 
 footer .footer-menu1 a span.borderR {
-  border-right: 1px solid #525a61;
+  border-right: 1px solid #eee;
   padding-right: 10px;
 }
 
@@ -267,10 +263,6 @@ footer .fontColor {
   padding-left: 20px;
 }
 
-footer .copyright {
-  font-size: 0.9em;
-}
-
 footer .fontColor p {
   color: #808991;
   font-size: 0.7em;
@@ -279,11 +271,11 @@ footer .fontColor p {
 
 footer .footer-terms {
   display: flex;
-  padding-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 footer .footer-terms a p {
-  border-right: 1px solid #525a61;
+  border-right: 1px solid #808991;
   padding: 0 10px;
 }
 

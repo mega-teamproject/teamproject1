@@ -7,10 +7,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 .header {
   background-color: #1f8ce6;
 }
@@ -225,7 +221,7 @@ footer .footer-menu1 a:first-child {
 }
 
 footer .footer-menu1 a span.borderR {
-  border-right: 1px solid #525a61;
+  border-right: 1px solid #eee;
   padding-right: 10px;
 }
 
@@ -283,7 +279,7 @@ footer .footer-terms {
 }
 
 footer .footer-terms a p {
-  border-right: 1px solid #525a61;
+  border-right: 1px solid #808991;
   padding: 0 10px;
 }
 
