@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+
+.idPw {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.idPw input {
+  padding: 15px;
+  border: 1px solid #d6deeb;
+  border-bottom: none;
+}
+
+.idPw input#Id {
+  border-radius: 5px 5px 0 0;
+}
+
+.idPwMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d6deeb;
+  padding: 10px 5px;
+  font-size: 0.8rem;
+  color: #666;
+  border-radius: 0 0 5px 5px;
+  background-color: #f7fbff;
+}
+
+.idPwMenu .checkbox {
+  margin-left: 5px;
+}
+
+.idPwMenu .checkbox label {
+  cursor: pointer;
+}
+
+.idPwMenu .checkbox:hover {
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+.idPwMenu .checkbox input {
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+}
+
+.idPwMenu .findIdPw {
+  display: flex;
+  align-items: center;
+}
+
+.findIdPw a {
+  text-decoration: none;
+  color: #666;
+}
+
+.findIdPw a:hover {
+  color: #1f8ce6;
+}
+
+.findIdPw p {
+  margin: 0;
+  padding: 5px;
+}
+
+.findIdPw p.id-border {
+  border-right: 1px solid #d6deeb;
+}
+
+.submit {
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  flex-flow: column;
+}
+
+.submit button {
+  padding: 16px 14px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.submit button.submit-login {
+  margin-bottom: 0;
+  background-color: #1f8ce6;
+  border: 1px solid #0077d9;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 570;
+  box-shadow: 0 1px 1px 0 rgb(31 140 230 / 30%);
+}
+
+.submit button.submit-join {
+  background-color: white;
+  border: 1px solid #d6deeb;
+  border-radius: 4px;
+  color: #808991;
+  font-size: 1rem;
+  font-weight: 570;
+  box-shadow: 0 2px 4px rgb(209 213 217 / 30%);
+}
+
+.alert {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: #e64938;
+  font-weight: bold;
+  display: none;
+}
