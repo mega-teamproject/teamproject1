@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  /* 일반로맨스판타지만화BL hover color #0077D9 */
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #1f8ce6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  margin-left: 10px;
+}
+
+.search h1 {
+  color: white;
+  font-size: 1.1em;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.search h1#opacity {
+  opacity: 0.5;
+  border-left: 1px solid;
+  padding-left: 10px;
+}
+
+.joinLogin {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.joinLogin button.btn {
+  border-radius: 4px;
+  padding: 5px 7px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.joinLogin button.borderBtn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #99d1ff;
+}
+
+.relative input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 40px;
+}
+.relative input:focus {
+  outline: none;
+}
+
+.relative {
+  position: relative;
+  margin: 0 10px;
+}
+
+.relative span {
+  color: #808991;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.header nav {
+  padding: 1px;
+}
+
+nav ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.section {
+  margin-left: 30px;
+}
+
+.section h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.cart {
+  border: 1px solid #808991;
+  width: 500px;
+  height: 480px;
+  margin-bottom: 100px;
+}
+
+.cart .header {
+  background-color: lightgray;
+  border-bottom: 5px solid #eee;
+  height: 50px;
+}
+
+.cart .header ul {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cart .header ul p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.footer {
+  background: #303538;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p.invisible {
+  display: none;
+}
+
+footer .footer-menu1 {
+  display: flex;
+  justify-content: left;
+  padding: 20px 10px;
+  padding-bottom: 0;
+}
+
+footer .footer-menu1 a {
+  margin: 0 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+footer .footer-menu1 a:first-child {
+  margin-right: 0;
+}
+
+footer .footer-menu1 a span.borderR {
+  border-right: 1px solid #525a61;
+  padding-right: 10px;
+}
+
+footer .footer-menu2 {
+  display: flex;
+  padding: 20px;
+  font-size: 0.9em;
+  letter-spacing: -1px;
+  padding-bottom: 0;
+}
+
+footer .footer-menu2 .footer-wrapper1 {
+  margin-right: 40px;
+}
+
+footer .footer-menu2 .footer-wrapper1 p.bigFont {
+  font-size: 1.2em;
+}
+
+footer .footer-menu2 .footer-wrapper2 {
+  margin-left: 40px;
+}
+
+footer .footer-menu2 .footer-wrapper2 span.blue-bg {
+  background-color: #509deb;
+  border-radius: 2px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+footer .fontColor {
+  color: #808991;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+footer .copyright {
+  font-size: 0.9em;
+}
+
+footer .fontColor p {
+  color: #808991;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+footer .footer-terms {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+footer .footer-terms a p {
+  border-right: 1px solid #525a61;
+  padding: 0 10px;
+}
+
+footer .footer-terms a p.paddingL {
+  padding-left: 0;
+}
