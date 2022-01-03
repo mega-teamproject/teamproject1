@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header h2 {
+  color: rgb(33, 37, 41);
+}
+
+header h4 {
+  color: rgb(158, 167, 173);
+}
+
+header i {
+  color: rgb(158, 167, 173);
+}
+
+.menu {
+  color: rgb(128, 137, 145);
+}
+
+.menu li:first-child {
+  color: black;
+}
+
+.section {
+  background-color: #f3f4f5;
+}
