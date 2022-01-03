@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .link a {
+  margin-right: 10px;
+}
+
+header .link a h4 {
+  font-size: 0.9em;
+}
+
+header .link a:first-child {
+  border-right: 1px solid rgb(158, 167, 173);
+  padding-right: 10px;
+}
+
+header .link i {
+  margin-right: 25px;
+}
+
+header .link span {
+  font-weight: normal;
+}
+
+header .set {
+  width: 200px;
+  height: auto;
+  border: 1px solid #f3f4f5;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 28%) 0px 4px 10px 0px,
+    rgb(0 0 0 / 5%) 0px 0px 0px 0.5px;
+
+  position: absolute;
+  right: 15px;
+}
+
+header .set ul {
+  list-style: none;
+  width: 100%;
+}
+
+header .set li {
+  border-bottom: 1px solid rgb(158, 167, 173);
+  padding: 15px 10px;
+  font-size: 0.9em;
+  letter-spacing: -1px;
+  width: 100%;
+}
+
+header .set i {
+  margin-right: 5px;
+}
+
+header h2 {
+  color: rgb(33, 37, 41);
+}
+
+header h4 {
+  color: rgb(158, 167, 173);
+}
+
+header i {
+  color: rgb(158, 167, 173);
+}
+
+.menu {
+  color: rgb(128, 137, 145);
+}
+
+.menu li:first-child {
+  color: black;
+}
+
+.section {
+  background-color: #f3f4f5;
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  border-top: 1px solid rgb(209, 213, 217);
+  border-bottom: 1px solid rgb(209, 213, 217);
+}
+
+.list i {
+  color: rgb(209, 213, 217);
+}
+
+footer {
+  color: rgb(158, 167, 173);
+}
