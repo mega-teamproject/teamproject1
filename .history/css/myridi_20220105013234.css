@@ -119,86 +119,35 @@ header {
   color: white;
 }
 
-.body {
-  display: flex;
-}
-
 .sidebar nav {
   width: 200px;
 }
 
 .sidebar nav ul {
   list-style: none;
-  padding: 5px 23px;
-}
-
-.sidebar nav ul li.active h4 {
-  color: #1f8ce6;
-  font-weight: bold;
+  padding: 5px 30px;
 }
 
 .sidebar nav ul h2 {
   padding: 0;
   margin-top: 0;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
 }
 
 .sidebar nav ul h4 {
   padding: 0;
   margin: 0;
-  letter-spacing: -1px;
-  font-size: 15px;
-  margin-bottom: 5px;
-  color: rgb(102, 102, 102);
 }
 
 .sidebar nav ul.nav-title li {
   border-bottom: 2px solid #f2f2f2;
-  padding: 20px 0;
 }
 
-.sidebar nav ul.nav-title li.bigTitle {
+.sidebar nav ul.nav-title li:first-child {
   border-bottom: none;
-  padding-bottom: 0;
-}
-
-.sidebar nav ul.nav-title li i {
-  margin-right: 5px;
 }
 
 .sidebar nav ul.nav-list li {
   border-bottom: none;
-  padding-bottom: 10px;
-  padding-top: 0;
-  font-size: 15px;
-  letter-spacing: -1px;
-}
-.sidebar nav ul.nav-list li a {
-  color: #808991;
-  font-weight: bold;
-}
-
-.section .my-ridi {
-  border: 2px solid #636c73;
-  width: 100%;
-  margin: 20px 15px;
-  padding: 20px 5px;
-}
-
-.section .my-ridi ul {
-  display: flex;
-  width: 500px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.section .my-ridi ul h4 {
-  margin: 0;
-}
-
-.section .my-ridi ul p {
-  margin: 0;
 }
 
 .footer {

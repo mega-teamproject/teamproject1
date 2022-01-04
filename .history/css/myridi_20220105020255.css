@@ -182,23 +182,10 @@ header {
 .section .my-ridi {
   border: 2px solid #636c73;
   width: 100%;
-  margin: 20px 15px;
-  padding: 20px 5px;
 }
 
 .section .my-ridi ul {
   display: flex;
-  width: 500px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.section .my-ridi ul h4 {
-  margin: 0;
-}
-
-.section .my-ridi ul p {
-  margin: 0;
 }
 
 .footer {
