@@ -10,6 +10,11 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .header {
   background-color: #1f8ce6;
 }
@@ -169,8 +174,10 @@ section .my-ridi {
   max-width: 700px;
   width: 550px;
   margin: 20px 0;
+}
+
+section .my-ridi {
   display: flex;
-  height: 180px;
 }
 
 section .my-ridi .myid-wrapper {
@@ -196,8 +203,7 @@ section .my-ridi .myid-wrapper p {
 section .my-ridi .myid-wrapper button {
   background-color: transparent;
   border: 2px solid #d6deeb;
-  padding: 5px;
-  letter-spacing: -1px;
+  padding: 10px;
 }
 
 section .myinfo-wrapper {
@@ -206,49 +212,10 @@ section .myinfo-wrapper {
 
 section ul {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  list-style: none;
 }
 
 section ul li {
   flex: 1 1 130px;
-  text-align: center;
-  border-right: 1px solid #e6e8eb;
-}
-
-section ul li:last-child {
-  border-right: none;
-}
-
-section ul li h4 {
-  margin: 0;
-  margin-top: 10px;
-  color: #1f8ce6;
-  font-size: 25px;
-}
-
-section ul li h4 span {
-  font-size: 0.5em;
-  font-weight: normal;
-  margin-left: 2px;
-}
-
-section ul li p {
-  margin: 0;
-}
-
-section ul li p.smalltxt {
-  color: #636c73;
-  font-size: 0.8em;
-  margin-top: 15px;
-}
-
-section ul li p.smalltxt span {
-  color: #0077d9;
-  font-size: 0.5em;
-  letter-spacing: -4px;
 }
 
 /* 마이리디홈 활성화 color #1f8ce6 */
@@ -265,37 +232,6 @@ section ul li p.smalltxt span {
 /* 밑에 0원 color #212529 */
 /* 최근조회작품 밑에 border 4px solid #f2f4f5 */
 /* 최근조회작품 color #636c73 */
-
-.visited-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.visited-header button {
-  background-color: #303538;
-  color: #fff;
-  border: 1px solid #303538;
-  border-radius: 2px;
-  font-weight: bold;
-  width: 90px;
-  height: 30px;
-  margin-top: 20px;
-}
-
-.visited-header button span {
-  font-weight: normal;
-  font-size: 0.7em;
-  letter-spacing: -2px;
-}
-
-.visited-contents {
-  border: 4px solid #f2f4f5;
-  padding: 80px 150px;
-  color: #636c73;
-  font-size: 0.9em;
-  text-align: center;
-  letter-spacing: -1px;
-}
 
 .footer {
   background: #303538;

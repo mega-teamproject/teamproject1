@@ -1,5 +1,19 @@
 * {
   box-sizing: border-box;
+  /* 마이리디홈 활성화 color #1f8ce6 */
+  /* 책 color #40474d / rgb(102, 102, 102) */
+  /* 선호작품 color #636c73 / #808991 */
+  /* border-bottom 2px solid #f2f2f2 */
+  /* logoutbtn:hover border #b3c2d1 / background #dfeef8 */
+  /* logoutbtn border 2px solid #d6deeb / color #636c73 */
+  /* 아이디 메일 로그아웃버튼 배경 #ebf6ff */
+  /* 리디캐시 title color #000 */
+  /* 0원 color #1f8ce6 */
+  /* 리디캐시충전 color #636c73 */
+  /* >> color #0077d9 */
+  /* 밑에 0원 color #212529 */
+  /* 최근조회작품 밑에 border 4px solid #f2f4f5 */
+  /* 최근조회작품 color #636c73 */
 }
 
 body {
@@ -8,6 +22,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .header {
@@ -160,141 +179,13 @@ header {
   font-weight: bold;
 }
 
-.section {
-  margin-left: 20px;
-}
-
-section .my-ridi {
+.section .my-ridi {
   border: 2px solid #636c73;
-  max-width: 700px;
-  width: 550px;
-  margin: 20px 0;
+  width: 100%;
+}
+
+.section .my-ridi ul {
   display: flex;
-  height: 180px;
-}
-
-section .my-ridi .myid-wrapper {
-  background-color: #ebf6ff;
-  padding: 20px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex: 1 1 140px;
-}
-
-section .my-ridi .myid-wrapper h4 {
-  margin: 0;
-  font-size: 1.2em;
-}
-section .my-ridi .myid-wrapper p {
-  margin: 0;
-  font-size: 0.8em;
-  color: #808991;
-}
-
-section .my-ridi .myid-wrapper button {
-  background-color: transparent;
-  border: 2px solid #d6deeb;
-  padding: 5px;
-  letter-spacing: -1px;
-}
-
-section .myinfo-wrapper {
-  flex: 1 1 400px;
-}
-
-section ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  list-style: none;
-}
-
-section ul li {
-  flex: 1 1 130px;
-  text-align: center;
-  border-right: 1px solid #e6e8eb;
-}
-
-section ul li:last-child {
-  border-right: none;
-}
-
-section ul li h4 {
-  margin: 0;
-  margin-top: 10px;
-  color: #1f8ce6;
-  font-size: 25px;
-}
-
-section ul li h4 span {
-  font-size: 0.5em;
-  font-weight: normal;
-  margin-left: 2px;
-}
-
-section ul li p {
-  margin: 0;
-}
-
-section ul li p.smalltxt {
-  color: #636c73;
-  font-size: 0.8em;
-  margin-top: 15px;
-}
-
-section ul li p.smalltxt span {
-  color: #0077d9;
-  font-size: 0.5em;
-  letter-spacing: -4px;
-}
-
-/* 마이리디홈 활성화 color #1f8ce6 */
-/* 책 color #40474d / rgb(102, 102, 102) */
-/* 선호작품 color #636c73 / #808991 */
-/* border-bottom 2px solid #f2f2f2 */
-/* logoutbtn:hover border #b3c2d1 / background #dfeef8 */
-/* logoutbtn border 2px solid #d6deeb / color #636c73 */
-/* 아이디 메일 로그아웃버튼 배경 #ebf6ff */
-/* 리디캐시 title color #000 */
-/* 0원 color #1f8ce6 */
-/* 리디캐시충전 color #636c73 */
-/* >> color #0077d9 */
-/* 밑에 0원 color #212529 */
-/* 최근조회작품 밑에 border 4px solid #f2f4f5 */
-/* 최근조회작품 color #636c73 */
-
-.visited-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.visited-header button {
-  background-color: #303538;
-  color: #fff;
-  border: 1px solid #303538;
-  border-radius: 2px;
-  font-weight: bold;
-  width: 90px;
-  height: 30px;
-  margin-top: 20px;
-}
-
-.visited-header button span {
-  font-weight: normal;
-  font-size: 0.7em;
-  letter-spacing: -2px;
-}
-
-.visited-contents {
-  border: 4px solid #f2f4f5;
-  padding: 80px 150px;
-  color: #636c73;
-  font-size: 0.9em;
-  text-align: center;
-  letter-spacing: -1px;
 }
 
 .footer {

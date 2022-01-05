@@ -10,6 +10,11 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .header {
   background-color: #1f8ce6;
 }
@@ -209,7 +214,6 @@ section ul {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  list-style: none;
 }
 
 section ul li {
@@ -275,26 +279,14 @@ section ul li p.smalltxt span {
   background-color: #303538;
   color: #fff;
   border: 1px solid #303538;
-  border-radius: 2px;
   font-weight: bold;
-  width: 90px;
-  height: 30px;
-  margin-top: 20px;
+  width: 100px;
 }
 
 .visited-header button span {
   font-weight: normal;
   font-size: 0.7em;
   letter-spacing: -2px;
-}
-
-.visited-contents {
-  border: 4px solid #f2f4f5;
-  padding: 80px 150px;
-  color: #636c73;
-  font-size: 0.9em;
-  text-align: center;
-  letter-spacing: -1px;
 }
 
 .footer {

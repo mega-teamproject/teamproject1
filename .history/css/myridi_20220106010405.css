@@ -10,6 +10,11 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .header {
   background-color: #1f8ce6;
 }
@@ -209,7 +214,6 @@ section ul {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  list-style: none;
 }
 
 section ul li {
