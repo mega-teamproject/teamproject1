@@ -270,35 +270,9 @@ section ul li p.smalltxt span {
 /* 최근조회작품 밑에 border 4px solid #f2f4f5 */
 /* 최근조회작품 color #636c73 */
 
-.visited-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .visited-header button {
   background-color: #303538;
   color: #fff;
-  border: 1px solid #303538;
-  border-radius: 2px;
-  font-weight: bold;
-  width: 90px;
-  height: 30px;
-  margin-top: 20px;
-}
-
-.visited-header button span {
-  font-weight: normal;
-  font-size: 0.7em;
-  letter-spacing: -2px;
-}
-
-.visited-contents {
-  border: 4px solid #f2f4f5;
-  padding: 80px 150px;
-  color: #636c73;
-  font-size: 0.9em;
-  text-align: center;
-  letter-spacing: -1px;
 }
 
 .footer {

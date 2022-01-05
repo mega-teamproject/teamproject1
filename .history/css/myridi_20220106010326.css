@@ -295,10 +295,6 @@ section ul li p.smalltxt span {
 .visited-contents {
   border: 4px solid #f2f4f5;
   padding: 80px 150px;
-  color: #636c73;
-  font-size: 0.9em;
-  text-align: center;
-  letter-spacing: -1px;
 }
 
 .footer {
