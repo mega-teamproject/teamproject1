@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+
+section {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section h4 {
+  color: rgb(0, 119, 217);
+  font-size: 1.1em;
+  margin: 15px;
+}
+
+section img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+section input {
+  margin-top: 5px;
+}
+
+section div {
+  text-align: left;
+  font-size: 0.9em;
+  display: flex;
+  cursor: pointer;
+}
+
+.center {
+  width: 400px;
+  margin: 0 auto;
+}
+
+button.btn {
+  width: 100%;
+  padding: 16px 14px;
+  margin: 20px 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 570;
+}
+
+button.phoneConfirm {
+  background-color: #1f8ce6;
+  border: 1px solid #0077d9;
+  color: white;
+  box-shadow: 0 1px 1px 0 rgb(31 140 230 / 30%);
+}
+
+button.cancel {
+  margin-top: 10px;
+  background: rgb(125, 142, 158);
+  color: white;
+  border: 1px solid rgb(99, 108, 115);
+  margin-bottom: 20px;
+}
+
+.center p {
+  text-align: center;
+  color: rgb(125, 142, 158);
+  font-size: 0.8em;
+  margin: 0;
+  letter-spacing: -1px;
+}
