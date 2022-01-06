@@ -211,11 +211,6 @@ ul li a {
   margin: 0 15px;
 }
 
-.bookInfo {
-  padding-bottom: 20px;
-  border-bottom: 1px #e6e8eb solid;
-}
-
 .bookInfo p {
   font-size: 0.9em;
   letter-spacing: -2px;
@@ -228,7 +223,6 @@ ul li a {
   font-size: 0.8em;
   letter-spacing: -1px;
   margin: 0;
-  color: #636c73;
 }
 
 .realTimeBookList img {

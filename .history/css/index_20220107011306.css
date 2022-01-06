@@ -207,28 +207,25 @@ ul li a {
   display: flex;
   align-items: center;
 }
-.realTimeBookList li strong {
+.realTimeBookList li span {
   margin: 0 15px;
+  font-weight: bold;
 }
 
-.bookInfo {
-  padding-bottom: 20px;
-  border-bottom: 1px #e6e8eb solid;
+.realTimeBookList li .bookInfo {
+  margin: 0;
 }
 
 .bookInfo p {
   font-size: 0.9em;
   letter-spacing: -2px;
   font-weight: bold;
-  margin: 0;
 }
 
 .bookInfo span {
   font-weight: normal;
   font-size: 0.8em;
   letter-spacing: -1px;
-  margin: 0;
-  color: #636c73;
 }
 
 .realTimeBookList img {
