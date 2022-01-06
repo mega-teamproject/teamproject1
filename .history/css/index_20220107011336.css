@@ -7,10 +7,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 .header {
   background-color: #1f8ce6;
 }
@@ -211,13 +207,9 @@ ul li a {
   display: flex;
   align-items: center;
 }
-.realTimeBookList li strong {
+.realTimeBookList li span {
   margin: 0 15px;
-}
-
-.bookInfo {
-  padding-bottom: 20px;
-  border-bottom: 1px #e6e8eb solid;
+  font-weight: bold;
 }
 
 .bookInfo p {
@@ -231,8 +223,6 @@ ul li a {
   font-weight: normal;
   font-size: 0.8em;
   letter-spacing: -1px;
-  margin: 0;
-  color: #636c73;
 }
 
 .realTimeBookList img {
@@ -242,97 +232,4 @@ ul li a {
 .footer {
   background: #303538;
   color: white;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
-footer p.invisible {
-  display: none;
-}
-
-footer .footer-menu1 {
-  display: flex;
-  justify-content: left;
-  padding: 20px 10px;
-  padding-bottom: 0;
-}
-
-footer .footer-menu1 a {
-  margin: 0 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-footer .footer-menu1 a:first-child {
-  margin-right: 0;
-}
-
-footer .footer-menu1 a span.borderR {
-  border-right: 1px solid #525a61;
-  padding-right: 10px;
-}
-
-footer .footer-menu2 {
-  display: flex;
-  padding: 20px;
-  font-size: 0.9em;
-  letter-spacing: -1px;
-  padding-bottom: 0;
-}
-
-footer .footer-menu2 .footer-wrapper1 {
-  margin-right: 40px;
-}
-
-footer .footer-menu2 .footer-wrapper1 p.bigFont {
-  font-size: 1.2em;
-}
-
-footer .footer-menu2 .footer-wrapper2 {
-  margin-left: 40px;
-}
-
-footer .footer-menu2 .footer-wrapper2 span.blue-bg {
-  background-color: #509deb;
-  border-radius: 2px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  font-size: 0.75em;
-}
-
-footer .fontColor {
-  color: #808991;
-  padding: 10px;
-  padding-left: 20px;
-}
-
-footer .copyright {
-  font-size: 0.9em;
-}
-
-footer .fontColor p {
-  color: #808991;
-  font-size: 0.7em;
-  margin: 0;
-}
-
-footer .footer-terms {
-  display: flex;
-  padding-bottom: 30px;
-}
-
-footer .footer-terms a p {
-  border-right: 1px solid #525a61;
-  padding: 0 10px;
-}
-
-footer .footer-terms a p.paddingL {
-  padding-left: 0;
 }
