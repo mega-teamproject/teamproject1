@@ -88,8 +88,8 @@ public class Check {
 		public boolean mailcheck(String email) {
 			boolean echeck = false;
 
-			m = Pattern.compile(Epattern).matcher(email);
-			if (m.find()) {
+			e = Pattern.compile(Epattern).matcher(email);
+			if (e.find()) {
 				echeck = true;
 			}
 
@@ -104,8 +104,8 @@ public class Check {
 		public boolean namecheck(String name) {
 			boolean ncheck = false;
 
-			m = Pattern.compile(npattern).matcher(name);
-			if (m.find()) {
+			n = Pattern.compile(npattern).matcher(name);
+			if (n.find()) {
 				ncheck = true;
 			}
 
