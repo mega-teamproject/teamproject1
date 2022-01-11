@@ -25,14 +25,12 @@ header {
   display: flex;
   margin-left: 10px;
 }
-
 .search h1 {
   color: white;
   font-size: 1.1em;
   margin-right: 10px;
   margin-bottom: 0;
 }
-
 .search h1#opacity {
   opacity: 0.5;
   border-left: 1px solid;
@@ -43,7 +41,6 @@ header {
   margin-right: 10px;
   margin-top: 10px;
 }
-
 .joinLogin button.btn {
   border-radius: 4px;
   padding: 5px 7px;
@@ -51,13 +48,11 @@ header {
   font-weight: bold;
   cursor: pointer;
 }
-
 .joinLogin button.borderBtn {
   background-color: transparent;
   color: white;
   border: 1px solid #99d1ff;
 }
-
 .joinLogin button.whiteBtn {
   background-color: white;
   color: #1f8ce6;
@@ -75,12 +70,10 @@ header {
 .relative input:focus {
   outline: none;
 }
-
 .relative {
   position: relative;
   margin: 0 10px;
 }
-
 .relative span {
   color: #808991;
   position: absolute;
@@ -156,28 +149,50 @@ header {
 }
 
 nav ul {
+  width: 100%;
   padding-left: 0;
   display: flex;
   justify-content: space-around;
 }
-
 ul li {
   list-style: none;
 }
-
 ul li a {
   text-decoration: none;
   color: white;
 }
 
+.header nav ul{
+  margin-bottom: 0;
+  width: 100%;
+}
+.header nav ul li {
+  width: 100%;
+}
+.header nav ul li:hover {
+  opacity: 0.5;
+  border-bottom: 3px solid rgb(153, 209, 255);
+}
+.header nav ul li.active {
+  border-bottom: 3px solid #99d1ff;
+}
+.header nav ul li a {
+  margin-left: 80px;
+}
+.header nav ul li a i {
+  margin-bottom: 10px;
+}
+
+
 .menu {
   border-bottom: 1px solid #e6e8eb;
 }
-
 .menu nav ul li a {
   color: #40474d;
 }
-
+.menu nav ul li a:hover {
+  color: #808991;
+}
 .menu nav ul li a.bluetxt {
   color: #0077d9;
   font-weight: bold;
@@ -188,6 +203,7 @@ ul li a {
   display: flex;
   margin-left: -150px;
   position: relative;
+  max-width: 767px;
 }
 .mainSlide .item {
   margin: 0 5px;
@@ -204,6 +220,9 @@ ul li a {
   top: 85px;
   color: rgba(242, 244, 245, 0.5);
   cursor: pointer;
+}
+.mainSlide span:hover {
+  color: rgb(158, 167, 173);
 }
 .mainSlide span.left-arrow {
   left: 290px;
@@ -268,35 +287,39 @@ ul li a {
   color: white;
 }
 
-.newslide_wrapper {
-  display: flex;
-}
 
+.realTimeBook {
+  margin-top: 20px;
+  margin-left: 20px;
+}
 .realTimeBookList-wrapper {
   display: flex;
   justify-content: space-between;
 }
-
+.realTimeBookList ul {
+  padding-left: 0;
+}
 .realTimeBookList li {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 .realTimeBookList li strong {
   margin: 0 15px;
 }
-
 .bookInfo {
   padding-bottom: 20px;
   border-bottom: 1px #e6e8eb solid;
 }
-
+.noborder {
+  border: none;
+}
 .bookInfo p {
   font-size: 0.9em;
   letter-spacing: -2px;
   font-weight: bold;
   margin: 0;
 }
-
 .bookInfo span {
   font-weight: normal;
   font-size: 0.8em;
@@ -304,47 +327,56 @@ ul li a {
   margin: 0;
   color: #636c73;
 }
-
 .realTimeBookList img {
   width: 50px;
+}
+
+.todaySlide {
+  margin: 20px;
+}
+
+.bestseller {
+  margin: 20px;
+}
+
+.weeklyNewSlide {
+  margin: 20px;
+}
+
+.instaBook {
+  margin: 20px;
+  padding-bottom: 20px;
 }
 
 .footer {
   background: #303538;
   color: white;
 }
-
 footer a {
   text-decoration: none;
   color: white;
 }
-
 footer p.invisible {
   display: none;
 }
-
 footer .footer-menu1 {
   display: flex;
   justify-content: left;
   padding: 20px 10px;
   padding-bottom: 0;
 }
-
 footer .footer-menu1 a {
   margin: 0 10px;
   font-size: 1.2em;
   font-weight: bold;
 }
-
 footer .footer-menu1 a:first-child {
   margin-right: 0;
 }
-
 footer .footer-menu1 a span.borderR {
   border-right: 1px solid #525a61;
   padding-right: 10px;
 }
-
 footer .footer-menu2 {
   display: flex;
   padding: 20px;
@@ -352,19 +384,15 @@ footer .footer-menu2 {
   letter-spacing: -1px;
   padding-bottom: 0;
 }
-
 footer .footer-menu2 .footer-wrapper1 {
   margin-right: 40px;
 }
-
 footer .footer-menu2 .footer-wrapper1 p.bigFont {
   font-size: 1.2em;
 }
-
 footer .footer-menu2 .footer-wrapper2 {
   margin-left: 40px;
 }
-
 footer .footer-menu2 .footer-wrapper2 span.blue-bg {
   background-color: #509deb;
   border-radius: 2px;
@@ -376,33 +404,27 @@ footer .footer-menu2 .footer-wrapper2 span.blue-bg {
   font-weight: bold;
   font-size: 0.75em;
 }
-
 footer .fontColor {
   color: #808991;
   padding: 10px;
   padding-left: 20px;
 }
-
 footer .copyright {
   font-size: 0.9em;
 }
-
 footer .fontColor p {
   color: #808991;
   font-size: 0.7em;
   margin: 0;
 }
-
 footer .footer-terms {
   display: flex;
   padding-bottom: 30px;
 }
-
 footer .footer-terms a p {
   border-right: 1px solid #525a61;
   padding: 0 10px;
 }
-
 footer .footer-terms a p.paddingL {
   padding-left: 0;
 }
