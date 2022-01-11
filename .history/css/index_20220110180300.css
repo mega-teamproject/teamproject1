@@ -188,10 +188,10 @@ ul li a {
   display: flex;
   margin-left: -150px;
   position: relative;
+  width: 100vw;
 }
 .mainSlide .item {
   margin: 0 5px;
-  background: rgba(0, 0, 0, 0.6);
 }
 .mainSlide .item img {
   width: 350px;

@@ -191,7 +191,6 @@ ul li a {
 }
 .mainSlide .item {
   margin: 0 5px;
-  background: rgba(0, 0, 0, 0.6);
 }
 .mainSlide .item img {
   width: 350px;
@@ -202,7 +201,7 @@ ul li a {
 .mainSlide span {
   position: absolute;
   top: 85px;
-  color: rgba(242, 244, 245, 0.5);
+  color: rgb(158, 167, 173);
   cursor: pointer;
 }
 .mainSlide span.left-arrow {
