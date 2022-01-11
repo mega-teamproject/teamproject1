@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +17,8 @@ import dto.Member;
 public class Joinduplication extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
 		// 데이터 가져옴
@@ -27,6 +29,8 @@ public class Joinduplication extends HttpServlet {
 		String name = request.getParameter("name");
 		String year = request.getParameter("year");
 		String sex = request.getParameter("gender");
+		LocalDateTime signDate = LocalDateTime.now();
+		LocalDateTime loginDate = signDate;
 
 		if (id != null && pw != null && pwCheck != null && email != null && name != null) {
 			// 공백 제거
@@ -47,7 +51,7 @@ public class Joinduplication extends HttpServlet {
 		if (year == null) {
 			year = "0";
 		}
-		
+
 		if (sex == null) {
 			sex = null;
 		}
@@ -61,13 +65,18 @@ public class Joinduplication extends HttpServlet {
 		member.setName(name);
 		member.setYear(year);
 		member.setSex(sex);
+		member.setSignDate(signDate);
+		member.setLoginDate(loginDate);
 
-		
 		id = member.getId();
 		pw = member.getPw();
 		pwCheck = member.getPwCheck();
 		email = member.getEmail();
 		name = member.getName();
+		year = member.getYear();
+		sex = member.getSex();
+		signDate = member.getSignDate();
+		loginDate = member.getSignDate();
 
 		// 인스턴스 생성
 		MemberDAO memberDAO = MemberDAO.getInstance();
@@ -114,19 +123,18 @@ public class Joinduplication extends HttpServlet {
 					}
 
 				}
+				
+				response.setStatus(201);
+
+				// 회원정보 DB 저장
+				// su로 몇행이 저장되었는지 확인
+				memberDAO.insert(member);
+				response.sendRedirect("index.html");
+				
 			} else {
 				System.out.println("비밀번호 재확인");
 				response.setStatus(400);
 			}
-
-			response.setStatus(201);
-			
-			// 회원정보 DB 저장
-			// su로 몇행이 저장되었는지 확인
-			int su = memberDAO.insert(memberDTO);
-			System.out.println(su);
-//		JoinCondition check = new JoinCondition();
-//		check.condition(member);
+		}
 	}
-}
 }
