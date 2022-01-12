@@ -378,15 +378,11 @@ section .bx-wrapper .bx-controls-direction a {
   margin: 20px;
   padding-bottom: 20px;
 }
-.instaBook a {
-  color: black;
-}
 .instaBook p {
   font-size: 19px;
   letter-spacing: -1px;
-  margin-bottom: 30px;
 }
-.instaBook .slider1 a {
+.instaBook a {
   color: #808991;
   font-size: 13px;
 }

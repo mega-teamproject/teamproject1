@@ -380,11 +380,11 @@ section .bx-wrapper .bx-controls-direction a {
 }
 .instaBook a {
   color: black;
+  margin-bottom: 10px;
 }
 .instaBook p {
   font-size: 19px;
   letter-spacing: -1px;
-  margin-bottom: 30px;
 }
 .instaBook .slider1 a {
   color: #808991;

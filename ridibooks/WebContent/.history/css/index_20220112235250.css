@@ -166,7 +166,7 @@ section .bx-wrapper .bx-controls-direction a {
   top: 34%;
 }
 
-.header nav ul {
+.header nav ul{
   margin-bottom: 0;
   width: 100%;
 }
@@ -187,6 +187,7 @@ section .bx-wrapper .bx-controls-direction a {
   margin-bottom: 10px;
 }
 
+
 .menu {
   border-bottom: 1px solid #e6e8eb;
 }
@@ -200,6 +201,7 @@ section .bx-wrapper .bx-controls-direction a {
   color: #0077d9;
   font-weight: bold;
 }
+
 
 .container .bx-wrapper {
   border: none;
@@ -358,44 +360,10 @@ section .bx-wrapper .bx-controls-direction a {
 .weeklyNewSlide {
   margin: 20px;
 }
-.weeklyNewSlide p {
-  font-size: 19px;
-  letter-spacing: -1px;
-}
-.weeklyNewSlide a {
-  color: #808991;
-  font-size: 13px;
-}
-.weeklyNewSlide .slider1 span {
-  color: black;
-  font-size: 14px;
-}
-.weeklyNewSlide img {
-  margin-bottom: 10px;
-}
 
 .instaBook {
   margin: 20px;
   padding-bottom: 20px;
-}
-.instaBook a {
-  color: black;
-}
-.instaBook p {
-  font-size: 19px;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-}
-.instaBook .slider1 a {
-  color: #808991;
-  font-size: 13px;
-}
-.instaBook .slider1 span {
-  color: black;
-  font-size: 14px;
-}
-.instaBook img {
-  margin-bottom: 10px;
 }
 
 .footer {
