@@ -162,6 +162,10 @@ ul li a {
   color: white;
 }
 
+section .bx-wrapper .bx-controls-direction a {
+  top: 34%;
+}
+
 .header nav ul{
   margin-bottom: 0;
   width: 100%;
@@ -198,37 +202,28 @@ ul li a {
   font-weight: bold;
 }
 
-.mainSlide {
-  margin-top: 20px;
-  display: flex;
-  margin-left: -150px;
-  position: relative;
-  max-width: 767px;
+
+.container .bx-wrapper {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
 }
-.mainSlide .item {
-  margin: 0 5px;
-  background: rgba(0, 0, 0, 0.6);
-}
-.mainSlide .item img {
-  width: 350px;
-  height: 220px;
-  display: block;
+.container .bx-wrapper img {
   border-radius: 5px;
 }
-.mainSlide span {
-  position: absolute;
-  top: 85px;
-  color: rgba(242, 244, 245, 0.5);
-  cursor: pointer;
+
+.mainSlide {
+  padding-top: 20px;
 }
-.mainSlide span:hover {
-  color: rgb(158, 167, 173);
+.mainSlide .bx-wrapper .bx-prev {
+  left: 26%;
 }
-.mainSlide span.left-arrow {
-  left: 290px;
+.mainSlide .bx-wrapper .bx-next {
+  right: 26%;
 }
-.mainSlide span.right-arrow {
-  left: 740px;
+.mainSlide .item {
+  width: 700px;
 }
 
 .icons {
@@ -285,8 +280,20 @@ ul li a {
 .newSlide {
   background: url("../images/newslide_background.png");
   color: white;
+  padding: 10px;
+  padding-bottom: 30px;
 }
-
+.newSlide .slider1 {
+  background-color: transparent;
+}
+.newSlide .slider1 span {
+  color: white;
+  font-size: 14px;
+}
+.newSlide .slider1 a {
+  color: #808991;
+  font-size: 13px;
+}
 
 .realTimeBook {
   margin-top: 20px;
@@ -333,6 +340,17 @@ ul li a {
 
 .todaySlide {
   margin: 20px;
+}
+.todaySlide p {
+  font-size: 18px;
+}
+.todaySlide a {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+.todaySlide a img {
+  margin-bottom: 5px;
 }
 
 .bestseller {
