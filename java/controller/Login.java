@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,12 +25,15 @@ public class Login extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		int value = memberdao.selectByIdValue(id, pw);
+		LocalDateTime loginDate = LocalDateTime.now();
 		
 		if(memberdao.selectById(id)) {
 			if(value != 0) {
 				response.setStatus(201);
 				System.out.println("로그인 성공");
+				memberdao.loginupdate(loginDate, value);
 				session.setAttribute("value", value);
+				response.sendRedirect("/html/index.html");
 			}else {
 				response.setStatus(404);
 				System.out.println("비밀번호 틀림");
