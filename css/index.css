@@ -303,6 +303,10 @@ ul li a {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+
+.realTimeBookList li {
+  display: flex;
+  align-items: center;
 }
 .realTimeBookList li strong {
   margin: 0 15px;
