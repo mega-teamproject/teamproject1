@@ -4,8 +4,8 @@
 <div class="header">
 	<header>
 		<div class="search">
-			<a href="index.jsp"><h1>RIDIBOOKS</h1></a> <a
-				href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
+			<a href="index.jsp"><h1>RIDIBOOKS</h1></a> 
+			<a href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
 		</div>
 		<div class="joinLogin">
 			<div class="joinLogin">
@@ -19,10 +19,7 @@
 	</div>
 	<nav>
 		<ul>
-			<li><a href="index.jsp"><i class="fas fa-home fa-lg"></i></a></li>
-			<li><a href="alarm.jsp"><i class="fas fa-bell fa-lg"></i></a></li>
-			<li><a href="cart.jsp"><i  class="fas fa-shopping-cart fa-lg"></i></a></li>
-			<li><a href="myridi.jsp"><i class="far fa-user fa-lg"></i></a></li>
+			<%@ include file="headerbtn2.jsp" %>
 		</ul>
 	</nav>
 </div>

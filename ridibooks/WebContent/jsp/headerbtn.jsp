@@ -12,8 +12,8 @@
 		btn2 = "<button class=\"whiteBtn btn\" onclick=\"location.href='login.jsp'\">로그인</button>";
 	}else {
 		// 로그인 상태 O
-		btn1 = "<button class=\"borderBtn btn\" onclick=\"location.href='join1.html'\">캐시충전</button>";
-		btn2 = "<button class=\"borderBtn btn\" onclick=\"location.href='login.html'\">내서재</button>";
+		btn1 = "<button class=\"borderBtn btn\" onclick=\"location.href='join1.jsp'\">캐시충전</button>";
+		btn2 = "<button class=\"borderBtn btn\" onclick=\"location.href='login.jsp'\">내서재</button>";
 	}
 %>
 
