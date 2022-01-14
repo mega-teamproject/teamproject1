@@ -6,6 +6,12 @@
     <meta charset="UTF-8" />
     <title>insert page title</title>
     <link rel="stylesheet" href="../css/join2.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="container">
@@ -72,13 +78,15 @@
         <div class="complete">
           <button
             class="submit-login"
-            type="button"
-            onclick="location.href='join2.jsp'"
+            type="submit"
           >
+          <!--             onclick="location.href='join2.jsp'" -->
             회원 가입 완료
           </button>
         </div>
       </form>
     </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/join2.js"></script>
   </body>
 </html>

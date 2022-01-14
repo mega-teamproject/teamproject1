@@ -129,7 +129,7 @@ public class Joinduplication extends HttpServlet {
 				// 회원정보 DB 저장
 				// su로 몇행이 저장되었는지 확인
 				memberDAO.insert(member);
-				response.sendRedirect("index.html");
+				response.sendRedirect("http://localhost/jsp/index.jsp");
 				
 			} else {
 				System.out.println("비밀번호 재확인");
