@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -25,7 +27,6 @@ public class MemberDAO {
 			conn = ds.getConnection();
 			
 		} catch (NamingException | SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -53,7 +54,7 @@ public class MemberDAO {
 		try {
 			conn = getConnection();
 
-			String sql = "INSERT INTO memberinfo(member_Id, member_Pw, member_Email, member_Name, member_Year, member_Sex) VALUES(?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO memberinfo(member_Id, member_Pw, member_Email, member_Name, member_Year, member_Sex, member_SignDate, member_LoginDate) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -63,6 +64,8 @@ public class MemberDAO {
 			pstmt.setString(4, memberDTO.getName());
 			pstmt.setString(5, memberDTO.getYear());
 			pstmt.setString(6, memberDTO.getSex());
+			pstmt.setTimestamp(7, Timestamp.valueOf(memberDTO.getSignDate()));
+			pstmt.setTimestamp(8, Timestamp.valueOf(memberDTO.getLoginDate()));
 
 			su = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -167,7 +170,7 @@ public class MemberDAO {
 		try {
 			conn = getConnection();
 
-			String sql = "SELECT * FROM memberinfo WHERE member_Id = ? AND member_Pw = ?";
+			String sql = "SELECT member_value FROM memberinfo WHERE member_Id = ? AND member_Pw = ?";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -177,7 +180,7 @@ public class MemberDAO {
 			ResultSet rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				result = rs.getInt("member_value");
+				result = rs.getInt("member_value");;
 			}
 			
 			rs.close();
@@ -199,7 +202,7 @@ public class MemberDAO {
 	}
 	
 	public int selectByIdValue(String email) {
-		// 아이디, 비밀번호 확인 후 고유값 전달
+		// 이메일 확인 후, 고유값 전달
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		int result = 0;
@@ -276,8 +279,73 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public void update() {
-		// 갱신
+	public boolean selectByvalue(int value) {
+		// 세션 확인을 위한 아이디 고유값 조회
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		boolean result = false;
+
+		try {
+			conn = getConnection();
+
+			String sql = "SELECT * FROM memberinfo WHERE member_value = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, value);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = true;
+			}
+			
+			rs.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return result;
+	}
+	
+	public void loginupdate(LocalDateTime date, int value) {
+		// 로그인 날짜 갱신
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = getConnection();
+			
+			String sql = "UPDATE memberinfo SET member_LoginDate = ? WHERE member_value = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setTimestamp(1, Timestamp.valueOf(date));
+			pstmt.setInt(2, value);
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public void delete() {

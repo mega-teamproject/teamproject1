@@ -35,7 +35,7 @@ public class Login extends HttpServlet {
 			if(value != 0) {
 				response.setStatus(201);
 				System.out.println("로그인 성공");
-//				memberdao.loginupdate(loginDate, value);
+				memberdao.loginupdate(loginDate, value);
 				session.setAttribute("id", id);
 				response.sendRedirect("/jsp/index.jsp");
 			}else {
