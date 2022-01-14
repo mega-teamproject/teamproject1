@@ -36,9 +36,8 @@ header {
   border-left: 1px solid;
   padding-left: 10px;
 }
-
-.response {
-  display: none;
+.search h1#opacity:hover {
+  opacity: 0.8;
 }
 
 .joinLogin {
@@ -51,6 +50,9 @@ header {
   letter-spacing: -1px;
   font-weight: bold;
   cursor: pointer;
+}
+.joinLogin button.btn:hover {
+  opacity: 0.5;
 }
 .joinLogin button.borderBtn {
   background-color: transparent;
@@ -88,55 +90,76 @@ header {
   position: relative;
 }
 
+.search .recent-search {
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  top: 52px;
+  border-radius: 5px;
+  display: none;
+  z-index: 9998;
+}
+.search .recent-search p {
+  margin: 10px 15px;
+  color: rgb(128, 137, 145);
+  font-size: 14px;
+}
+.search .recent-search .saveBtn {
+  background-color: rgb(242, 244, 245);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  padding: 7px;
+}
+.search .recent-search a {
+  color: rgb(128, 137, 145);
+  font-size: 14px;
+  padding: 5px 8px;
+}
+.search .recent-search .search-contents {
+  width: 300px;
+  padding: 60px 40px;
+  margin: 0 auto;
+  color: rgb(158, 167, 173);
+}
 .search-list {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: #1f8ce6;
   display: none;
+  z-index: 10000;
 }
-.search .recent-search {
-  width: 400px;
-  background-color: white;
-  position: absolute;
-  top: 55px;
-  border-radius: 5px;
-  padding: 10px;
-  display: none;
-}
-.search .recent-search p {
-  margin: 0;
-  color: rgb(128, 137, 145);
-  font-size: 14px;
-}
-.search .recent-search .search-contents {
-  width: 200px;
-  padding: 60px 0;
-  margin: 0 auto;
+.bg-black {
+  width: 100vw;
+  height: 2500px;
+  background-color: black;
+  opacity: 0.6;
 }
 .search-input {
   padding: 5px;
   height: auto;
   width: 100%;
+  background: #1f8ce6;
 }
 .search-input i.fa-arrow-left {
   color: white;
   margin: 0 10px;
+  cursor: pointer;
 }
 .search-input input {
-  width: 80%;
+  width: 90%;
   height: 40px;
   margin-top: 10px;
   border-radius: 4px;
   border: none;
   padding-left: 40px;
+  font-size: 16px;
 }
 .search-input span {
   color: #808991;
   position: absolute;
-  top: 25px;
-  left: 55px;
+  top: 24px;
+  left: 60px;
 }
 .search-wrapper {
   background: white;
@@ -190,6 +213,9 @@ ul li a {
 
 section .bx-wrapper .bx-controls-direction a {
   top: 34%;
+}
+section:first-child .bx-wrapper .bx-controls-direction a {
+  top: 50%;
 }
 
 .header nav ul {
@@ -386,6 +412,9 @@ section .bx-wrapper .bx-controls-direction a {
 .bestseller {
   margin: 20px;
 }
+.bestseller a {
+  color: black;
+}
 
 .weeklyNewSlide {
   margin: 20px;
@@ -491,6 +520,12 @@ footer .footer-wrapper4,
 footer .footer-wrapper5 {
   display: none;
 }
+footer a:hover p,
+footer a:hover span
+ {
+  opacity: 0.5;
+  cursor: pointer;
+}
 footer .fontColor {
   color: #808991;
   padding: 10px;
@@ -512,7 +547,7 @@ footer .footer-terms a p {
   border-right: 1px solid #525a61;
   padding: 0 10px;
 }
-footer .footer-terms a p:last-child {
+footer .footer-terms a:last-child p {
   border-right: none;
 }
 footer .footer-terms a p.paddingL {
@@ -521,7 +556,13 @@ footer .footer-terms a p.paddingL {
 
 @media screen and (min-width: 999px) {
   header {
+    max-width: 1000px;
+    margin: 0 auto;
     margin-bottom: 10px;
+  }
+  section {
+    max-width: 1000px;
+    margin: 0 auto;
   }
   .search h1 {
     font-size: 1.4em;
@@ -543,6 +584,10 @@ footer .footer-terms a p.paddingL {
     display: inline;
     margin-left: 10px;
     font-weight: bold;
+  }
+  nav {
+    max-width: 1000px;
+    margin: 0 auto;
   }
   nav ul {
     justify-content: left;
@@ -577,6 +622,14 @@ footer .footer-terms a p.paddingL {
   }
   .menu li {
     margin-right: 50px;
+  }
+  .icons {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  footer {
+    max-width: 1000px;
+    margin: 0 auto;
   }
   footer .fisrt-footer {
     display: flex;
