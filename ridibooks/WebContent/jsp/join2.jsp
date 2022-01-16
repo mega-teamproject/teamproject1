@@ -6,12 +6,7 @@
     <meta charset="UTF-8" />
     <title>insert page title</title>
     <link rel="stylesheet" href="../css/join2.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+    <script type="text/javascript"><%@ include file="../js/join2.js" %></script>
   </head>
   <body>
     <div class="container">
@@ -21,14 +16,15 @@
         </h3>
       </header>
       <form action="/join/duplication" method="POST">
-        <input type="text" class="mt-b" name="id" id="id" placeholder="아이디" />
-        <input type="password" name="pwd" id="pwd" placeholder="비밀번호" />
+        <input type="text" class="mt-b" name="id" id="id" placeholder="아이디" value="${Member.id }"/>
+        <input type="password" name="pwd" id="pwd" placeholder="비밀번호" value="${Member.pw }"/>
         <input
           type="password"
           name="pwdCheck"
           id="pwdCheck"
           placeholder="비밀번호 확인"
           class="mt-b"
+          value="${Member.pwCheck }"
         />
         <input
           type="email"
@@ -36,6 +32,7 @@
           id="mail"
           class="mt-b"
           placeholder="이메일 주소"
+          value="${Member.email }"
         />
         <input
           type="text"
@@ -43,50 +40,85 @@
           id="name"
           class="mt-b"
           placeholder="이름"
+          value="${Member.name }"
         />
-        <div class="birth&gender mt-b">
-          <label for="gender">선택 입력</label> <br />
-          <input type="text" name="year" id="year" placeholder="출생년도" />
-          <input type="radio" name="gender" id="m" value="남" />
-          <input type="radio" name="gender" id="f" value="여" />
+        <div class="birth-gender-wrapper">
+          <p id="label">선택 입력</p>
+          <div class="birth-gender relative">
+            <div class="birth">
+              <input type="text" name="birthday" id="birthday" />
+              <span class="placeholder birth_ph">출생년도</span>
+              <span class="focus birth-ph">예: 1981</span>
+            </div>
+            <div class="gender">
+              <input type="checkbox" id="male_box" value="남" />
+              <label for="male_box" id="male-la"></label>
+              <span id="male_choice">남</span>
+
+              <input type="checkbox" id="female_box" value="여" />
+              <label for="female_box" id="female-la"></label>
+              <span id="female_choice">여</span>
+            </div>
+          </div>
         </div>
         <div class="terms">
-          <div class="allAgree agree">
-            <input type="checkbox" name="all" id="all" />
-            <h4>선택 포함 전체 약관 동의</h4>
+          <div class="allAgree pad">
+            <input type="checkbox" name="all" id="all" class="checked" />
+            <label for="all">선택 포함 전체 약관 동의</label>
           </div>
-          <div class="termAgree agree m-l space">
-            <input type="checkbox" name="term" id="term" />
-            <p>이용약관 동의(필수)</p>
-            <a href="#">약관보기 ></a>
+          <div class="termAgree pad agree m-l space">
+            <div>
+              <input type="checkbox" name="check" id="term" class="checked" />
+              <label for="term">이용약관 동의(필수)</label>
+            </div>
+            <a href="https://policy.ridi.com/legal/terms/">약관보기 ></a>
           </div>
-          <div class="alarmAgree agree m-l">
-            <input type="checkbox" name="alarm" id="alarm" />
-            <p>이벤트, 혜택 알림 수신 동의(선택)</p>
+          <div class="alarmAgree pad m-l">
+            <input type="checkbox" name="check" id="alarm" class="checked" />
+            <label for="alarm">이벤트, 혜택 알림 수신 동의(선택)</label>
           </div>
-          <div class="infoAgree agree m-l space">
-            <input type="checkbox" name="info" id="info" />
-            <p>성별, 생년 정보 제공 동의(선택)</p>
-            <a href="#">내용확인 ></a>
+          <div class="infoAgree pad agree m-l space">
+            <div>
+              <input type="checkbox" name="check" id="info" class="checked" />
+              <label for="info">성별, 생년 정보 제공 동의(선택)</label>
+            </div>
+            <a href="https://policy.ridi.com/legal/provide-gender-and-birth/"
+              >내용확인 ></a
+            >
           </div>
-          <div class="personalAgree agree space">
-            <input type="checkbox" name="personalInfo" id="personalInfo" />
-            <p>개인 정보 수집 및 이용 동의(필수)</p>
-            <a href="#">내용확인 ></a>
+          <div class="personalAgree pad agree space">
+            <div>
+              <input type="checkbox" name="personalInfo" id="personalInfo" />
+              <label for="personalInfo"
+                >개인 정보 수집 및 이용 동의(필수)</label
+              >
+            </div>
+            <a href="https://policy.ridi.com/legal/privacy-collect-and-use/"
+              >내용확인 ></a
+            >
           </div>
         </div>
+        <p class="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          이용약관, 개인 정보 수집 및 이용에 동의해주세요.
+        </p>
+        <p class="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          이용약관에 동의해주세요.
+        </p>
+        <p class="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          개인 정보 수집 및 이용에 동의해주세요.
+        </p>
         <div class="complete">
           <button
             class="submit-login"
             type="submit"
           >
-          <!--             onclick="location.href='join2.jsp'" -->
             회원 가입 완료
           </button>
         </div>
       </form>
     </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/join2.js"></script>
   </body>
 </html>
