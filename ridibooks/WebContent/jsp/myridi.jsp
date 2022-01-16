@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%
+	String Id = (String) session.getAttribute("id");
+	String email = (String) session.getAttribute("email");
+%>
+
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
@@ -63,8 +68,8 @@
               <div class="my-ridi">
                 <div class="myid-wrapper">
                   <div class="myid">
-                    <h4>******</h4>
-                    <p>******@naver.com</p>
+                    <h4><%= Id %></h4>
+                    <p><%= email %></p>
                   </div>
                   <button type="button" class="logout" name="logout" onclick="location.href='/logout'">로그아웃</button>
                 </div>
@@ -102,7 +107,7 @@
                 </div>
             </section>
           </div>
->>>>>>> frontend
+
         </div>
 
         <%@ include file="footer.jsp" %>
