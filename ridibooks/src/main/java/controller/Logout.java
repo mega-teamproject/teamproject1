@@ -15,10 +15,11 @@ public class Logout extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("id") != null) {
-			session.removeAttribute("id");
+			// 로그아웃 시 세션 삭제
+			session.invalidate();
+			System.out.println("로그아웃 성공");
 		}
 		
-		response.sendRedirect("/jsp/index.jsp");
-	
+		response.sendRedirect("/jsp/index.jsp");	// 메인 페이지로 이동
 	}
 }

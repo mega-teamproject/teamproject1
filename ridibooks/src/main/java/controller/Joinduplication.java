@@ -81,24 +81,25 @@ public class Joinduplication extends HttpServlet {
 		// 인스턴스 생성
 		MemberDAO memberDAO = MemberDAO.getInstance();
 		// 아이디 중복 체크
-		boolean idcheck = memberDAO.selectById(id);
-		if (idcheck) {
+		if (memberDAO.selectById(id)) {
 			System.out.println("아이디 중복");
 			response.setStatus(409);
+			response.sendRedirect("http://localhost/jsp/join2.jsp");
 		} else {
 			// 비밀번호 체크
 			if (pw.equals(pwCheck)) {
 				// 이메일 중복 체크
-				boolean emailCheck = memberDAO.selectByEmail(email);
-				if (emailCheck) {
+				if (memberDAO.selectByEmail(email)) {
 					System.out.println("이메일 중복");
 					response.setStatus(409);
+					response.sendRedirect("http://localhost/jsp/join2.jsp");
 				} else {
 					// 아이디 확인
 					RegularExpression idchecking = new RegularExpression();
 					if (!idchecking.idcheck(id)) {
 						System.out.println("아이디 재확인");
 						response.setStatus(400);
+						response.sendRedirect("http://localhost/jsp/join2.jsp");
 					}
 
 					// 비밀번호 확인
@@ -106,6 +107,7 @@ public class Joinduplication extends HttpServlet {
 					if (!pwdcheck.pwcheck(pw)) {
 						System.out.println("비밀번호 재확인");
 						response.setStatus(400);
+						response.sendRedirect("http://localhost/jsp/join2.jsp");
 					}
 
 					// 이메일 형식 확인
@@ -113,6 +115,7 @@ public class Joinduplication extends HttpServlet {
 					if (!emailcheck.mailcheck(email)) {
 						System.out.println("이메일 재확인");
 						response.setStatus(412);
+						response.sendRedirect("http://localhost/jsp/join2.jsp");
 					}
 
 					// 이름 확인
@@ -120,20 +123,18 @@ public class Joinduplication extends HttpServlet {
 					if (!namecheck.namecheck(name)) {
 						System.out.println("이름 재확인");
 						response.setStatus(412);
+						response.sendRedirect("http://localhost/jsp/join2.jsp");
 					}
-
 				}
 				
 				response.setStatus(201);
-
-				// 회원정보 DB 저장
-				// su로 몇행이 저장되었는지 확인
-				memberDAO.insert(member);
-				response.sendRedirect("http://localhost/jsp/index.jsp");
+				memberDAO.insert(member);									// 회원정보 DB 저장
+				response.sendRedirect("http://localhost/jsp/index.jsp");	// 회원가입 완료 시 메인 페이지로 이동
 				
 			} else {
 				System.out.println("비밀번호 재확인");
 				response.setStatus(400);
+				response.sendRedirect("http://localhost/jsp/join2.jsp");
 			}
 		}
 	}

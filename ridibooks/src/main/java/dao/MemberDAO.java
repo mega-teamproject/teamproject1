@@ -279,6 +279,45 @@ public class MemberDAO {
 		return result;
 	}
 	
+	public String selectByEmail(int value) {
+		// 이메일 조회 조회
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String result = null;
+
+		try {
+			conn = getConnection();
+
+			String sql = "SELECT member_Email FROM memberinfo WHERE member_value = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, value);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = rs.getString("member_Email");
+			}
+			
+			rs.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return result;
+	}
+	
 	public boolean selectByvalue(int value) {
 		// 세션 확인을 위한 아이디 고유값 조회
 		Connection conn = null;
@@ -348,7 +387,38 @@ public class MemberDAO {
 		}
 	}
 
+	public void changepw(String pw, int value) {
+		// 비밀번호 재설정
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = getConnection();
+			
+			String sql = "UPDATE memberinfo SET member_Pw = ? WHERE member_value = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, pw);
+			pstmt.setInt(2, value);
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
 	public void delete() {
-		// 삭제
+		// 회원 탈퇴 기능
 	}
 }

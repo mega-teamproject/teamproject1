@@ -11,7 +11,7 @@
     <div class="container">
       <header>
         <h3>
-          <a href="index.html">RIDIBOOKS</a>
+          <a href="index.jsp">RIDIBOOKS</a>
         </h3>
       </header>
       <div class="alert alert1">
@@ -41,11 +41,12 @@
           <i class="fas fa-window-close"></i>
         </div>
       </div>
+      <form action="/resetpw" method="POST">
       <div class="findId">
         <label for="email">비밀번호 재설정</label>
         <input type="text" name="id" id="id" placeholder="아이디" />
         <input type="email" name="email" id="email" placeholder="이메일 주소" />
-        <button type="button" onclick="find()">찾기</button>
+        <button type="submit">찾기</button>
         <div class="solution">
           <p>새 비밀번호를 설정할 수 있도록 이메일로 메시지가 전송됩니다.</p>
           <span>이메일이 기억나지 않으세요?</span>
@@ -54,6 +55,7 @@
           >
         </div>
       </div>
+      </form>
     </div>
   </body>
 </html>
