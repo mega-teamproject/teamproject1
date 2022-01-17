@@ -88,6 +88,7 @@ header {
 }
 .response {
   position: relative;
+  display: none;
 }
 
 .search .recent-search {
@@ -211,11 +212,11 @@ ul li a {
   color: white;
 }
 
-section .bx-wrapper .bx-controls-direction a {
-  top: 34%;
-}
-section:first-child .bx-wrapper .bx-controls-direction a {
+section.first-sec .bx-wrapper .bx-controls-direction a {
   top: 50%;
+}
+section .bx-wrapper .bx-controls-direction a {
+  top: 38%;
 }
 
 .header nav ul {

@@ -34,13 +34,13 @@ h3 a {
   color: #1f8ce6;
   font-weight: bold;
 }
+
 form {
   display: flex;
   flex-flow: column;
   width: 400px;
   margin: 0 auto;
 }
-
 form input {
   width: 100%;
   padding: 15px;
@@ -48,32 +48,26 @@ form input {
   border-radius: 4px;
   font-size: 1em;
 }
-
 form input:hover {
   border: 1px solid #9ea7ad;
   border-radius: 4px;
 }
-
 form input:focus {
   outline: 1px solid #1f8ce6;
   border-radius: 4px;
 }
-
 form .relative {
   position: relative;
 }
-
 form .mb {
   margin-bottom: 10px;
 }
-
 form .relative span.placeholder {
   position: absolute;
   top: 15px;
   left: 15px;
   color: #738096;
 }
-
 form .relative span.focus {
   position: absolute;
   top: 5px;
@@ -96,13 +90,11 @@ input#pwd {
   border-bottom: none;
   border-radius: 4px 4px 0 0;
 }
-
 form input#pwd:focus {
   outline: 1px solid #1f8ce6;
   border-bottom: 1px solid #1f8ce6;
   border-radius: 4px;
 }
-
 input#pwdCheck {
   border-radius: 0 0 4px 4px;
 }
@@ -114,23 +106,18 @@ input#pwdCheck {
   margin-bottom: 5px;
   letter-spacing: -1px;
 }
-
 .birth-gender {
   display: flex;
 }
-
 .birth {
   margin-right: 7px;
 }
-
 .gender {
   position: relative;
 }
-
 .gender label:hover {
   border: 1px solid #9ea7ad;
 }
-
 input[id="male_box"] + label {
   display: inline-block;
   width: 80px;
@@ -140,7 +127,6 @@ input[id="male_box"] + label {
   border-radius: 4px;
   cursor: pointer;
 }
-
 input[id="female_box"] + label {
   display: inline-block;
   width: 80px;
@@ -150,11 +136,9 @@ input[id="female_box"] + label {
   border-radius: 4px;
   cursor: pointer;
 }
-
 .gender input[type="checkbox"] {
   display: none;
 }
-
 span#male_choice {
   position: absolute;
   top: 15px;
@@ -162,7 +146,6 @@ span#male_choice {
   color: #738096;
   cursor: pointer;
 }
-
 span#female_choice {
   position: absolute;
   top: 15px;
@@ -177,37 +160,30 @@ span#female_choice {
   background-color: white;
   width: 100%;
 }
-
 .terms input {
   width: 20px;
 }
-
 .allAgree {
   border-bottom: 1px solid #d6deeb;
 }
-
 .terms .pad {
   padding: 10px;
   color: #738096;
   font-size: 0.9em;
   letter-spacing: -1px;
 }
-
 .terms .pad:hover,
 .terms .pad:hover a {
   color: black;
 }
-
 .terms .agree {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .terms .m-l {
   margin-left: 20px;
 }
-
 .terms a {
   font-size: 0.8em;
   letter-spacing: 0;

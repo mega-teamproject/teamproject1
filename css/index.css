@@ -521,7 +521,8 @@ footer .footer-wrapper5 {
   display: none;
 }
 footer a:hover p,
-footer a:hover span {
+footer a:hover span
+ {
   opacity: 0.5;
   cursor: pointer;
 }
@@ -603,7 +604,7 @@ footer .footer-terms a p.paddingL {
   }
   .header nav ul li.active a {
     padding-bottom: 5px;
-    border-bottom: 3px solid #99d1ff;
+    border-bottom: 3px solid #99d1ff;;
   }
   .header nav ul li:hover {
     border-bottom: none;
@@ -648,7 +649,7 @@ footer .footer-terms a p.paddingL {
   footer .footer-wrapper1 p.bigFont {
     font-size: 1em;
   }
-  footer .footer-wrapper2 {
+  footer .footer-wrapper2  {
     display: none;
   }
   footer .footer-wrapper3,
