@@ -27,7 +27,6 @@ public class MemberDAO {
 			conn = ds.getConnection();
 			
 		} catch (NamingException | SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

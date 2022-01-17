@@ -1,5 +1,7 @@
 package dto;
 
+import java.time.LocalDateTime;
+
 public class Member {
 	private String id;
 	private String pw;
@@ -8,7 +10,9 @@ public class Member {
 	private String name;
 	private String year;
 	private String sex;
-	
+	private LocalDateTime signDate;
+	private LocalDateTime loginDate;
+
 	public String getId() {
 		return id;
 	}
@@ -63,6 +67,22 @@ public class Member {
 
 	public void setSex(String sex) {
 		this.sex = sex;
+	}
+
+	public LocalDateTime getSignDate() {
+		return signDate;
+	}
+
+	public void setSignDate(LocalDateTime signDate) {
+		this.signDate = signDate;
+	}
+
+	public LocalDateTime getLoginDate() {
+		return loginDate;
+	}
+
+	public void setLoginDate(LocalDateTime loginDate) {
+		this.loginDate = loginDate;
 	}
 
 }

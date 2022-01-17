@@ -16,8 +16,7 @@ public class Logout extends HttpServlet {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("id") != null) {
 			// 로그아웃 시 세션 삭제
-			session.removeAttribute("id");
-			session.removeAttribute("email");
+			session.invalidate();
 			System.out.println("로그아웃 성공");
 		}
 		
