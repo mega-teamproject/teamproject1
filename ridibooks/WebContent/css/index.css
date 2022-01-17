@@ -270,6 +270,12 @@ section .bx-wrapper .bx-controls-direction a {
   border-radius: 5px;
 }
 
+.slider1 a img:hover {
+  opacity: 0.6;
+}
+.slider2 a img:hover {
+  opacity: 0.6;
+}
 .mainSlide {
   padding-top: 20px;
 }
@@ -352,9 +358,26 @@ section .bx-wrapper .bx-controls-direction a {
   font-size: 13px;
 }
 
+section ul li a img:hover {
+  opacity: 0.6;
+}
 .realTimeBook {
   margin-top: 20px;
   margin-left: 20px;
+}
+.realTimeBook .clock {
+  background-image: linear-gradient(255deg, #0077d9 4%, #72d2e0);
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 40px;
+  color: white;
+  font-size: 13px;
+}
+.realTimeBook .clock i {
+  margin-right: 3px;
+}
+.realTimeBook p.realTimeTitle {
+  font-size: 18px;
 }
 .realTimeBookList-wrapper {
   display: flex;
@@ -383,6 +406,7 @@ section .bx-wrapper .bx-controls-direction a {
   letter-spacing: -2px;
   font-weight: bold;
   margin: 0;
+  color: black;
 }
 .bookInfo span {
   font-weight: normal;

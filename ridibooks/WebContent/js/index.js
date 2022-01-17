@@ -35,3 +35,18 @@ $("html").on("click", function(e){
         $(".recent-search").css("display", "none");
     }
 });
+
+function printTime() {
+    let clock = document.getElementById("real-time");
+    console.log(clock);
+    let date = new Date();
+    
+    clock.innerHTML = 
+    date.getHours() + "시" + "  " +
+    date.getMinutes() + "분";
+
+    setTimeout("printTime()", 60000);
+}
+window.onload = function() {
+    printTime();
+}
