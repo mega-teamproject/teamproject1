@@ -299,45 +299,62 @@ section .bx-wrapper .bx-controls-direction a {
   padding-left: 0;
 }
 .icons ul li {
-  background-color: black;
-  border-radius: 14px;
-  width: 50px;
+  flex: 0 0 10%;
+  display: flex;
+  flex-flow: column;
 }
 .icons ul li img {
   display: block;
   width: 100%;
 }
-.icons ul li#color1 {
-  background: #e8cb99;
+.icons ul li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.icons ul li#color2 {
-  background: #99d1cb;
+.icons ul li div {
+  width: 50px;
+  border-radius: 14px;
 }
-.icons ul li#color3 {
-  background: #b9bef1;
-}
-.icons ul li#color4 {
-  background: #99d1cb;
-}
-.icons ul li#color5 {
-  background: #f1c0a7;
-}
-.icons ul li#color6 {
-  background: #abdcba;
-}
-.icons ul li#color7 {
-  background: #d5adeb;
-}
-.icons ul li#color8 {
-  background: #f0b9b9;
-}
-.icons ul li#color9 {
-  background: #badba1;
-}
-.icons ul span {
+.icons ul li span {
   display: inline-block;
   text-align: center;
   font-size: 0.8em;
+  height: 35px;
+  margin-top: 10px;
+}
+.icons ul li span.desktop {
+  display: none;
+}
+.icons ul li #color1 {
+  background: #e8cb99;
+}
+.icons ul li #color2 {
+  background: #99d1cb;
+}
+.icons ul li #color3 {
+  background: #b9bef1;
+}
+.icons ul li #color4 {
+  background: #99d1cb;
+}
+.icons ul li #color5 {
+  background: #f1c0a7;
+}
+.icons ul li #color6 {
+  background: #abdcba;
+}
+.icons ul li #color7 {
+  background: #d5adeb;
+}
+.icons ul li #color8 {
+  background: #f0b9b9;
+}
+.icons ul li #color9 {
+  background: #badba1;
 }
 
 .newSlide {
@@ -651,6 +668,12 @@ footer .footer-terms a p.paddingL {
   .icons {
     max-width: 1000px;
     margin: 0 auto;
+  }
+  .icons ul li span.desktop {
+    display: inline-block;
+  }
+  .icons ul li span.mobile {
+    display: none;
   }
   footer {
     max-width: 1000px;

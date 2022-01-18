@@ -38,7 +38,6 @@ $("html").on("click", function(e){
 
 function printTime() {
     let clock = document.getElementById("real-time");
-    console.log(clock);
     let date = new Date();
     
     clock.innerHTML = 
