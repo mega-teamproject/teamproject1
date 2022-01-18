@@ -83,20 +83,27 @@ public class MemberDAO {
 		return su;
 	}
 
-	public boolean selectById(String id) {
-		// 아이디 조회
+	public boolean selectByexist(String IDorEmail) {
+		// 아이디, 이메일 조회
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		boolean result = false;
+		String SQL = null;
+		
+		if(IDorEmail.contains("@")) {
+			SQL = "SELECT * FROM memberinfo WHERE member_Email = ?";
+		}else {
+			SQL = "SELECT * FROM memberinfo WHERE member_Id = ?";
+		}
 
 		try {
 			conn = getConnection();
 
-			String sql = "SELECT * FROM memberinfo WHERE member_Id = ?";
+			String sql = SQL;
 
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, id);
+				pstmt.setString(1, IDorEmail);
 			
 			ResultSet rs = pstmt.executeQuery();
 			
@@ -122,16 +129,22 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public String selectById(int value) {
-		// 아이디 조회
+	public String selectByinfo(int num, int value) {
+		// 아이디 출력 -> 0
+		// 이메일 출력 -> 1
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		String result = null;
+		String sql = null;
 
 		try {
 			conn = getConnection();
 
-			String sql = "SELECT * FROM memberinfo WHERE member_value = ?";
+			if(num == 0) {
+				sql = "SELECT * FROM memberinfo WHERE member_value = ?";
+			}else {
+				sql = "SELECT member_Email FROM memberinfo WHERE member_value = ?";
+			}
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -140,7 +153,12 @@ public class MemberDAO {
 			ResultSet rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				result = rs.getString("member_Id");
+				if(num == 0){
+					result = rs.getString("member_Id");	
+				}
+				else {
+					result = rs.getString("member_Email");
+				}
 			}
 			
 			rs.close();
@@ -161,21 +179,34 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public int selectByIdValue(String id, String pw) {
-		// 아이디, 비밀번호 확인 후 고유값 전달
+	public int selectByIdValue(String id, String pw, String email) {
+		// 아이디, 비밀번호, 이메일 확인 후 고유값 전달
+		// 입력할 값이 없을 땐 null을 입력해줌
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		int result = 0;
+		String SQL = null;
+		
+		if(email != null) {
+			SQL = "SELECT * FROM memberinfo WHERE member_Email = ?";
+			result = 1;
+		} else {
+			SQL = "SELECT member_value FROM memberinfo WHERE member_Id = ? AND member_Pw = ?";
+		}
 
 		try {
 			conn = getConnection();
 
-			String sql = "SELECT member_value FROM memberinfo WHERE member_Id = ? AND member_Pw = ?";
+			String sql = SQL;
 
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, id);
-			pstmt.setString(2, pw);
+			if(result == 1) {
+				pstmt.setString(1, email);
+			}else {
+				pstmt.setString(1, id);
+				pstmt.setString(2, pw);
+			}
 			
 			ResultSet rs = pstmt.executeQuery();
 			
@@ -200,163 +231,7 @@ public class MemberDAO {
 		
 		return result;
 	}
-	
-	public int selectByIdValue(String email) {
-		// 이메일 확인 후, 고유값 전달
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		int result = 0;
 
-		try {
-			conn = getConnection();
-
-			String sql = "SELECT * FROM memberinfo WHERE member_Email = ?";
-
-			pstmt = conn.prepareStatement(sql);
-
-			pstmt.setString(1, email);
-			
-			ResultSet rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				result = rs.getInt("member_value");
-			}
-			
-			rs.close();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (conn != null)
-					pstmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		return result;
-	}
-	
-	public boolean selectByEmail(String email) {
-		// 이메일 조회 조회
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		boolean result = false;
-
-		try {
-			conn = getConnection();
-
-			String sql = "SELECT * FROM memberinfo WHERE member_Email = ?";
-
-			pstmt = conn.prepareStatement(sql);
-
-			pstmt.setString(1, email);
-			
-			ResultSet rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				result = true;
-			}
-			
-			rs.close();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (conn != null)
-					pstmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		return result;
-	}
-	
-	public String selectByEmail(int value) {
-		// 이메일 조회 조회
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		String result = null;
-
-		try {
-			conn = getConnection();
-
-			String sql = "SELECT member_Email FROM memberinfo WHERE member_value = ?";
-
-			pstmt = conn.prepareStatement(sql);
-
-			pstmt.setInt(1, value);
-			
-			ResultSet rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				result = rs.getString("member_Email");
-			}
-			
-			rs.close();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (conn != null)
-					pstmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		return result;
-	}
-	
-	public boolean selectByvalue(int value) {
-		// 세션 확인을 위한 아이디 고유값 조회
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		boolean result = false;
-
-		try {
-			conn = getConnection();
-
-			String sql = "SELECT * FROM memberinfo WHERE member_value = ?";
-
-			pstmt = conn.prepareStatement(sql);
-
-			pstmt.setInt(1, value);
-			
-			ResultSet rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				result = true;
-			}
-			
-			rs.close();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (conn != null)
-					pstmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		return result;
-	}
-	
 	public void loginupdate(LocalDateTime date, int value) {
 		// 로그인 날짜 갱신
 		Connection conn = null;

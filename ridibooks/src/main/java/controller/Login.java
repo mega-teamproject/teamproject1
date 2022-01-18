@@ -24,11 +24,11 @@ public class Login extends HttpServlet {
 		// 데이터 가져옴
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		int value = memberdao.selectByIdValue(id, pw);
-		String email = memberdao.selectByEmail(value);
+		int value = memberdao.selectByIdValue(id, pw, null);
+		String email = memberdao.selectByinfo(1, value);
 		LocalDateTime loginDate = LocalDateTime.now();
 		
-		if(memberdao.selectById(id)) {
+		if(memberdao.selectByexist(id)) {
 			if(value != 0) {
 				response.setStatus(201);
 				System.out.println("로그인 성공");
