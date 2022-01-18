@@ -22,8 +22,8 @@ public class ResetPw extends HttpServlet {
 		String email = request.getParameter("email");
 		
 		
-		if(memberdao.selectById(id)) {
-			if(memberdao.selectByEmail(email)) {
+		if(memberdao.selectByexist(id)) {
+			if(memberdao.selectByexist(email)) {
 				System.out.println("비밀번호 변경 페이지로 이동");
 //				response.sendRedirect("");					// 새로운 비밀번호 입력하고 변경하는 페이지 URL ( 아직 미정 )
 			}else {

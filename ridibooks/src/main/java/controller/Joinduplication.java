@@ -81,7 +81,7 @@ public class Joinduplication extends HttpServlet {
 		// 인스턴스 생성
 		MemberDAO memberDAO = MemberDAO.getInstance();
 		// 아이디 중복 체크
-		if (memberDAO.selectById(id)) {
+		if (memberDAO.selectByexist(id)) {
 			System.out.println("아이디 중복");
 			response.setStatus(409);
 			response.sendRedirect("http://localhost/jsp/join2.jsp");
@@ -89,7 +89,7 @@ public class Joinduplication extends HttpServlet {
 			// 비밀번호 체크
 			if (pw.equals(pwCheck)) {
 				// 이메일 중복 체크
-				if (memberDAO.selectByEmail(email)) {
+				if (memberDAO.selectByexist(email)) {
 					System.out.println("이메일 중복");
 					response.setStatus(409);
 					response.sendRedirect("http://localhost/jsp/join2.jsp");

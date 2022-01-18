@@ -23,13 +23,13 @@ public class FindId extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		String email = request.getParameter("email");
-		int value = memberDAO.selectByIdValue(email);
+		int value = memberDAO.selectByIdValue(null, null, email);
 		String id = null;
 		
 		if (check.mailcheck(email)) {
 			if ( value != 0) {
 				response.setStatus(201);
-				id = idchange(memberDAO.selectById(value));
+				id = idchange(memberDAO.selectByinfo(0, value));
 				System.out.println(id);
 				session.setAttribute("id", id);
 				response.sendRedirect("/jsp/findId2.jsp");
