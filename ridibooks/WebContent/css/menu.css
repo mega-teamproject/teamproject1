@@ -250,10 +250,124 @@
       width: 1200px;
       margin: 30px auto;
       display: flex;
+      border: 1px solid #e6e8eb;
   }
+  .menu-wrapper section ul {
+    padding: 0;
+    margin: 0;
+  }
+  /* .menu-wrapper section .menu-list {
+    padding: 15px;
+  } */
   .menu-wrapper section h4 {
-      color: black;
+    color: black;
+    font-size: 14px;
+    margin: 0;
+  } 
+  .menu-wrapper section a {
+      color: #666;
+      font-size: 12px;
+      letter-spacing: -0.03em;
   }
+  .menu-wrapper section span {
+    display: block;
+  }
+  section .main-menu ul li a {
+    display: flex;
+    justify-content: space-between;
+  }
+  section .menu-list {
+    width: 180px;
+    border-right: 1px solid #c4d1de;
+  }
+  section .menu-list:last-child {
+    border-right: none;
+  }
+  section .sub-menu {
+    background-color: #ebf6ff;
+  }
+ 
+  .main-menu ul li {
+    padding: 10px 15px;
+    position: relative;
+  }
+  .main-menu ul li:first-child {
+    margin-top: 15px;
+  }
+  ul li.border-b {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c4d1de;
+  }
+  .main-menu ul li.border-b {
+    border-bottom: 1px solid #e6e8eb;
+    
+  }
+  .main-menu ul li span {
+    position: absolute;
+    right: 20px;
+    letter-spacing: -5px;
+    color: #1f8ce6;
+  }
+  .main-menu li.main-active {
+    background-color: #1f8ce6;
+  }
+  .main-menu li.main-active a span,
+  .main-menu li.main-active h4 {
+    color: white;
+  }
+  .main-menu ul li span.left-arrow {
+    right: 5px;
+    top: 12px;
+    color: #ebf6ff;
+    display: none;
+  }
+
+  .sub-menu {
+    padding: 20px 20px;
+  }
+  .sub-menu li {
+    padding: 3px 0;
+  }
+  .sub-menu li:hover a {
+    color: #1f8ce6;
+    font-weight: bold;
+  }
+
+  .genre {
+    margin-top: 15px;
+  }
+  .genre ul li {
+    margin: 3px 32px;
+  }
+  .genre ul li:hover a {
+    color: #1f8ce6;
+    font-weight: bold;
+  }
+  .genre ul li.btn {
+    background-color: #1f8ce6;
+    margin: 10px 20px 0 20px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    position: relative;
+  }
+  .genre ul li.btn:hover {
+    background-color: #0F5E9C;
+    cursor: pointer;
+  }
+  .genre ul li.btn a {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .genre ul li.btn span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    letter-spacing: -5px;
+  }
+
+
   .footer {
     background: #303538;
     color: white;
@@ -355,10 +469,10 @@
       margin: 0 auto;
       margin-bottom: 10px;
     }
-    section {
+    /* section {
       max-width: 1000px;
       margin: 0 auto;
-    }
+    } */
     .search h1 {
       font-size: 1.4em;
     }
