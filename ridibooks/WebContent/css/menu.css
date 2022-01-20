@@ -316,11 +316,16 @@
     color: white;
   }
   .main-menu ul li span.left-arrow {
+    display: none;
+  }
+  .main-menu ul li span.active-arrow {
     right: 5px;
     top: 12px;
     color: #ebf6ff;
-    display: none;
+    position: absolute;
+    display: block;
   }
+  
 
   .sub-menu {
     padding: 20px 20px;
@@ -331,6 +336,15 @@
   .sub-menu li:hover a {
     color: #1f8ce6;
     font-weight: bold;
+  }
+  /* .sub-menu .novel {
+    position: relative;
+  } */
+  .sub-menu .submenu-list {
+    display: none;
+  }
+  .sub-menu .active-sublist {
+    display: block;
   }
 
   .genre {
