@@ -477,8 +477,7 @@ section .title-shop a {
 }
 .book-intro p {
   font-size: 13px;
-  letter-spacing: -1.6px;
-  line-height: 25px;
+  letter-spacing: -1.2px;
 }
 .book-intro p span.invisible {
   display: none;

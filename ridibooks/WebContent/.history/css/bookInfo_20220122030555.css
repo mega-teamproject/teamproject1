@@ -475,11 +475,6 @@ section .title-shop a {
   display: block;
   margin-bottom: 5px;
 }
-.book-intro p {
-  font-size: 13px;
-  letter-spacing: -1.6px;
-  line-height: 25px;
-}
 .book-intro p span.invisible {
   display: none;
 }
@@ -487,10 +482,6 @@ section .title-shop a {
   float: right;
   background: transparent;
   border: none;
-  color: #4076b5;
-  letter-spacing: -1px;
-  font-size: 14px;
-  cursor: pointer;
 }
 .book-intro button.invisible {
   display: none;

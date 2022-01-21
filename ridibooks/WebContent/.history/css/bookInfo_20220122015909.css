@@ -381,9 +381,9 @@ section .title-shop a {
 }
 .sub-info {
   border: solid 4px #f2f4f5;
-  padding: 0 30px;
+  padding: 8px 15px;
   display: flex;
-  margin: 0 65px;
+  margin: 0 50px;
 }
 .sub-info p {
   margin: 0;
@@ -399,104 +399,9 @@ section .title-shop a {
 .sub-info ul {
   display: flex;
   flex-flow: column;
-  padding: 0;
 }
 .sub-info ul:first-child {
   margin-right: 40px;
-}
-.book-detail {
-  border-top: 1px solid #808991;
-  margin: 30px 10px;
-  padding: 20px 40px;
-}
-.announce {
-  border: 1px dotted #bbb;
-  background: #f4f4f4;
-  color: #333;
-  padding: 30px 40px;
-  margin-bottom: 80px;
-}
-.announce h4 {
-  font-size: 13px;
-  margin: 0;
-  margin-bottom: 8px;
-}
-.announce p {
-  font-size: 13px;
-  letter-spacing: -1.8px;
-  margin: 0;
-}
-.announce p span {
-  display: block;
-  margin-bottom: 5px;
-}
-.book-detail h3 {
-  color: #59667a;
-  border-bottom: 2px solid #7d8e9e;
-  padding-bottom: 5px;
-}
-.book-series ul {
-  padding: 0;
-}
-.book-series ul li {
-  border-bottom: 1px solid #d6e3f0;
-  margin: 8px 0;
-  position: relative;
-}
-.book-series ul li img {
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
-.book-series ul li a {
-  color: #525a61;
-  font-weight: bold;
-  font-size: 12px;
-  vertical-align: 29px;
-  margin-left: 10px;
-}
-.book-series ul li span {
-  position: absolute;
-  right: 5px;
-  top: 20px;
-  color: #bbb;
-}
-.book-series ul li a:hover span {
-  color: #1f8ce6;
-}
-.book-intro {
-  overflow: hidden;
-}
-.book-intro h4 {
-  font-size: 13px;
-  letter-spacing: -1px;
-  color: #333;
-}
-.book-intro h4 span {
-  display: block;
-  margin-bottom: 5px;
-}
-.book-intro p {
-  font-size: 13px;
-  letter-spacing: -1.6px;
-  line-height: 25px;
-}
-.book-intro p span.invisible {
-  display: none;
-}
-.book-intro button {
-  float: right;
-  background: transparent;
-  border: none;
-  color: #4076b5;
-  letter-spacing: -1px;
-  font-size: 14px;
-  cursor: pointer;
-}
-.book-intro button.invisible {
-  display: none;
-}
-.author {
-  clear: both;
 }
 
 .footer {
