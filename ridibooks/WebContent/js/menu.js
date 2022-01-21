@@ -39,20 +39,34 @@ $("html").on("click", function(e){
 $(".main-menu ul li").hover(function(e) {
     let $target = $(e.target);
     $(".main-menu ul li").removeClass("main-active");
-    $($target).addClass("main-active"); 
-    if($target == $("#main-novel")) {
-        $(".left-arrow").removeClass("active-arrow");
-        $("#main-arrow").addClass("active-arrow");
-        $(".submenu-list").removeClass("active-sublist");
-        $("#novel").addClass("active-sublist");
-    } else if($target == $("#biz-novel")) {
-        $(".left-arrow").removeClass("active-arrow");
-        $("#biz-arrow").addClass("active-arrow");
-        $(".submenu-list").removeClass("active-sublist");
-        $("#biz").addClass("active-sublist");
-    }
+    $target.addClass("main-active"); 
+    // console.log($target);
+    // console.log($("#main-novel"));
+    // console.log($(".left-arrow"));
+    // console.log($(".submenu-list"));
+    $(".left-arrow").removeClass("active-arrow");
+    $(".submenu-list").removeClass("active-sublist");
 
+    // $target을 사용해서 현재 마우스를 올린 li 태그의
+    // 자식의 자식들 중에서 마지막 자식을 보이도록 CSS를 설정한다.
+    // find() / $('ul').find('span:eq(0)');
+    let $span = $target.find("span.left-arrow");
+    $span.addClass("active-arrow");
+
+    // 현재 마우스를 올린 li 태그의 부모 태그로 올라가서
+    // 부모 태그의 자식들을 가져옴 childeren()
+    let $index = $target.index();
+    let $submenu = $(".sub-menu").children("div:eq(" + $index + ")");
+    $submenu.addClass("active-sublist");
+
+    // 가져온 자식 중에 현재 마우스를 올린 li 태그가 몇 번째 자식인지 알려주는 메서드를 사용해서
+    // 몇 번째 자식인지 파악 후 index()
+    // 그 몇 번째를 활용해 sub-menu div 몇 번째를 활성화
 }, function() {
     $(".main-menu ul li").removeClass("main-active");
+    $(".left-arrow").removeClass("active-arrow");
+    $(".submenu-list").removeClass("active-sublist");
     $(".fixed-active").addClass("main-active");
+    $("#main-arrow").addClass("active-arrow");
+    $("#novel").addClass("active-sublist");
 });
