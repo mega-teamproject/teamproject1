@@ -542,9 +542,6 @@ section .title-shop a {
   border-radius: 4px;
   border: 1px solid #158cee;
 }
-.author-profile button.new-alarm:hover {
-  background: #ebf6ff;
-}
 .author-profile ul {
   padding: 0;
 }

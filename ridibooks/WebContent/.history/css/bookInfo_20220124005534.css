@@ -517,59 +517,13 @@ section .title-shop a {
 }
 .author-profile a {
   display: flex;
-  text-decoration: none;
-}
-.author-profile a:hover h3,
-.author-profile a:hover span {
-  color: #158cee;
 }
 .author-profile h3 {
   border-bottom: none;
-  color: #333;
 }
-.author-profile a span {
+.author-profile span {
   display: block;
-  margin-left: 5px;
-  font-size: 14px;
-  line-height: 60px;
-  color: #999;
-}
-.author-profile button {
-  background: white;
-  padding: 5px 20px;
-  color: #158cee;
-  font-weight: bold;
-  border-radius: 4px;
-  border: 1px solid #158cee;
-}
-.author-profile button.new-alarm:hover {
-  background: #ebf6ff;
-}
-.author-profile ul {
-  padding: 0;
-}
-.author-profile ul li {
-  font-size: 13px;
-  color: #808991;
-}
-.author-profile ul li span.intro-detail {
-  color: #333;
-  margin-left: 5px;
-}
-.update {
-  text-align: right;
-  font-size: 13px;
-  color: #808991;
-}
-.update button {
-  padding: 2px 10px;
-  font-size: 11px;
-  color: #808991;
-  border: 1px solid #d1d5d9;
-  letter-spacing: -1px;
-}
-.update button i {
-  margin-right: 5px;
+  vertical-align: 11px;
 }
 
 .footer {
