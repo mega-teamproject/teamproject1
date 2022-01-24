@@ -14,8 +14,8 @@
 		</div>
 	</header>
 	<div class="relative">
-		<input type="text" placeholder="제목, 저자, 출판사 검색" /> <span><i
-			class="fas fa-search"></i> </span>
+		<input type="text" name="q" value = "" onkeypress="if(window.event.keyCode==13){test()}" placeholder="제목, 저자, 출판사 검색" /> 
+			<span><i class="fas fa-search"></i></span>
 	</div>
 	<nav>
 		<ul>
