@@ -368,5 +368,11 @@
       
       <%@ include file="footer.jsp" %>
     </div>
+    
+    <script type="text/javascript">
+    	function test() {
+			location.href = "/booksearch";
+    	}
+    </script>
   </body>
 </html>
