@@ -685,12 +685,9 @@ button.invisible {
   font-size: 13px;
   color: #333;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
-  margin: 0;
 }
 .best ul {
   padding: 0;
-  margin: 0;
 }
 .best ul li {
   border-bottom: 1px solid #ddd;
@@ -728,7 +725,7 @@ button.invisible {
   margin-right: 15px;
 }
 .best a p span.last-span {
-  margin-right: 9px;
+  margin-right: 8px;
 }
 
 .footer {

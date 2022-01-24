@@ -685,12 +685,9 @@ button.invisible {
   font-size: 13px;
   color: #333;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
-  margin: 0;
 }
 .best ul {
   padding: 0;
-  margin: 0;
 }
 .best ul li {
   border-bottom: 1px solid #ddd;
@@ -701,7 +698,6 @@ button.invisible {
   padding: 5px;
   font-size: 11px;
   color: #666;
-  cursor: pointer;
 }
 .best ul li button:hover {
   color: #333;
@@ -709,10 +705,6 @@ button.invisible {
 }
 .best a {
   color: #666;
-  letter-spacing: -1px;
-}
-.best a:hover {
-  color: #1f8ce6;
 }
 .best a p {
   width: 170px;
@@ -724,11 +716,6 @@ button.invisible {
 .best a p span {
   color: #e64938;
   font-weight: bold;
-  display: inline-block;
-  margin-right: 15px;
-}
-.best a p span.last-span {
-  margin-right: 9px;
 }
 
 .footer {

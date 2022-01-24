@@ -685,12 +685,10 @@ button.invisible {
   font-size: 13px;
   color: #333;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
-  margin: 0;
+  padding-bottom: 10px;
 }
 .best ul {
   padding: 0;
-  margin: 0;
 }
 .best ul li {
   border-bottom: 1px solid #ddd;
