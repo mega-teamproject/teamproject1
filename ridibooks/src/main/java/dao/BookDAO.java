@@ -32,37 +32,76 @@ public class BookDAO {
 		return conn;
 	}
 	
-	public ArrayList<BookDTO> bookSearch(String q) {
+//	public ArrayList<BookDTO> bookSearch(String q) {
+//		// 도서 검색 결과 조회
+//		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
+//		Connection conn = null;
+//		PreparedStatement pstmt = null;
+//
+//		try {
+//			conn = getConnection();
+//
+//			String sql = "SELECT * FROM book WHERE b_Name LIKE '?'";
+//
+//			pstmt = conn.prepareStatement(sql);
+//
+//			pstmt.setString(1, "%"+q+"%");
+//			
+//			ResultSet rs = pstmt.executeQuery();
+//			
+//			while(rs.next()) {
+//				BookDTO bookdto = new BookDTO();
+//				
+//				bookdto.setBname(rs.getString("b_Name"));
+//				bookdto.setAuthor(rs.getInt("a_value"));
+//				bookdto.setBgrade(rs.getInt("b_Grade"));
+//				bookdto.setReview(rs.getInt("review_value"));
+//				bookdto.setBpublisher(rs.getString("b_Publisher"));
+//				bookdto.setCategory(rs.getInt("ct_value"));
+//				bookdto.setTotal(rs.getInt("b_Total"));
+//				bookdto.setBinfomation(rs.getString("b_Infomation"));
+//				bookdto.setBprice(rs.getInt("b_Price"));
+//				
+//				list.add(bookdto);
+//			}
+//			
+//			rs.close();
+//			
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} finally {
+//			try {
+//				if (pstmt != null)
+//					pstmt.close();
+//				if (conn != null)
+//					pstmt.close();
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		
+//		return list;
+//	}
+	
+	public String bookSearch(String q) {
 		// 도서 검색 결과 조회
-		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
+		String result = null;
 
 		try {
 			conn = getConnection();
 
-			String sql = "SELECT * FROM book WHERE b_Name LIKE '%?%'";
+			String sql = "SELECT * FROM book WHERE b_Name LIKE ?";
 
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, q);
+			pstmt.setString(1, "%"+q+"%");
 			
 			ResultSet rs = pstmt.executeQuery();
 			
-			while(rs.next()) {
-				BookDTO bookdto = new BookDTO();
-				
-				bookdto.setBname(rs.getString("b_Name"));
-				bookdto.setAuthor(rs.getInt("a_value"));
-				bookdto.setBgrade(rs.getInt("b_Grade"));
-				bookdto.setReview(rs.getInt("review_value"));
-				bookdto.setBpublisher(rs.getString("b_Publisher"));
-				bookdto.setCategory(rs.getInt("ct_value"));
-				bookdto.setTotal(rs.getInt("b_Total"));
-				bookdto.setBinfomation(rs.getString("b_Infomation"));
-				bookdto.setBprice(rs.getInt("b_Price"));
-				
-				list.add(bookdto);
+			if(rs.next()) {
+				result = rs.getString("b_Name");
 			}
 			
 			rs.close();
@@ -80,8 +119,6 @@ public class BookDAO {
 			}
 		}
 		
-		return list;
+		return result;
 	}
-	
-	
 }
