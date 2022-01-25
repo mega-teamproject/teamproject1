@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header {
+  background-image: url(../images/header-bg.png);
+  background-size: cover;
+  background-color: #1f8ce6;
+  background-position: 50% calc(50% + 103px);
+  background-repeat: no-repeat;
+  height: 252px;
+  padding: 62px 20px 0 20px;
+  text-align: center;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  border-right: 1px solid #eee;
+  height: 15px;
+}
+header nav ul li a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 15px;
+}
+header nav ul li a span.book_logo {
+  width: 89px;
+  height: 17px;
+  vertical-align: top;
+  display: inline-block;
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+  background-image: url(../images/ridibooks.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+header nav ul li a span.select_logo {
+  width: 89px;
+  height: 17px;
+  vertical-align: top;
+  display: inline-block;
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+  background-image: url(../images/ridiselect.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+header nav ul li a span.paper_logo {
+  width: 89px;
+  height: 17px;
+  vertical-align: top;
+  display: inline-block;
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+  background-image: url(../images/ridipaper.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+header nav ul li a span.indent {
+  text-indent: -9999px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+}
