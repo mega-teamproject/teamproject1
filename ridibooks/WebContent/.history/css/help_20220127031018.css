@@ -225,10 +225,6 @@ section {
   background-color: white;
   border: 1px solid #1f8ce6;
   border-radius: 4px;
-  cursor: pointer;
-}
-.method ul button:hover {
-  background-color: #ebf6ff;
 }
 .method ul button span {
   color: #1f8ce6;
