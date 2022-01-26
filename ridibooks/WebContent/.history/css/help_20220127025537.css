@@ -181,9 +181,6 @@ section {
 .FAQ h4 {
   margin-bottom: 30px;
 }
-.FAQ li {
-  margin-bottom: 30px;
-}
 .FAQ a {
   color: #666;
   font-size: 16px;
@@ -194,7 +191,7 @@ section {
   border-top: 1px solid #eee;
 }
 .FAQ p {
-  margin: 10px 0;
+  margin-top: 10px;
   font-size: 15px;
 }
 .FAQ button {
@@ -202,37 +199,6 @@ section {
   background-color: #1f8ce6;
   color: white;
   font-size: 12px;
-  padding: 6px 15px;
+  padding: 5px 10px;
   border-radius: 15px;
-}
-
-.method {
-  margin-top: 50px;
-}
-.method h4 {
-  margin-bottom: 30px;
-}
-.method ul {
-  display: flex;
-}
-.method ul li {
-  flex: 0 0 24%;
-}
-.method ul button {
-  padding: 20px;
-  width: 90%;
-  height: 150px;
-  background-color: white;
-  border: 1px solid #1f8ce6;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.method ul button:hover {
-  background-color: #ebf6ff;
-}
-.method ul button span {
-  color: #1f8ce6;
-  font-weight: bold;
-  font-size: 16px;
-  display: block;
 }
