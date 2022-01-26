@@ -35,3 +35,22 @@ $("html").on("click", function(e){
         $(".recent-search").css("display", "none");
     }
 });
+
+$(".order a").on("click", function(e) {
+    e.preventDefault();
+    $(".order a.order-active").removeClass("order-active");
+    $(e.target).addClass("order-active");
+});
+
+$(".view button").on("click", function(e) {
+    $(".view button.view-active").removeClass("view-active");
+    $(this).addClass("view-active");
+    console.log($(this));
+    if($(this).hasId("view-detail")) {
+        $(".book-list2").css("display", "none");
+        $(".book-list1").css("display", "block");
+    } else {
+        $(".book-list1").css("display", "none");
+        $(".book-list2").css("display", "block");
+    }
+});
