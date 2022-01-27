@@ -45,12 +45,63 @@ $(".order a").on("click", function(e) {
 $(".view button").on("click", function(e) {
     $(".view button.view-active").removeClass("view-active");
     $(this).addClass("view-active");
-    console.log($(this));
-    if($(this).hasId("view-detail")) {
+    console.log($(this).attr("id"));
+    if($(this).attr("id") == "view-simple") {
         $(".book-list2").css("display", "none");
         $(".book-list1").css("display", "block");
     } else {
         $(".book-list1").css("display", "none");
         $(".book-list2").css("display", "block");
+    }
+});
+
+$(".pagination a").on("click", function() {
+    $(".pagination .active").removeClass("active");
+    $(this).parent().addClass("active");
+});
+$(".pagination .next").off("click")
+$(".pagination .next").on("click", function() {
+    let next = $(this).attr("next");
+    next = parseInt(next);
+
+    for(let i=0; i<5; i++){
+        let y = i+2;
+        let z = next + i;
+        $(".pagination li:nth-child(" + y + ") a").text(z);
+
+    }
+
+    $(".pagination .active").removeClass("active");
+    $(".pagination li:nth-child(2)").addClass("active");
+
+    $(this).attr("next", next+5);
+    $(".pagination .prev").attr("prev", next-1);
+    $(".pagination li:first-child").css("visibility", "visible");
+
+    if(next == 46) {
+        $(".pagination li:last-child").css("visibility", "hidden");
+    }
+});
+$(".pagination .prev").off("click")
+$(".pagination .prev").on("click", function() {
+    let prev = $(this).attr("prev");
+    prev = parseInt(prev);
+
+    for(let i=0; i<5; i++){
+        let y = 6-i;
+        let z = prev - i;
+        $(".pagination li:nth-child(" + y + ") a").text(z);
+
+    }
+
+    $(".pagination .active").removeClass("active");
+    $(".pagination li:nth-child(6)").addClass("active");
+
+    $(this).attr("prev", prev-5);
+    $(".pagination .next").attr("next", prev+1);
+    $(".pagination li:last-child").css("visibility", "visible");
+
+    if(prev == 5) {
+        $(".pagination li:first-child").css("visibility", "hidden");
     }
 });
