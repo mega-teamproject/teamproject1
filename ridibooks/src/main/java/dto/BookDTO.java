@@ -12,10 +12,12 @@ public class BookDTO {
 	private String binfomation; // 내용
 	private int bprice; // 가격
 
+	
 	@Override
 	public String toString() {
-		return bookimg + "&" + bname + "&" + author + "&" + bgrade + "&" + review + "&" + bpublisher + "&" + category
-				+ "&" + total + "&" + binfomation + "&" + bprice;
+		return "bookimg:" + bookimg + ", bname:" + bname + ", author:" + author + ", bgrade:" + bgrade
+				+ ", review:" + review + ", bpublisher:" + bpublisher + ", category:" + category + ", total:" + total
+				+ ", binfomation:" + binfomation + ", bprice:" + bprice;
 	}
 
 	public String getBookimg() {
