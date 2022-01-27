@@ -151,7 +151,7 @@
   justify-content: center;
 }
 .pagination ul li {
-  border: 1px solid #999;
+  border: 1px solid #d1d5d9;
   display: inline-block;
   border-radius: 4px;
   font-weight: bold;
@@ -167,9 +167,11 @@
   border-radius: 0;
   border-right: none;
 }
+.pagination ul li:nth-child(3) {
+  border-left: none;
+}
 .pagination ul li:nth-child(2) {
   border-radius: 4px 0 0 4px;
-  border-right: none;
 }
 .pagination ul li:nth-child(6) {
   border-radius: 0 4px 4px 0;
@@ -179,8 +181,22 @@
 }
 .pagination a {
   min-width: 20px;
-  color: #666;
+  color: #808991;
   padding: 6px 15px;
   text-align: center;
   line-height: 28px;
+}
+.pagination li:hover {
+  background-color: #f2f4f5;
+}
+.pagination li.active {
+  background-color: #1f8ce6;
+  border-color: #0e7bc3;
+}
+.pagination li.active a {
+  color: white;
+  cursor: default;
+}
+.pagination li:first-child {
+  visibility: hidden;
 }
