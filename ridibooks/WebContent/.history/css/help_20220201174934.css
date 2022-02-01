@@ -143,15 +143,6 @@ section {
 @media screen and (min-width: 768px) {
   .instructions ul.announceBtn {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .instructions ul.announceBtn li {
-    flex: 0 0 32%;
-    margin-right: 10px;
-  }
-  .instructions ul.announceBtn li:last-child {
-    margin-right: 0;
   }
 }
 .instructions ul.announceBtn li button:hover {
