@@ -153,6 +153,12 @@ section {
   .instructions ul.announceBtn li:last-child {
     margin-right: 0;
   }
+  .service-FAQ ul {
+    display: flex;
+  }
+  .service-FAQ ul li {
+    flex: 0 0 32%;
+  }
 }
 .instructions ul.announceBtn li button:hover {
   color: #0077d9;

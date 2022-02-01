@@ -89,20 +89,13 @@ header h2 {
 header form {
   max-width: 600px;
   margin: 0 auto;
-  position: relative;
 }
-.header input {
+header input {
   padding: 12px 40px;
   width: 100%;
   border-radius: 6px;
   border: none;
   font-size: 14px;
-}
-.header form span {
-  position: absolute;
-  color: #999;
-  left: 12px;
-  top: 8px;
 }
 
 section {
@@ -123,9 +116,6 @@ section {
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
-.instructions ul.announce {
-  margin-bottom: 15px;
-}
 .instructions ul.announceBtn li {
   padding: 5px 0;
 }
@@ -139,20 +129,6 @@ section {
   padding: 15px 0;
   cursor: pointer;
   border-radius: 5px;
-}
-@media screen and (min-width: 768px) {
-  .instructions ul.announceBtn {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .instructions ul.announceBtn li {
-    flex: 0 0 32%;
-    margin-right: 10px;
-  }
-  .instructions ul.announceBtn li:last-child {
-    margin-right: 0;
-  }
 }
 .instructions ul.announceBtn li button:hover {
   color: #0077d9;
@@ -281,12 +257,8 @@ section {
   align-items: center;
 }
 .ask .ask-box a {
-  width: 130px;
+  width: 230px;
   height: 200px;
-}
-.ask .ask-box a:hover {
-  color: #1f8ce6;
-  background-color: #ebf6ff;
 }
 .ask .ask-box a div {
   margin: 50px 30px;
@@ -294,74 +266,10 @@ section {
 }
 .ask .ask-box a div span {
   display: block;
-  color: #1f8ce6;
-  font-weight: bold;
-  font-size: 14px;
-  margin-top: 10px;
-  letter-spacing: -1px;
 }
 .ask .partner-ask {
   width: 48%;
 }
 footer {
   margin-top: 100px;
-  background-color: #2f3142;
-}
-.footer-wrapper {
-  padding: 50px 30px;
-}
-.footer-wrapper a {
-  color: white;
-  font-weight: bold;
-  letter-spacing: -1px;
-}
-.footer-nav ul {
-  display: flex;
-  font-size: 14px;
-  letter-spacing: -1px;
-}
-.footer-nav ul li {
-  margin-right: 20px;
-  color: #b8bfc4;
-  position: relative;
-}
-.footer-nav ul li::before {
-  display: block;
-  content: "";
-  width: 3px;
-  height: 3px;
-  background-color: #b8bfc4;
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  margin-top: -1px;
-  border-radius: 3px;
-}
-.footer-nav ul li:first-child::before {
-  content: none;
-}
-.footer-info a {
-  display: block;
-  font-size: 14px;
-  margin: 40px 0;
-}
-.footer-terms ul {
-  display: flex;
-}
-.footer-terms ul li {
-  margin-right: 15px;
-}
-.footer-terms ul a {
-  color: #5f696f;
-  font-size: 11px;
-}
-.footer-terms ul a.focus {
-  color: #9ea7ad;
-}
-.corp {
-  margin-top: 15px;
-}
-.corp a {
-  color: #5f696f;
-  font-size: 11px;
 }
