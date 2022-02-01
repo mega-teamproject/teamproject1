@@ -89,20 +89,18 @@ header h2 {
 header form {
   max-width: 600px;
   margin: 0 auto;
-  position: relative;
 }
-.header input {
+header input {
   padding: 12px 40px;
   width: 100%;
   border-radius: 6px;
   border: none;
   font-size: 14px;
+  position: relative;
 }
 .header form span {
   position: absolute;
   color: #999;
-  left: 12px;
-  top: 8px;
 }
 
 section {
@@ -123,9 +121,6 @@ section {
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
-.instructions ul.announce {
-  margin-bottom: 15px;
-}
 .instructions ul.announceBtn li {
   padding: 5px 0;
 }
@@ -139,20 +134,6 @@ section {
   padding: 15px 0;
   cursor: pointer;
   border-radius: 5px;
-}
-@media screen and (min-width: 768px) {
-  .instructions ul.announceBtn {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .instructions ul.announceBtn li {
-    flex: 0 0 32%;
-    margin-right: 10px;
-  }
-  .instructions ul.announceBtn li:last-child {
-    margin-right: 0;
-  }
 }
 .instructions ul.announceBtn li button:hover {
   color: #0077d9;
