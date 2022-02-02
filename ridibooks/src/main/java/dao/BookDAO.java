@@ -66,8 +66,6 @@ public class BookDAO {
 				list.add(bookdto);
 			}
 			
-			return list;
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -81,8 +79,6 @@ public class BookDAO {
 			}
 		}
 		
-		return null;
+		return list;
 	}
-	
-	
 }
