@@ -1,0 +1,145 @@
+ul {
+    padding: 0;
+}
+.menu {
+    margin: 0;
+}
+.menu ul {
+    margin: 12px 0;
+}
+.menu ul li:first-child {
+    margin-left: 25px;
+}
+.section {
+    width: 1000px;
+    margin: 0 auto;
+}
+section {
+    margin-left: 80px;
+}
+section h3 {
+    color: #333;
+    font-size: 21px;
+    margin: 25px 0;
+}
+.main .main-nav ul {
+    display: flex;
+    padding: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d1d5d9;
+}
+.main .main-nav ul li {
+    margin-right: 20px;
+    height: 12px;
+}
+.main .main-nav a {
+    color: #808991;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.main .main-nav a:hover {
+    color: #636c73;
+    border-bottom: 3px solid #636c73;
+}
+.main .main-nav a.acitve {
+    color: #40474d;
+}
+.main .main-nav a.acitve::after {
+    display: block;
+    content: "";
+    height: 3px;
+    background-color: #1f8ce6;
+}
+.main .main-contents img {
+    display: block;
+    width: 320px;
+    border: 1px solid #b3b3b3;
+}
+.main-contents li {
+    display: flex;
+    margin-bottom: 25px;
+}
+.main-contents .main-text {
+    margin-left: 20px;
+}
+.main-contents .main-text a {
+    color: #333;
+}
+.main-contents .main-text p {
+    color: #666;
+    font-size: 13px;
+}
+.main-contents .main-text p span {
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 8px;
+}
+.main-contents .main-text p span.invisible {
+    visibility: hidden;
+}
+.main-contents .main-text h4 {
+    margin: 0;
+    font-size: 20px;
+}
+.main-contents .main-text a:hover {
+    color: #1f8ce6;
+}
+.last-contents {
+    display: none;
+}
+.pagination {
+    width: 100%;
+    margin-bottom: 100px;
+}
+.pagination ul {
+    display: flex;
+    justify-content: center;
+}
+.pagination ul li {
+    border: 1px solid #d1d5d9;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+}
+.pagination ul li:first-child {
+    margin-right: 5px;
+}
+.pagination ul li:nth-child(2) {
+    border-radius: 4px 0 0 4px;
+}
+.pagination ul li:nth-child(3) {
+    border-radius: 0 4px 4px 0;
+}
+.pagination ul li:last-child {
+    margin-left: 5px;
+}
+.pagination a {
+    min-width: 20px;
+    color: #808991;
+    padding: 6px 15px;
+    text-align: center;
+    line-height: 28px;
+}
+.pagination li:hover {
+    background-color: #f2f4f5;
+}
+.pagination li.active {
+    background-color: #1f8ce6;
+    border-color: #0e7bc3;
+}
+.pagination li.active a {
+    color: white;
+    cursor: default;
+}
+.pagination li:first-child {
+    visibility: hidden;
+}
+@media screen and (min-width : 1000px) {
+    section {
+        margin-left: 20px;
+    }
+}
