@@ -13,24 +13,26 @@ import javax.servlet.http.HttpServletResponse;
 import dao.BookDAO;
 import dto.BookDTO;
 
-@WebServlet("/booksearch")
-public class BookSearch extends HttpServlet {
+@WebServlet("/infomation")
+public class Infomation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 
 		BookDAO bookdao = new BookDAO();
-		String q = request.getParameter("q");
-		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
+		int num = Integer.parseInt(request.getParameter("num"));
+		ArrayList<BookDTO> info = new ArrayList<BookDTO>();
 
-		list = bookdao.bookSearch(q, 0);
+		info = bookdao.bookSearch(null, num);
 
-		request.setAttribute("list", list);
+		request.setAttribute("info", info);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/search.jsp");
+		System.out.println(info);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/bookInfo.jsp");
 		rd.forward(request, response);
+	
 	}
 }

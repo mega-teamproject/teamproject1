@@ -1,3 +1,35 @@
+function cart() {
+	var cart = document.getElementById("cart");
+	var bookvalue = $("#bookname").attr("value")
+	
+	console.log($(cart).val());
+	
+	if( $(cart).val() == '0' ) {
+	  $(cart).val('1');
+	  location.href="/bookadd?cart="+bookvalue+"&heart=0";
+	}
+	else if($(cart).val() == '1'){
+	  $(cart).val('0');
+	  location.href="/bookadd?cart="+bookvalue+"&heart=0";
+	}
+}
+
+function heart() {
+	var heart = document.getElementById("heart");
+	var bookvalue = $("#bookname").attr("value")
+	
+	console.log($(heart).val());
+	
+	if( $(heart).val() == '0' ) {
+	  $(heart).val('1');
+	  location.href="/bookadd?heart="+bookvalue+"&cart=0";
+	}
+	else if($(heart).val() == '1'){
+	  $(heart).val('0');
+	  location.href="/bookadd?heart="+bookvalue+"&cart=0";
+	}
+}
+
 $(".footer-info a").on("click", function () {
   let show = $(".footer-info p.invisible");
   if (show.css("display") == "none") {

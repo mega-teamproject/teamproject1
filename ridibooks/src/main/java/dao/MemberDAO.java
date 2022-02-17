@@ -75,7 +75,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -120,7 +120,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -165,7 +165,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -219,7 +219,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -265,7 +265,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -297,7 +297,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -327,7 +327,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -354,7 +354,7 @@ public class MemberDAO {
 				if (pstmt != null)
 					pstmt.close();
 				if (conn != null)
-					pstmt.close();
+					conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

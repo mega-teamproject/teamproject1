@@ -1,6 +1,7 @@
 package dto;
 
 public class BookDTO {
+	private int bookvalue; // 도서 고유번호
 	private String bookimg; // 책 이미지
 	private String bname; // 제목
 	private int author; // 저자
@@ -12,12 +13,19 @@ public class BookDTO {
 	private String binfomation; // 내용
 	private int bprice; // 가격
 
-	
 	@Override
 	public String toString() {
-		return "bookimg:" + bookimg + ", bname:" + bname + ", author:" + author + ", bgrade:" + bgrade
-				+ ", review:" + review + ", bpublisher:" + bpublisher + ", category:" + category + ", total:" + total
-				+ ", binfomation:" + binfomation + ", bprice:" + bprice;
+		return "bookvalue:" + bookvalue + ", bookimg:" + bookimg + ", bname:" + bname + ", author:" + author + ", bgrade:" + bgrade + ", review:"
+				+ review + ", bpublisher:" + bpublisher + ", category:" + category + ", total:" + total
+				+ ", binfomation:" + binfomation + ", bprice:" + bprice + "/";
+	}
+
+	public int getBookvalue() {
+		return bookvalue;
+	}
+
+	public void setBookvalue(int bookvalue) {
+		this.bookvalue = bookvalue;
 	}
 
 	public String getBookimg() {
