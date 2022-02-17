@@ -30,7 +30,6 @@ function heart() {
 	}
 }
 
-
 $(".footer-info a").on("click", function () {
   let show = $(".footer-info p.invisible");
   if (show.css("display") == "none") {

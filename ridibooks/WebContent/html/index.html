@@ -24,6 +24,22 @@
           <div class="search">
             <a href="index.html"><h1>RIDIBOOKS</h1></a>
             <a href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
+            <div class="relative response">
+              <input id="search_input" type="text" placeholder="제목, 저자, 출판사 검색" />
+              <span><i class="fas fa-search"></i> </span>
+              <div class="recent-search">
+                <p>최근 검색어</p>
+                <div class="search-contents">
+                  <p>최근 검색어 내역이 없습니다.</p>
+                </div>
+                <div class="saveBtn">
+                  <a href="#">
+                    검색어 저장 끄기
+                  </a>
+                </div>
+              </div>
+            </div>
+            
           </div>
           <div class="joinLogin">
             <button class="borderBtn btn" onclick="location.href='join1.html'">
@@ -34,7 +50,7 @@
             </button>
           </div>
         </header>
-        <div class="relative">
+        <div class="relative full-input">
           <input type="text" placeholder="제목, 저자, 출판사 검색" />
           <span><i class="fas fa-search"></i> </span>
         </div>
@@ -53,20 +69,21 @@
               <a href="#">검색어 저장 끄기</a>
             </div>
           </div>
+          <div class="bg-black"></div>
         </div>
         <nav>
           <ul>
             <li class="active">
-              <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
+              <a class="a-active" href="index.html"><i class="fas fa-home fa-lg"></i><span>홈</span></a>
             </li>
             <li>
-              <a href="alarm.html"><i class="far fa-bell fa-lg"></i></a>
+              <a href="alarm.html"><i class="far fa-bell fa-lg"></i><span>알림</span></a>
             </li>
             <li>
-              <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+              <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span>카트</span></a>
             </li>
             <li>
-              <a href="myridi.html"><i class="far fa-user fa-lg"></i></a>
+              <a href="myridi.html"><i class="far fa-user fa-lg"></i><span>마이리디</span></a>
             </li>
           </ul>
         </nav>
@@ -86,95 +103,119 @@
         </nav>
       </div>
       <div class="mainSlide">
-        <div class="slider">
-          <div class="item">
-            <a href="#"><img src="../images/mainslide1.jpg" alt="" /></a>
+        <section class="first-sec">
+          <div class="slider">
+            <div class="item">
+              <a href="#"><img src="../images/mainslide1.jpg" alt="" /></a>
+            </div>
+            <div class="item active-slide">
+              <a href="#"><img src="../images/mainslide2.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide3.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide4.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide5.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide6.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide7.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide8.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide9.jpg" alt="" /></a>
+            </div>
+            <div class="item">
+              <a href="#"><img src="../images/mainslide10.jpg" alt="" /></a>
+            </div>
           </div>
-          <div class="item active-slide">
-            <a href="#"><img src="../images/mainslide2.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide3.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide4.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide5.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide6.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide7.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide8.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide9.jpg" alt="" /></a>
-          </div>
-          <div class="item">
-            <a href="#"><img src="../images/mainslide10.jpg" alt="" /></a>
-          </div>
-        </div>
+        </section>
       </div>
       <div class="icons">
         <ul>
-          <div>
-            <li id="color1">
-              <a href="#"><img src="../images/+new.png" /></a>
-            </li>
-            <!-- <span>신간</span> -->
-          </div>
-          <div>
-            <li id="color2">
-              <a href="#"><img src="../images/+gift.png" /></a>
-            </li>
-            <!-- <span>이벤트</span> -->
-          </div>
-          <div>
-            <li id="color3">
-              <a href="#"><img src="../images/+best.png" /></a>
-            </li>
-            <!-- <span>베스트셀러</span> -->
-          </div>
-          <div>
-            <li id="color4">
-              <a href="#"><img src="../images/+rent.png" /></a>
-            </li>
-            <!-- <span>대여전</span> -->
-          </div>
-          <div>
-            <li id="color5">
-              <a href="#"><img src="../images/+sale.png" /></a>
-            </li>
-            <!-- <span>지금<br>인기세트</span> -->
-          </div>
-          <div>
-            <li id="color6">
-              <a href="#"><img src="../images/+calendar.png" /></a>
-            </li>
-            <!-- <span>신간<br>캘린더</span> -->
-          </div>
-          <div>
-            <li id="color7">
-              <a href="#"><img src="../images/+roadsign.png" /></a>
-            </li>
-            <!-- <span>일반<br>혜택지도</span> -->
-          </div>
-          <div>
-            <li id="color8">
-              <a href="#"><img src="../images/+coupon.png" /></a>
-            </li>
-            <!-- <span>위클리<br>쿠폰</span> -->
-          </div>
-          <div>
-            <li id="color9">
-              <a href="#"><img src="../images/+paperpro.png" /></a>
-            </li>
-            <!-- <span>리디페이퍼</span> -->
-          </div>
+          <li>
+            <a href="#">
+              <div  id="color1">
+              <img src="../images/+new.png" />
+              </div>
+              <span>신간</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color2">
+              <img src="../images/+gift.png" />
+              </div>
+              <span>이벤트</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color3">
+              <img src="../images/+best.png" />
+              </div>
+              <span>베스트셀러</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color4">
+              <img src="../images/+rent.png" />
+              </div>
+              <span>대여전</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color5">
+              <img src="../images/+sale.png" />
+              </div>
+              <span class="mobile">지금<br>인기세트</span>
+              <span class="desktop">지금 인기세트</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color6">
+              <img src="../images/+calendar.png" />
+              </div>
+              <span class="mobile">신간<br>캘린더</span>
+              <span class="desktop">신간 캘린더</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color7">
+              <img src="../images/+roadsign.png" />
+              </div>
+              <span class="mobile">일반<br>혜택지도</span>
+              <span class="desktop">일반 혜택지도</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color8">
+              <img src="../images/+coupon.png" />
+              </div>
+              <span class="mobile">위클리<br>쿠폰</span>
+              <span class="desktop">위클리 쿠폰</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div  id="color9">
+              <img src="../images/+paperpro.png" />
+              </div>
+              <span>리디페이퍼</span>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="newSlide">
@@ -200,9 +241,9 @@
         <section>
           <div class="clock">
             <i class="fas fa-clock"></i>
-            <span>00시 01분</span>
+            <span id="real-time">00시 01분</span>
           </div>
-          <h4>사람들이 지금 많이 읽고 있는 책</h4>
+          <p class="realTimeTitle">사람들이 지금 많이 읽고 있는 책</p>
           <div class="realTimeBookList-wrapper">
             <div class="realTimeBookList">
               <ul>
@@ -210,24 +251,24 @@
                   <a href="#"><img src="../images/신비한동물사전L.webp"></a>
                   <strong>1</strong>
                   <div class="bookInfo">
-                    <p>신비한 동물사전</p>
-                    <span>조앤.K.롤링</span>
+                    <a href="#"><p>신비한 동물사전</p></a>
+                    <a href="#"><span>조앤.K.롤링</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/신부이태석L.webp"></a>
                   <strong>2</strong>
                   <div class="bookInfo">
-                    <p>신부 이태석</p>
-                    <span>이충렬</span>
+                    <a href="#"><p>신부 이태석</p></a>
+                    <a href="#"><span>이충렬</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/슈퍼석세스L.webp"></a>
                   <strong>3</strong>
                   <div class="bookInfo noborder">
-                    <p>슈퍼 석세스</p>
-                    <span>댄 페냐</span>
+                    <a href="#"><p>슈퍼 석세스</p></a>
+                    <a href="#"><span>댄 페냐</span></a>
                   </div>
                 </li>
               </ul>
@@ -238,24 +279,24 @@
                   <a href="#"><img src="../images/신비한동물사전L.webp"></a>
                   <strong>1</strong>
                   <div class="bookInfo">
-                    <p>신비한 동물사전</p>
-                    <span>조앤.K.롤링</span>
+                    <a href="#"><p>신비한 동물사전</p></a>
+                    <a href="#"><span>조앤.K.롤링</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/신부이태석L.webp"></a>
                   <strong>2</strong>
                   <div class="bookInfo">
-                    <p>신부 이태석</p>
-                    <span>이충렬</span>
+                    <a href="#"><p>신부 이태석</p></a>
+                    <a href="#"><span>이충렬</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/슈퍼석세스L.webp"></a>
                   <strong>3</strong>
                   <div class="bookInfo noborder">
-                    <p>슈퍼 석세스</p>
-                    <span>댄 페냐</span>
+                    <a href="#"><p>슈퍼 석세스</p></a>
+                    <a href="#"><span>댄 페냐</span></a>
                   </div>
                 </li>
               </ul>
@@ -266,24 +307,24 @@
                   <a href="#"><img src="../images/신비한동물사전L.webp"></a>
                   <strong>1</strong>
                   <div class="bookInfo">
-                    <p>신비한 동물사전</p>
-                    <span>조앤.K.롤링</span>
+                    <a href="#"><p>신비한 동물사전</p></a>
+                    <a href="#"><span>조앤.K.롤링</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/신부이태석L.webp"></a>
                   <strong>2</strong>
                   <div class="bookInfo">
-                    <p>신부 이태석</p>
-                    <span>이충렬</span>
+                    <a href="#"><p>신부 이태석</p></a>
+                    <a href="#"><span>이충렬</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/슈퍼석세스L.webp"></a>
                   <strong>3</strong>
                   <div class="bookInfo noborder">
-                    <p>슈퍼 석세스</p>
-                    <span>댄 페냐</span>
+                    <a href="#"><p>슈퍼 석세스</p></a>
+                    <a href="#"><span>댄 페냐</span></a>
                   </div>
                 </li>
               </ul>
@@ -312,7 +353,7 @@
       </div>
       <div class="bestseller">
         <section>
-          <h4>베스트 셀러 > </h4>
+          <a href="#"><p>베스트 셀러 > </p></a>
           <div class="realTimeBookList-wrapper">
             <div class="realTimeBookList">
               <ul>
@@ -320,24 +361,24 @@
                   <a href="#"><img src="../images/신비한동물사전L.webp"></a>
                   <strong>1</strong>
                   <div class="bookInfo">
-                    <p>신비한 동물사전</p>
-                    <span>조앤.K.롤링</span>
+                    <a href="#"><p>신비한 동물사전</p></a>
+                    <a href="#"><span>조앤.K.롤링</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/신부이태석L.webp"></a>
                   <strong>2</strong>
                   <div class="bookInfo">
-                    <p>신부 이태석</p>
-                    <span>이충렬</span>
+                    <a href="#"><p>신부 이태석</p></a>
+                    <a href="#"><span>이충렬</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/슈퍼석세스L.webp"></a>
                   <strong>3</strong>
-                  <div class="bookInfo">
-                    <p>슈퍼 석세스</p>
-                    <span>댄 페냐</span>
+                  <div class="bookInfo noborder">
+                    <a href="#"><p>슈퍼 석세스</p></a>
+                    <a href="#"><span>댄 페냐</span></a>
                   </div>
                 </li>
               </ul>
@@ -348,24 +389,24 @@
                   <a href="#"><img src="../images/신비한동물사전L.webp"></a>
                   <strong>1</strong>
                   <div class="bookInfo">
-                    <p>신비한 동물사전</p>
-                    <span>조앤.K.롤링</span>
+                    <a href="#"><p>신비한 동물사전</p></a>
+                    <a href="#"><span>조앤.K.롤링</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/신부이태석L.webp"></a>
                   <strong>2</strong>
                   <div class="bookInfo">
-                    <p>신부 이태석</p>
-                    <span>이충렬</span>
+                    <a href="#"><p>신부 이태석</p></a>
+                    <a href="#"><span>이충렬</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/슈퍼석세스L.webp"></a>
                   <strong>3</strong>
-                  <div class="bookInfo">
-                    <p>슈퍼 석세스</p>
-                    <span>댄 페냐</span>
+                  <div class="bookInfo noborder">
+                    <a href="#"><p>슈퍼 석세스</p></a>
+                    <a href="#"><span>댄 페냐</span></a>
                   </div>
                 </li>
               </ul>
@@ -376,24 +417,24 @@
                   <a href="#"><img src="../images/신비한동물사전L.webp"></a>
                   <strong>1</strong>
                   <div class="bookInfo">
-                    <p>신비한 동물사전</p>
-                    <span>조앤.K.롤링</span>
+                    <a href="#"><p>신비한 동물사전</p></a>
+                    <a href="#"><span>조앤.K.롤링</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/신부이태석L.webp"></a>
                   <strong>2</strong>
                   <div class="bookInfo">
-                    <p>신부 이태석</p>
-                    <span>이충렬</span>
+                    <a href="#"><p>신부 이태석</p></a>
+                    <a href="#"><span>이충렬</span></a>
                   </div>
                 </li>
                 <li>
                   <a href="#"><img src="../images/슈퍼석세스L.webp"></a>
                   <strong>3</strong>
-                  <div class="bookInfo">
-                    <p>슈퍼 석세스</p>
-                    <span>댄 페냐</span>
+                  <div class="bookInfo noborder">
+                    <a href="#"><p>슈퍼 석세스</p></a>
+                    <a href="#"><span>댄 페냐</span></a>
                   </div>
                 </li>
               </ul>
@@ -402,7 +443,7 @@
       </div>
       <div class="weeklyNewSlide">
         <section>
-          <h4>금주의 신간 </h4>
+          <p>금주의 신간</p>
           <div class="slider1">
             <div><a href="#"><img src="../images/신비한동물사전L.webp"><span>신비한 동물사전</span><br>조앤.K.롤링</a></div>
             <div><a href="#"><img src="../images/신부이태석L.webp"><span>신부 이태석</span><br>이충렬</a></div>
@@ -421,7 +462,7 @@
       </div>
       <div class="instaBook">
         <section>
-          <h4>리디북스토어 인스타그램 추천도서 > </h4>
+          <a href="#"><p>리디북스토어 인스타그램 추천도서 > </p></a>
           <div class="slider1">
             <div><a href="#"><img src="../images/신비한동물사전L.webp"><span>신비한 동물사전</span><br>조앤.K.롤링</a></div>
             <div><a href="#"><img src="../images/신부이태석L.webp"><span>신부 이태석</span><br>이충렬</a></div>
@@ -440,40 +481,58 @@
       </div>
       <div class="footer">
         <footer>
-          <div class="footer-menu1">
-            <a href=""><span class="borderR">고객센터</span></a>
-            <a href=""><span>공지사항</span></a>
-          </div>
-          <div class="footer-menu2">
-            <div class="footer-wrapper1">
-              <a href="https://paper.ridibooks.com/"><p class="bigFont"><strong>RIDI</strong>PAPER</p></a>
-              <a href="#"><p>제휴카드</p></a>
-              <a href="#"><p>뷰어 다운로드</p></a>
-              <a href="https://ridibooks.com/order/checkout/cash"><p>리디캐시 충전</p></a>
+          <div class="fisrt-footer">
+            <div class="footer-menu1">
+              <a href=""><span class="borderR">고객센터</span></a>
+              <a href=""><span>공지사항</span></a>
             </div>
-            <div class="footer-wrapper2">
-              <a href="https://www.ridicorp.com/"><p>회사 소개</p></a>
-              <a href="https://www.ridicorp.com/career/"><p>인재 채용 <span class="blue-bg">N</span></p></a>
-              <a href="#"><p>더 보기 <i class="fas fa-chevron-down"></i></p></a>
-              <a href="https://help.ridibooks.com/hc/ko/articles/360046896553"><p class="invisible">콘텐츠 제공문의</p></a>
-              <a href="https://cp.ridibooks.com/cp/login"><p class="invisible">CP 사이트</p></a>
-              <a href="mailto:biz@ridi.com"><p class="invisible">사업 제휴 문의</p></a>
-              <a href="https://help.ridibooks.com/hc/ko/articles/360058140713-RIDI-Biz-%ED%98%91%EC%97%85-%EB%AC%B8%EC%9D%98"><p class="invisible">리디셀렉트 B2B</p></a>
+            <div class="footer-menu2">
+              <div class="footer-wrapper1">
+                <a href="https://paper.ridibooks.com/"><p class="bigFont"><strong>RIDI</strong>PAPER</p></a>
+                <a href="#"><p>제휴카드</p></a>
+                <a href="#"><p>뷰어 다운로드</p></a>
+                <a href="https://ridibooks.com/order/checkout/cash"><p>리디캐시 충전</p></a>
+              </div>
+              <div class="footer-wrapper2">
+                <a href="https://www.ridicorp.com/"><p>회사 소개</p></a>
+                <a href="https://www.ridicorp.com/career/"><p>인재 채용 <span class="blue-bg">N</span></p></a>
+                <a class="a-invisible"><p>더 보기 <i class="fas fa-chevron-down"></i></p></a>
+                <a href="https://help.ridibooks.com/hc/ko/articles/360046896553"><p class="invisible">콘텐츠 제공문의</p></a>
+                <a href="https://cp.ridibooks.com/cp/login"><p class="invisible">CP 사이트</p></a>
+                <a href="mailto:biz@ridi.com"><p class="invisible">사업 제휴 문의</p></a>
+                <a href="https://help.ridibooks.com/hc/ko/articles/360058140713-RIDI-Biz-%ED%98%91%EC%97%85-%EB%AC%B8%EC%9D%98"><p class="invisible">리디셀렉트 B2B</p></a>
+              </div>
+              <div class="footer-wrapper3">
+                <a href="https://help.ridibooks.com/hc/ko/articles/360046896553"><p>콘텐츠 제공문의</p></a>
+                <a href="https://cp.ridibooks.com/cp/login"><p>CP 사이트</p></a>
+                <a href="mailto:biz@ridi.com"><p>사업 제휴 문의</p></a>
+                <a href="https://help.ridibooks.com/hc/ko/articles/360058140713-RIDI-Biz-%ED%98%91%EC%97%85-%EB%AC%B8%EC%9D%98"><p>리디셀렉트 B2B</p></a>
+              </div>
+              <div class="footer-wrapper4">
+                <a href="https://www.ridicorp.com/"><p>페이스북</p></a>
+                <a href="https://www.ridicorp.com/career/"><p>인스타그램</p></a>
+              </div>
+              <div class="footer-wrapper5">
+                <a href="https://www.ridicorp.com/"><p>회사 소개</p></a>
+                <a href="https://www.ridicorp.com/career/"><p>인재 채용 <span class="blue-bg">N</span></p></a>
+              </div>
             </div>
           </div>
           <div class="footer-info fontColor">
-            <a href="#"><p>리디(주) 사업자 정보 <i class="fas fa-chevron-down"></i></p></a>
+            <a><p>리디(주) 사업자 정보 <i class="fas fa-chevron-down"></i></p></a>
             <p class="invisible">대표자 배기식 | 사업자 등록번호 120-87-27435</p>
             <p class="invisible">통신판매업 신고번호 제 2009-서울강남 35-02139호</p>
             <p class="invisible">이메일 help@ridi.com | 대표전화 1644-0331</p>
             <p class="invisible">주소 서울시 강남구 역삼동 702-28 어반벤치빌딩 10층(테헤란로 325)</p>
           </div>
-          <div class="fontColor copyright"><i class="far fa-copyright"></i>RIDI Corp.</div>
-          <div class="footer-terms fontColor">
-            <a href="https://policy.ridi.com/legal/terms/"><p class="paddingL">이용약관</p></a>
-            <a href="https://policy.ridi.com/legal/privacy/"><p>개인 정보 처리 방침</p></a>
-            <a href="https://policy.ridi.com/legal/youth/"><p>청소년 보호 정책</p></a>
-            <a href="https://ftc.go.kr/www/bizCommList.do?key=232"><p>사업자 정보 확인</p></a>
+          <div class="last-footer">
+            <div class="fontColor copyright"><i class="far fa-copyright"></i>RIDI Corp.</div>
+            <div class="footer-terms fontColor">
+              <a href="https://policy.ridi.com/legal/terms/"><p class="paddingL">이용약관</p></a>
+              <a href="https://policy.ridi.com/legal/privacy/"><p>개인 정보 처리 방침</p></a>
+              <a href="https://policy.ridi.com/legal/youth/"><p>청소년 보호 정책</p></a>
+              <a href="https://ftc.go.kr/www/bizCommList.do?key=232"><p>사업자 정보 확인</p></a>
+            </div>
           </div>
         </footer>
       </div>
@@ -481,6 +540,7 @@
 
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/index.js"></script>
     
     <script>
       $(document).ready(function(){
@@ -503,7 +563,7 @@
           speed: 500, // 이동 속도를 설정 
           pager: false, // 현재 위치 페이징 표시 여부 설정 
           moveSlides: 6, // 슬라이드 이동시 개수 
-          slideWidth: 150, // 슬라이드 너비 
+          slideWidth: 200, // 슬라이드 너비 
           minSlides: 6, // 최소 노출 개수 
           maxSlides: 6, // 최대 노출 개수 
           slideMargin: 15, // 슬라이드간의 간격 
@@ -515,7 +575,7 @@
           speed: 500, // 이동 속도를 설정 
           pager: false, // 현재 위치 페이징 표시 여부 설정 
           moveSlides: 6, // 슬라이드 이동시 개수 
-          slideWidth: 150, // 슬라이드 너비 
+          slideWidth: 200, // 슬라이드 너비 
           minSlides: 6, // 최소 노출 개수 
           maxSlides: 6, // 최대 노출 개수 
           slideMargin: 15, // 슬라이드간의 간격 

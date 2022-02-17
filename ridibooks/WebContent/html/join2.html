@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>insert page title</title>
+    <title>회원가입2</title>
     <link rel="stylesheet" href="../css/join2.css" />
     <link
       rel="stylesheet"
@@ -22,9 +22,9 @@
       </header>
       <form action="">
         <div class="relative mb">
-          <input type="text" class="mt-b" />
-          <span class="placeholder">아이디</span>
-          <span class="focus">5~20자 영문,숫자 입력</span>
+          <input type="text" name="id" id="id" />
+          <span class="placeholder id_ph">아이디</span>
+          <span class="focus id-ph">5~20자 영문,숫자 입력</span>
           <p class="alert">
             <i class="fas fa-exclamation-circle"></i>
             아이디를 입력해주세요.
@@ -32,15 +32,15 @@
         </div>
         <div class="relative">
           <input type="password" name="pwd" id="pwd" />
-          <span class="placeholder">비밀번호</span>
-          <span class="focus"
+          <span class="placeholder pw_ph">비밀번호</span>
+          <span class="focus pw-ph"
             >8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력</span
           >
         </div>
         <div class="relative mb">
           <input type="password" name="pwdCheck" id="pwdCheck" class="mt-b" />
-          <span class="placeholder">비밀번호 확인</span>
-          <span class="focus">비밀번호 재입력</span>
+          <span class="placeholder pwc_ph">비밀번호 확인</span>
+          <span class="focus pwc-ph">비밀번호 재입력</span>
           <p class="alert">
             <i class="fas fa-exclamation-circle"></i>
             비밀번호를 입력해주세요.
@@ -48,8 +48,8 @@
         </div>
         <div class="relative mb">
           <input type="email" name="mail" id="mail" class="mt-b" />
-          <span class="placeholder">이메일 주소</span>
-          <span class="focus">이메일 주소 입력</span>
+          <span class="placeholder mail_ph">이메일 주소</span>
+          <span class="focus email-ph">이메일 주소 입력</span>
           <p class="alert">
             <i class="fas fa-exclamation-circle"></i>
             이메일을 입력해주세요.
@@ -57,8 +57,8 @@
         </div>
         <div class="relative mb">
           <input type="text" name="name" id="name" class="mt-b" />
-          <span class="placeholder">이름</span>
-          <span class="focus">이름 입력</span>
+          <span class="placeholder name_ph">이름</span>
+          <span class="focus name-ph">이름 입력</span>
           <p class="alert">
             <i class="fas fa-exclamation-circle"></i>
             이름을 입력해주세요.
@@ -68,50 +68,56 @@
           <p id="label">선택 입력</p>
           <div class="birth-gender relative">
             <div class="birth">
-              <input type="text" />
-              <span class="placeholder">출생년도</span>
-              <span class="focus">예: 1981</span>
+              <input type="text" name="birthday" id="birthday" />
+              <span class="placeholder birth_ph">출생년도</span>
+              <span class="focus birth-ph">예: 1981</span>
             </div>
             <div class="gender">
               <input type="checkbox" id="male_box" value="남" />
-              <label for="male_box"></label>
+              <label for="male_box" id="male-la"></label>
               <span id="male_choice">남</span>
 
               <input type="checkbox" id="female_box" value="여" />
-              <label for="female_box"></label>
+              <label for="female_box" id="female-la"></label>
               <span id="female_choice">여</span>
             </div>
           </div>
         </div>
         <div class="terms">
           <div class="allAgree pad">
-            <input type="checkbox" name="all" id="all" />
+            <input type="checkbox" name="all" id="all" class="checked" />
             <label for="all">선택 포함 전체 약관 동의</label>
           </div>
           <div class="termAgree pad agree m-l space">
             <div>
-              <input type="checkbox" name="term" id="term" />
-              <span>이용약관 동의(필수)</span>
+              <input type="checkbox" name="check" id="term" class="checked" />
+              <label for="term">이용약관 동의(필수)</label>
             </div>
-            <a href="#">약관보기 ></a>
+            <a href="https://policy.ridi.com/legal/terms/">약관보기 ></a>
           </div>
           <div class="alarmAgree pad m-l">
-            <input type="checkbox" name="alarm" id="alarm" />
-            <span>이벤트, 혜택 알림 수신 동의(선택)</span>
+            <input type="checkbox" name="check" id="alarm" class="checked" />
+            <label for="alarm">이벤트, 혜택 알림 수신 동의(선택)</label>
           </div>
           <div class="infoAgree pad agree m-l space">
             <div>
-              <input type="checkbox" name="info" id="info" />
-              <span>성별, 생년 정보 제공 동의(선택)</span>
+              <input type="checkbox" name="check" id="info" class="checked" />
+              <label for="info">성별, 생년 정보 제공 동의(선택)</label>
             </div>
-            <a href="#">내용확인 ></a>
+            <a href="https://policy.ridi.com/legal/provide-gender-and-birth/"
+              >내용확인 ></a
+            >
           </div>
           <div class="personalAgree pad agree space">
             <div>
               <input type="checkbox" name="personalInfo" id="personalInfo" />
-              <span>개인 정보 수집 및 이용 동의(필수)</span>
+              <label for="personalInfo"
+                >개인 정보 수집 및 이용 동의(필수)</label
+              >
             </div>
-            <a href="#">내용확인 ></a>
+            <a href="https://policy.ridi.com/legal/privacy-collect-and-use/"
+              >내용확인 ></a
+            >
           </div>
         </div>
         <p class="alert">
@@ -137,5 +143,7 @@
         </div>
       </form>
     </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/join2.js"></script>
   </body>
 </html>

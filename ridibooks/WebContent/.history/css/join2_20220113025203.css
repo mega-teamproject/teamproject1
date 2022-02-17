@@ -1,0 +1,231 @@
+* {
+  /* input hover border 색 #9ea7ad */
+  /* input border #D6DEEB */
+  /* input내 span color #303538 */
+  /* focus border #1F8CE6 */
+  /* alert border rgb(250, 186, 179) */
+  /* alert color rgb(230, 73, 56) */
+  /* focus color rgb(31, 140, 230) */
+  /* button check rgb(219, 239, 255) */
+  /* button check border rgb(158, 167, 173) */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebf6ff;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h3 {
+  border-bottom: 1px solid #d6deeb;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #1f8ce6;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+form input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d6deeb;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+form input:hover {
+  border: 1px solid #9ea7ad;
+  border-radius: 4px;
+}
+
+form input:focus {
+  outline: 1px solid #1f8ce6;
+  border-radius: 4px;
+}
+
+form .relative {
+  position: relative;
+}
+
+form .mb {
+  margin-bottom: 10px;
+}
+
+form .relative span.placeholder {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #738096;
+}
+
+form .relative span.focus {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 5px;
+  color: rgb(31, 140, 230);
+  display: none;
+}
+
+p.alert {
+  display: none;
+  color: rgb(230, 73, 56);
+  font-size: 0.8em;
+  letter-spacing: -1px;
+  margin: 0;
+  margin-left: 5px;
+}
+
+input#pwd {
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+form input#pwd:focus {
+  outline: 1px solid #1f8ce6;
+  border-bottom: 1px solid #1f8ce6;
+  border-radius: 4px;
+}
+
+input#pwdCheck {
+  border-radius: 0 0 4px 4px;
+}
+
+.birth-gender-wrapper p#label {
+  font-size: 0.8em;
+  color: #94a2b8;
+  margin: 0;
+  margin-bottom: 5px;
+  letter-spacing: -1px;
+}
+
+.birth-gender {
+  display: flex;
+}
+
+.birth {
+  margin-right: 7px;
+}
+
+.gender {
+  position: relative;
+}
+
+.gender label:hover {
+  border: 1px solid #9ea7ad;
+}
+
+input[id="male_box"] + label {
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  border: 1px solid #d6deeb;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[id="female_box"] + label {
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  border: 1px solid #d6deeb;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gender input[type="checkbox"] {
+  display: none;
+}
+
+span#male_choice {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  color: #738096;
+  cursor: pointer;
+}
+
+span#female_choice {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #738096;
+  cursor: pointer;
+}
+
+.terms {
+  border: 1px solid #d6deeb;
+  margin-top: 20px;
+  background-color: white;
+  width: 100%;
+}
+
+.terms input {
+  width: 20px;
+}
+
+.allAgree {
+  border-bottom: 1px solid #d6deeb;
+}
+
+.terms .pad {
+  padding: 10px;
+  color: #738096;
+  font-size: 0.9em;
+  letter-spacing: -1px;
+}
+
+.terms .pad:hover,
+.terms .pad:hover a {
+  color: black;
+}
+
+.terms .agree {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terms .m-l {
+  margin-left: 20px;
+}
+
+.terms a {
+  font-size: 0.8em;
+  letter-spacing: 0;
+  text-decoration: none;
+  color: #9ea7ad;
+}
+
+button.submit-login {
+  width: 100%;
+  padding: 16px 14px;
+  margin: 20px 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  background-color: #1f8ce6;
+  border: 1px solid #0077d9;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 570;
+  box-shadow: 0 1px 1px 0 rgb(31 140 230 / 30%);
+}

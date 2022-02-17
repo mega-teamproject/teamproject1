@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴</title>
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    
+    
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <header>
+          <div class="search">
+            <a href="index.html"><h1>RIDIBOOKS</h1></a>
+            <a href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
+            <div class="relative response">
+              <input id="search_input" type="text" placeholder="제목, 저자, 출판사 검색" />
+              <span><i class="fas fa-search"></i> </span>
+              <div class="recent-search">
+                <p>최근 검색어</p>
+                <div class="search-contents">
+                  <p>최근 검색어 내역이 없습니다.</p>
+                </div>
+                <div class="saveBtn">
+                  <a href="#">
+                    검색어 저장 끄기
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="joinLogin">
+            <button class="borderBtn btn" onclick="location.href='join1.html'">
+              회원가입
+            </button>
+            <button class="whiteBtn btn" onclick="location.href='login.html'">
+              로그인
+            </button>
+          </div>
+        </header>
+        <div class="relative full-input">
+          <input type="text" placeholder="제목, 저자, 출판사 검색" />
+          <span><i class="fas fa-search"></i> </span>
+        </div>
+        <div class="search-list">
+          <div class="search-input">
+            <i class="fas fa-arrow-left"></i>
+            <input type="text" placeholder="제목, 저자, 출판사 검색" />
+            <span><i class="fas fa-search"></i> </span>
+          </div>
+          <div class="search-wrapper">
+            <p>최근 검색어</p>
+            <div class="search-result">
+              <p>최근 검색어 내역이 없습니다.</p>
+            </div>
+            <div class="search-save">
+              <a href="#">검색어 저장 끄기</a>
+            </div>
+          </div>
+          <div class="bg-black"></div>
+        </div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a class="a-active" href="index.html"><i class="fas fa-home fa-lg"></i><span>홈</span></a>
+            </li>
+            <li>
+              <a href="alarm.html"><i class="far fa-bell fa-lg"></i><span>알림</span></a>
+            </li>
+            <li>
+              <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span>카트</span></a>
+            </li>
+            <li>
+              <a href="myridi.html"><i class="far fa-user fa-lg"></i><span>마이리디</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="menu-wrapper">
+        <section>
+            <div class="main-menu menu-list">
+                <ul>
+                    <li id="main-novel" class="main-active fixed-active">
+                      <a href="">
+                        <h4>소설</h4>
+                        <span class="right-arrow">>></span>
+                        <span id="main-arrow" class="left-arrow active-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                    </li>
+                    <li id="main-biz">
+                      <a href="">
+                        <h4>경영/경제</h4>
+                        <span>>></span>
+                        <span id="biz-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-human">
+                      <a href="">
+                        <h4>인문/사회/역사</h4>
+                        <span>>></span>
+                        <span id="human-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-self" class="border-b">
+                      <a href="">
+                        <h4>자기계발</h4>
+                        <span>>></span>
+                        <span id="self-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-essay">
+                      <a href="">
+                        <h4>에세이/시</h4>
+                        <span>>></span>
+                        <span id="essay-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-tour">
+                      <a href="">
+                        <h4>여행</h4>
+                        <span>>></span>
+                        <span id="tour-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-religion">
+                      <a href="">
+                        <h4>종교</h4>
+                        <span>>></span>
+                        <span id="relig-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-foreign">
+                      <a href="">
+                        <h4>외국어</h4>
+                        <span>>></span>
+                        <span id="for-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-science">
+                      <a href="">
+                        <h4>과학</h4>
+                        <span>>></span>
+                        <span id="sci-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-edu">
+                      <a href="">
+                        <h4>진로/교육/교재</h4>
+                        <span>>></span>
+                        <span id="edu-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-it">
+                      <a href="">
+                        <h4>컴퓨터/IT</h4>
+                        <span>>></span>
+                        <span id="it-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-health">
+                      <a href="">
+                        <h4>건강/다이어트</h4>
+                        <span>>></span>
+                        <span id="hea-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-life">
+                      <a href="">
+                        <h4>가정/생활</h4>
+                        <span>>></span>
+                        <span id="life-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-child">
+                      <a href="">
+                        <h4>어린이/청소년</h4>
+                        <span>>></span>
+                        <span id="ch-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-overseas">
+                      <a href="">
+                        <h4>해외도서</h4>
+                        <span>>></span>
+                        <span id="ov-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                    <li id="main-magazine">
+                      <a href="">
+                        <h4>잡지</h4>
+                        <span>>></span>
+                        <span id="mz-arrow" class="left-arrow"><i class="fas fa-caret-left fa-lg"></i></span>
+                      </a>
+                      </li>
+                </ul>
+            </div>
+            <div class="sub-menu menu-list">
+                <div id="novel" class="submenu-list active-sublist">
+                  <ul>
+                    <li><a href="">소설 전체</a></li>
+                    <li><a href="">한국소설</a></li>
+                    <li><a href="">영미소설</a></li>
+                    <li><a href="">일본 소설</a></li>
+                    <li><a href="">중국 소설</a></li>
+                    <li><a href="">북유럽 소설</a></li>
+                    <li><a href="">독일 소설</a></li>
+                    <li><a href="">프랑스 소설</a></li>
+                    <li class="border-b"><a href="">기타 국가 소설</a></li>
+                    <li><a href="">추리/미스터리/스릴러</a></li>
+                    <li><a href="">SF 소설</a></li>
+                    <li><a href="">국내 판타지 소설</a></li>
+                    <li><a href="">해외 판타지 소설</a></li>
+                    <li><a href="">국내 역사소설</a></li>
+                    <li><a href="">해외 역사소설</a></li>
+                    <li><a href="">대체 역사소설</a></li>
+                    <li><a href="">동양 고전문학</a></li>
+                    <li><a href="">서양 고전문학</a></li>
+                  </ul>
+                </div>
+                <div id="biz" class="submenu-list">
+                  <ul>
+                    <li><a href="">추리/미스터리/스릴러</a></li>
+                    <li><a href="">SF 소설</a></li>
+                    <li><a href="">국내 판타지 소설</a></li>
+                    <li><a href="">해외 판타지 소설</a></li>
+                    <li><a href="">국내 역사소설</a></li>
+                  </ul>
+                </div>
+                <div id="human" class="submenu-list">
+                  <ul>
+                    <li><a href="">국내 역사소설</a></li>
+                    <li><a href="">해외 역사소설</a></li>
+                    <li><a href="">대체 역사소설</a></li>
+                    <li><a href="">동양 고전문학</a></li>
+                    <li><a href="">서양 고전문학</a></li>
+                  </ul>
+                </div>
+                <div id="self" class="submenu-list">
+                  <ul>
+                    <li><a href="">영미소설</a></li>
+                    <li><a href="">일본 소설</a></li>
+                    <li><a href="">중국 소설</a></li>
+                    <li><a href="">북유럽 소설</a></li>
+                    <li><a href="">독일 소설</a></li>
+                  </ul>
+                </div>
+                <div id="essay" class="submenu-list">
+                  <ul>
+                    <li><a href="">SF 소설</a></li>
+                    <li><a href="">국내 판타지 소설</a></li>
+                    <li><a href="">해외 판타지 소설</a></li>
+                  </ul>
+                </div>
+                <div id="tour" class="submenu-list">
+                  <ul>
+                    <li><a href="">추리/미스터리/스릴러</a></li>
+                  </ul>
+                </div>
+                <div id="religion" class="submenu-list">
+                  <ul>
+                    <li><a href="">한국소설</a></li>
+                    <li><a href="">영미소설</a></li>
+                    <li><a href="">일본 소설</a></li>
+                    <li><a href="">중국 소설</a></li>
+                  </ul>
+                </div>
+                <div id="foreign" class="submenu-list">
+                  <ul>
+                    <li><a href="">북유럽 소설</a></li>
+                    <li><a href="">독일 소설</a></li>
+                    <li><a href="">프랑스 소설</a></li>
+                    <li><a href="">기타 국가 소설</a></li>
+                  </ul>
+                </div>
+                <div id="science" class="submenu-list">
+                  <ul>
+                    <li><a href="">동양 고전문학</a></li>
+                    <li><a href="">서양 고전문학</a></li>
+                  </ul>
+                </div>
+                <div id="edu" class="submenu-list">
+                  <ul>
+                    <li><a href="">국내 역사소설</a></li>
+                    <li><a href="">해외 역사소설</a></li>
+                    <li><a href="">대체 역사소설</a></li>
+                  </ul>
+                </div>
+                <div id="it" class="submenu-list">
+                  <ul>
+                    <li><a href="">기타 국가 소설</a></li>
+                  </ul>
+                </div>
+                <div id="health" class="submenu-list">
+                  <ul>
+                    <li><a href="">북유럽 소설</a></li>
+                    <li><a href="">영미소설</a></li>
+                  </ul>
+                </div>
+                <div id="life" class="submenu-list">
+                  <ul>
+                    <li><a href="">일본 소설</a></li>
+                    <li><a href="">중국 소설</a></li>
+                  </ul>
+                </div>
+                <div id="child" class="submenu-list">
+                  <ul>
+                    <li><a href="">해외 역사소설</a></li>
+                    <li><a href="">대체 역사소설</a></li>
+                  </ul>
+                </div>
+                <div id="overseas" class="submenu-list">
+                  <ul>
+                    <li><a href="">SF 소설</a></li>
+                  </ul>
+                </div>
+                <div id="magazine" class="submenu-list">
+                  <ul>
+                    <li><a href="">소설 전체</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="romance-menu menu-list genre">
+                <ul>
+                    <li class="btn"><a href="">로맨스 e북<span>>></span></a></li>
+                    <li><a href="">현대물</a></li>
+                    <li><a href="">역사/시대물</a></li>
+                    <li><a href="">판타지물</a></li>
+                    <li><a href="">할리퀸 소설</a></li>
+                    <li><a href="">19+</a></li>
+                    <li><a href="">TL 소설</a></li>
+                    <li><a href="">섹슈얼 로맨스</a></li>
+                    <li><a href="">하이틴</a></li>
+                    <li class="btn"><a href="">로맨스 웹소설<span>>></span></a></li>
+                    <li><a href="">현대물</a></li>
+                    <li><a href="">역사/시대물</a></li>
+                    <li><a href="">판타지물</a></li>
+                </ul>
+            </div>
+            <div class="fantasy-menu menu-list genre">
+                <ul>
+                    <li class="btn"><a href="">판타지 e북<span>>></span></a></li>
+                    <li><a href="">정통 판타지</a></li>
+                    <li><a href="">퓨전 판타지</a></li>
+                    <li><a href="">현대 판타지</a></li>
+                    <li><a href="">게임 판타지</a></li>
+                    <li><a href="">대체 역사물</a></li>
+                    <li class="border-b"><a href="">스포츠물</a></li>
+                    <li><a href="">신무협</a></li>
+                    <li><a href="">전통무협</a></li>
+                    <li class="btn"><a href="">판타지 웹소설<span>>></span></a></li>
+                    <li><a href="">정통 판타지</a></li>
+                    <li><a href="">퓨전 판타지</a></li>
+                    <li><a href="">현대 판타지</a></li>
+                    <li><a href="">무협 소설</a></li>
+                </ul>
+            </div>
+            <div class="comic-menu menu-list genre">
+                <ul>
+                    <li class="btn"><a href="">만화 e북<span>>></span></a></li>
+                    <li><a href="">국내 순정</a></li>
+                    <li><a href="">해외 순정</a></li>
+                    <li><a href="">드라마</a></li>
+                    <li><a href="">성인</a></li>
+                    <li><a href="">할리퀸</a></li>
+                    <li><a href="">무협</a></li>
+                    <li><a href="">학원</a></li>
+                    <li><a href="">액션</a></li>
+                    <li><a href="">판타지/SF</a></li>
+                    <li><a href="">스포츠</a></li>
+                    <li><a href="">코믹</a></li>
+                    <li><a href="">GL</a></li>
+                    <li><a href="">공포/추리</a></li>
+                    <li><a href="">만화잡지</a></li>
+                    <li class="btn"><a href="">라이트노벨<span>>></span></a></li>
+                    <li><a href="">국내 라노벨</a></li>
+                    <li><a href="">해외 라노벨</a></li>
+                    <li><a href="">성인 라노벨</a></li>
+                    <li><a href="">TL</a></li>
+                </ul>
+            </div>
+            <div class="webtoon-menu menu-list genre">
+                <ul>
+                    <li class="btn"><a href="">웹툰<span>>></span></a></li>
+                    <li><a href="">국내 순정</a></li>
+                    <li><a href="">해외 순정</a></li>
+                    <li><a href="">드라마</a></li>
+                    <li><a href="">성인</a></li>
+                    <li><a href="">액션/무협</a></li>
+                    <li><a href="">판타지/SF</a></li>
+                    <li><a href="">스포츠/학원</a></li>
+                    <li><a href="">코믹</a></li>
+                    <li><a href="">GL</a></li>
+                    <li><a href="">공포/추리</a></li>
+                </ul>
+            </div>
+            <div class="bl-menu menu-list genre">
+                <ul>
+                    <li class="btn"><a href="">BL 소설 e북<span>>></span></a></li>
+                    <li><a href="">현대물</a></li>
+                    <li><a href="">판타지물</a></li>
+                    <li><a href="">역사/시대물</a></li>
+                    <li><a href="">해외 소설</a></li>
+                    <li class="btn"><a href="">BL 웹소설<span>>></span></a></li>
+                    <li><a href="">현대물</a></li>
+                    <li><a href="">판타지물</a></li>
+                    <li><a href="">역사/시대물</a></li>
+                    <li class="btn"><a href="">BL 만화 e북<span>>></span></a></li>
+                    <li><a href="">국내 만화</a></li>
+                    <li><a href="">해외 만화</a></li>
+                    <li class="btn"><a href="">BL 웹툰<span>>></span></a></li>
+                    <li><a href="">웹툰</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+      <div class="footer">
+        <footer>
+          <div class="fisrt-footer">
+            <div class="footer-menu1">
+              <a href=""><span class="borderR">고객센터</span></a>
+              <a href=""><span>공지사항</span></a>
+            </div>
+            <div class="footer-menu2">
+              <div class="footer-wrapper1">
+                <a href="https://paper.ridibooks.com/"><p class="bigFont"><strong>RIDI</strong>PAPER</p></a>
+                <a href="#"><p>제휴카드</p></a>
+                <a href="#"><p>뷰어 다운로드</p></a>
+                <a href="https://ridibooks.com/order/checkout/cash"><p>리디캐시 충전</p></a>
+              </div>
+              <div class="footer-wrapper2">
+                <a href="https://www.ridicorp.com/"><p>회사 소개</p></a>
+                <a href="https://www.ridicorp.com/career/"><p>인재 채용 <span class="blue-bg">N</span></p></a>
+                <a class="a-invisible"><p>더 보기 <i class="fas fa-chevron-down"></i></p></a>
+                <a href="https://help.ridibooks.com/hc/ko/articles/360046896553"><p class="invisible">콘텐츠 제공문의</p></a>
+                <a href="https://cp.ridibooks.com/cp/login"><p class="invisible">CP 사이트</p></a>
+                <a href="mailto:biz@ridi.com"><p class="invisible">사업 제휴 문의</p></a>
+                <a href="https://help.ridibooks.com/hc/ko/articles/360058140713-RIDI-Biz-%ED%98%91%EC%97%85-%EB%AC%B8%EC%9D%98"><p class="invisible">리디셀렉트 B2B</p></a>
+              </div>
+              <div class="footer-wrapper3">
+                <a href="https://help.ridibooks.com/hc/ko/articles/360046896553"><p>콘텐츠 제공문의</p></a>
+                <a href="https://cp.ridibooks.com/cp/login"><p>CP 사이트</p></a>
+                <a href="mailto:biz@ridi.com"><p>사업 제휴 문의</p></a>
+                <a href="https://help.ridibooks.com/hc/ko/articles/360058140713-RIDI-Biz-%ED%98%91%EC%97%85-%EB%AC%B8%EC%9D%98"><p>리디셀렉트 B2B</p></a>
+              </div>
+              <div class="footer-wrapper4">
+                <a href="https://www.ridicorp.com/"><p>페이스북</p></a>
+                <a href="https://www.ridicorp.com/career/"><p>인스타그램</p></a>
+              </div>
+              <div class="footer-wrapper5">
+                <a href="https://www.ridicorp.com/"><p>회사 소개</p></a>
+                <a href="https://www.ridicorp.com/career/"><p>인재 채용 <span class="blue-bg">N</span></p></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-info fontColor">
+            <a><p>리디(주) 사업자 정보 <i class="fas fa-chevron-down"></i></p></a>
+            <p class="invisible">대표자 배기식 | 사업자 등록번호 120-87-27435</p>
+            <p class="invisible">통신판매업 신고번호 제 2009-서울강남 35-02139호</p>
+            <p class="invisible">이메일 help@ridi.com | 대표전화 1644-0331</p>
+            <p class="invisible">주소 서울시 강남구 역삼동 702-28 어반벤치빌딩 10층(테헤란로 325)</p>
+          </div>
+          <div class="last-footer">
+            <div class="fontColor copyright"><i class="far fa-copyright"></i>RIDI Corp.</div>
+            <div class="footer-terms fontColor">
+              <a href="https://policy.ridi.com/legal/terms/"><p class="paddingL">이용약관</p></a>
+              <a href="https://policy.ridi.com/legal/privacy/"><p>개인 정보 처리 방침</p></a>
+              <a href="https://policy.ridi.com/legal/youth/"><p>청소년 보호 정책</p></a>
+              <a href="https://ftc.go.kr/www/bizCommList.do?key=232"><p>사업자 정보 확인</p></a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/menu.js"></script>
+
+  </body>
+</html>
