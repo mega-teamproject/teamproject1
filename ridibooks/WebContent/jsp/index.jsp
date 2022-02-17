@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
@@ -153,10 +152,15 @@
 		<section>
 			<h4>집 앞 서점에 방금 나온 신간!</h4>
 			<div class="slider1">
+			<%--
+				<c:forEach var="i" begin="0" end="12">
 				<div>
-					<a href="#"><img src="../images/신비한동물사전L.webp"><span>신비한
-							동물사전</span><br>조앤.K.롤링</a>
+					<a href="#"><img src="${newbook[i].img }">
+								<span>${newbook[i].name }</span><br>
+								${newbook[i].publisher }</a>
 				</div>
+				</c:forEach>
+				 --%>
 				<div>
 					<a href="#"><img src="../images/신부이태석L.webp"><span>신부
 							이태석</span><br>이충렬</a>
@@ -528,6 +532,10 @@
 			});
 		});
 		
+		
+		function search() {
+			
+		}
 	</script>
 </body>
 </html>
