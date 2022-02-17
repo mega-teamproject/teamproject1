@@ -15,7 +15,7 @@ public class BookDTO {
 
 	@Override
 	public String toString() {
-		return "bookvalue:" + bookvalue + ", bookimg:" + bookimg + ", bname:" + bname + ", author:" + author + ", bgrade:" + bgrade + ", review:"
+		return "bookimg:" + bookimg + ", bname:" + bname + ", author:" + author + ", bgrade:" + bgrade + ", review:"
 				+ review + ", bpublisher:" + bpublisher + ", category:" + category + ", total:" + total
 				+ ", binfomation:" + binfomation + ", bprice:" + bprice + "/";
 	}
