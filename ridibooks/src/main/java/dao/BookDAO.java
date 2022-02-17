@@ -31,6 +31,42 @@ public class BookDAO {
 
 		return conn;
 	}
+	
+	public String selectByPublisher(int i) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String result = null;
+		
+		try {
+			conn = getConnection();
+
+			String sql = "SELECT * FROM author WHERE a_value = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, i);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				result = rs.getString("a_Name");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return result;
+	}
 
 	public ArrayList<BookDTO> bookSearch(String q, int n) {
 		// 도서 검색 결과 조회
