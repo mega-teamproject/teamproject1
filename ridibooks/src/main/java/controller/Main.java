@@ -10,27 +10,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.BookDAO;
-import dto.BookDTO;
+import dao.NewBookDAO;
+import dto.NewBook;
 
-@WebServlet("/infomation")
-public class Infomation extends HttpServlet {
+@WebServlet("/main")
+public class Main extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 도서 정보 저장 후, 페이지로 포워드
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 
-		BookDAO bookdao = new BookDAO();
-		int num = Integer.parseInt(request.getParameter("num"));
-		ArrayList<BookDTO> info = new ArrayList<BookDTO>();
-
-		info = bookdao.bookSearch(null, num);
-
-		request.setAttribute("info", info);
+		NewBookDAO newbook = new NewBookDAO();
+		ArrayList<NewBook> newBookList = new ArrayList<NewBook>();
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/bookInfo.jsp");
+		newBookList = newbook.NewBookList();
+
+		request.setAttribute("newBook", newBookList);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/index.jsp");
 		rd.forward(request, response);
 	}
 }
