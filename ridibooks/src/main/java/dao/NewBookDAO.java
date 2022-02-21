@@ -30,19 +30,33 @@ public class NewBookDAO {
 		return conn;
 	}
 
-	public ArrayList<NewBook> NewBookList() {
+	public ArrayList<NewBook> NewBookList(int i) {
 		// 신간도서 조회
 		ArrayList<NewBook> newlist = new ArrayList<NewBook>();
 		BookDAO bookDAO = new BookDAO();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
+		String SQL = null;
+		
+		if(i==1) {
+			// 방금 나온 신간
+			SQL = "SELECT * FROM book WHERE b_img LIKE ? ORDER BY b_addDate DESC";
+		} else if(i==2) {
+			// 금주의 신간
+			SQL = "SELECT * FROM book WHERE b_addDate BETWEEN DATE_ADD(NOW(),INTERVAL -1 WEEK ) AND NOW() AND b_img LIKE ? ORDER BY b_addDate DESC";
+		} else if(i==3) {
+			// 베스트셀러
+			SQL = "SELECT * FROM book WHERE b_img LIKE ? ORDER BY b_Purchase DESC";
+		}
 
 		try {
 
 			conn = getConnection();
-			String sql = "SELECT * FROM book ORDER BY b_addDate DESC";
+			String sql = SQL;
 
 			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, "%L%");
 			
 			ResultSet rs = pstmt.executeQuery();
 
