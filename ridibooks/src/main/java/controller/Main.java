@@ -22,11 +22,17 @@ public class Main extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 
 		NewBookDAO newbook = new NewBookDAO();
-		ArrayList<NewBook> newBookList = new ArrayList<NewBook>();
+		ArrayList<NewBook> newBookList1 = new ArrayList<NewBook>();
+		ArrayList<NewBook> newBookList2 = new ArrayList<NewBook>();
+		ArrayList<NewBook> bestseller = new ArrayList<NewBook>();
 		
-		newBookList = newbook.NewBookList();
+		newBookList1 = newbook.NewBookList(1);
+		newBookList2 = newbook.NewBookList(2);
+		bestseller = newbook.NewBookList(3);
 
-		request.setAttribute("newBook", newBookList);
+		request.setAttribute("newBook", newBookList1);
+		request.setAttribute("newWeek", newBookList2);
+		request.setAttribute("best", bestseller);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/index.jsp");
 		rd.forward(request, response);
