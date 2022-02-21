@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,8 +31,8 @@
               <div class="main-info">
                 <div class="main-img">
                   <img
-                    src="../images/마법사의돌L.webp"
-                    alt="해리포터 HARRY POTTER 해리포터와 마법사의돌 J.K.롤링"
+                    src="${info[0].bookimg }"
+                    alt="#"
                   />
                 </div>
                 <div class="title-shop">
@@ -53,9 +54,9 @@
                       <span>(534명)</span>
                     </div>
                     <div class="author">
-                      <a href="">조앤.K.롤링</a> 저 | <a href="">강동혁</a> 역
+                      <a href="">${info[0].author }</a> 저 | <a href="">강동혁</a> 역
                       <br />
-                      <a href="">Pottermore</a> 츨판
+                      <a href="">${info[0].bpublisher }</a> 츨판
                     </div>
                   </div>
                   <div class="main-shop">
@@ -64,11 +65,11 @@
                       <div class="price">
                         <div class="value">
                           <p>전자책정가</p>
-                          <p><strong>10,050원</strong></p>
+                          <p><strong><fmt:formatNumber value="${info[0].bprice }" pattern="#,###" />원</strong></p>
                         </div>
                         <div class="value">
                           <p>판매가</p>
-                          <p><span>10,050원</span></p>
+                          <p><span><fmt:formatNumber value="${info[0].bprice }" pattern="#,###" />원</span></p>
                         </div>
                       </div>
                     </div>

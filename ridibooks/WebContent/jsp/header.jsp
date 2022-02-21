@@ -3,12 +3,13 @@
 
 <div class="header">
 	<header>
+		<form action="/booksearch">
 		<div class="search">
-			<a href="index.jsp"><h1>RIDIBOOKS</h1></a> 
+			<a href="/jsp/index.jsp"><h1>RIDIBOOKS</h1></a> 
 			<a href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
 			
 			<div class="relative response">
-              <input id="search_input" type="text" name="q" value = "${param.q}" class="q" onkeypress="if(window.event.keyCode==13){search()}" placeholder="제목, 저자, 출판사 검색" />
+              <input id="search_input" type="text" name="q" value = "" class="q" placeholder="제목, 저자, 출판사 검색" />
               <span><i class="fas fa-search"></i> </span>
               <div class="recent-search">
                 <p>최근 검색어</p>
@@ -23,6 +24,7 @@
               </div>
             </div>
 		</div>
+		</form>
 		<div class="joinLogin">
 			<div class="joinLogin">
 				<%@ include file="headerbtn.jsp" %>

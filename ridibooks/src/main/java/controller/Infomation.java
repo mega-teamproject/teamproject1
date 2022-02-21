@@ -18,6 +18,7 @@ public class Infomation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 도서 정보 저장 후, 페이지로 포워드
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 
@@ -28,11 +29,8 @@ public class Infomation extends HttpServlet {
 		info = bookdao.bookSearch(null, num);
 
 		request.setAttribute("info", info);
-
-		System.out.println(info);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/bookInfo.jsp");
 		rd.forward(request, response);
-	
 	}
 }
