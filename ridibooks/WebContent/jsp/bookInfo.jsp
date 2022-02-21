@@ -31,8 +31,8 @@
               <div class="main-info">
                 <div class="main-img">
                   <img
-                    src="../images/마법사의돌L.webp"
-                    alt="해리포터 HARRY POTTER 해리포터와 마법사의돌 J.K.롤링"
+                    src="${info[0].bookimg }"
+                    alt="#"
                   />
                 </div>
                 <div class="title-shop">
