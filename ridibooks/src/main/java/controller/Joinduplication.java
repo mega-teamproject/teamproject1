@@ -17,17 +17,24 @@ import dto.Member;
 public class Joinduplication extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
+		String birth = "0";
+		
+		if(request.getParameter("year")==null) {
+			birth = "0";
+		} else {
+			birth = request.getParameter("year");
+		}
+		
 		// 데이터 가져옴
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pwd");
 		String pwCheck = request.getParameter("pwdCheck");
 		String email = request.getParameter("mail");
 		String name = request.getParameter("name");
-		String year = request.getParameter("year");
+		int year = Integer.parseInt(birth);
 		String sex = request.getParameter("gender");
 		LocalDateTime signDate = LocalDateTime.now();
 		LocalDateTime loginDate = signDate;
@@ -48,8 +55,8 @@ public class Joinduplication extends HttpServlet {
 			name = name.replace(" ", "");
 		}
 
-		if (year == null) {
-			year = "0";
+		if (year == 0) {
+			year = 0;
 		}
 
 		if (sex == null) {
@@ -80,62 +87,77 @@ public class Joinduplication extends HttpServlet {
 
 		// 인스턴스 생성
 		MemberDAO memberDAO = MemberDAO.getInstance();
-		// 아이디 중복 체크
-		if (memberDAO.selectByexist(id)) {
-			System.out.println("아이디 중복");
-			response.setStatus(409);
+
+		// 아이디 상태 확인
+		if (memberDAO.selectBystatus(id) != 0) {
+			System.out.println("해당 아이디 사용 금지");
 			response.sendRedirect("http://localhost/jsp/join2.jsp");
 		} else {
-			// 비밀번호 체크
-			if (pw.equals(pwCheck)) {
-				// 이메일 중복 체크
-				if (memberDAO.selectByexist(email)) {
-					System.out.println("이메일 중복");
-					response.setStatus(409);
-					response.sendRedirect("http://localhost/jsp/join2.jsp");
-				} else {
-					// 아이디 확인
-					RegularExpression idchecking = new RegularExpression();
-					if (!idchecking.idcheck(id)) {
-						System.out.println("아이디 재확인");
-						response.setStatus(400);
-						response.sendRedirect("http://localhost/jsp/join2.jsp");
-					}
-
-					// 비밀번호 확인
-					RegularExpression pwdcheck = new RegularExpression();
-					if (!pwdcheck.pwcheck(pw)) {
-						System.out.println("비밀번호 재확인");
-						response.setStatus(400);
-						response.sendRedirect("http://localhost/jsp/join2.jsp");
-					}
-
-					// 이메일 형식 확인
-					RegularExpression emailcheck = new RegularExpression();
-					if (!emailcheck.mailcheck(email)) {
-						System.out.println("이메일 재확인");
-						response.setStatus(412);
-						response.sendRedirect("http://localhost/jsp/join2.jsp");
-					}
-
-					// 이름 확인
-					RegularExpression namecheck = new RegularExpression();
-					if (!namecheck.namecheck(name)) {
-						System.out.println("이름 재확인");
-						response.setStatus(412);
-						response.sendRedirect("http://localhost/jsp/join2.jsp");
-					}
-				}
-				
-				response.setStatus(201);
-				memberDAO.insert(member);									// 회원정보 DB 저장
-				response.sendRedirect("http://localhost/jsp/index.jsp");	// 회원가입 완료 시 메인 페이지로 이동
-				
-			} else {
-				System.out.println("비밀번호 재확인");
-				response.setStatus(400);
+			// 아이디 중복 체크
+			if (memberDAO.selectByexist(id)) {
+				System.out.println("아이디 중복");
+				response.setStatus(409);
 				response.sendRedirect("http://localhost/jsp/join2.jsp");
+			} else {
+				// 비밀번호 체크
+				if (pw.equals(pwCheck)) {
+					// 이메일 중복 체크
+					if (memberDAO.selectByexist(email)) {
+						System.out.println("이메일 중복");
+						response.setStatus(409);
+						response.sendRedirect("http://localhost/jsp/join2.jsp");
+					} else {
+						// 아이디 확인
+						RegularExpression idchecking = new RegularExpression();
+						if (!idchecking.idcheck(id)) {
+							System.out.println("아이디 재확인");
+							response.setStatus(400);
+							response.sendRedirect("http://localhost/jsp/join2.jsp");
+						}
+
+						// 비밀번호 확인
+						RegularExpression pwdcheck = new RegularExpression();
+						if (!pwdcheck.pwcheck(pw)) {
+							System.out.println("비밀번호 재확인");
+							response.setStatus(400);
+							response.sendRedirect("http://localhost/jsp/join2.jsp");
+						}
+
+						// 이메일 형식 확인
+						RegularExpression emailcheck = new RegularExpression();
+						if (!emailcheck.mailcheck(email)) {
+							System.out.println("이메일 재확인");
+							response.setStatus(412);
+							response.sendRedirect("http://localhost/jsp/join2.jsp");
+						}
+
+						// 이메일 상태 확인
+						if (memberDAO.selectBystatus(email) != 0) {
+							System.out.println("이메일 영구 사용 금지");
+							response.setStatus(412);
+							response.sendRedirect("http://localhost/jsp/join2.jsp");
+						}
+
+						// 이름 확인
+						RegularExpression namecheck = new RegularExpression();
+						if (!namecheck.namecheck(name)) {
+							System.out.println("이름 재확인");
+							response.setStatus(412);
+							response.sendRedirect("http://localhost/jsp/join2.jsp");
+						}
+					}
+
+					response.setStatus(201);
+					memberDAO.insert(member); // 회원정보 DB 저장
+					response.sendRedirect("http://localhost/jsp/index.jsp"); // 회원가입 완료 시 메인 페이지로 이동
+
+				} else {
+					System.out.println("비밀번호 재확인");
+					response.setStatus(400);
+					response.sendRedirect("http://localhost/jsp/join2.jsp");
+				}
 			}
 		}
+
 	}
 }

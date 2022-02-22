@@ -27,15 +27,21 @@ public class FindId extends HttpServlet {
 		String id = null;
 		
 		if (check.mailcheck(email)) {
-			if ( value != 0) {
-				response.setStatus(201);
-				id = idchange(memberDAO.selectByinfo(0, value));
-				System.out.println(id);
-				session.setAttribute("id", id);
-				response.sendRedirect("/jsp/findId2.jsp");
-			} else {
+			if(memberDAO.selectBystatus(email) == 0) {
+				if ( value != 0) {
+					response.setStatus(201);
+					id = idchange(memberDAO.selectByinfo(0, value));
+					System.out.println(id);
+					session.setAttribute("id", id);
+					response.sendRedirect("/jsp/findId2.jsp");
+				} else {
+					response.setStatus(404);
+					System.out.println("해당 이메일 없음");
+					response.sendRedirect("/jsp/findId.jsp");
+				}
+			}else {
 				response.setStatus(404);
-				System.out.println("해당 이메일 없음");
+				System.out.println("해당 이메일 사용 금지");
 				response.sendRedirect("/jsp/findId.jsp");
 			}
 		}else {
@@ -45,7 +51,7 @@ public class FindId extends HttpServlet {
 		}
 	}
 	
-	public String idchange(String id) {
+	private String idchange(String id) {
 		String str1 = id.substring(0, 2);
 		String str2 = id.substring(2, id.length());
 		String result = null;
