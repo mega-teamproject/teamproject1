@@ -198,6 +198,11 @@ header {
   padding: 1px;
 }
 
+.header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
 nav ul {
   width: 100%;
   padding-left: 0;

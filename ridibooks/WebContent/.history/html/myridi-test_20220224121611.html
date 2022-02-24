@@ -16,42 +16,74 @@
   <body>
     <div class="container">
         <div class="header">
-          <header>
-            <div class="search">
-              <a href="index.html"><h1>RIDIBOOKS</h1></a>
-              <a href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
+            <header>
+                <div class="search">
+                    <a href="index.html"><h1>RIDIBOOKS</h1></a>
+                    <a href="https://select.ridibooks.com/home"><h1 id="opacity">RIDISelect</h1></a>
+                    <div class="relative response">
+                        <input id="search_input" type="text" placeholder="제목, 저자, 출판사 검색" />
+                        <span><i class="fas fa-search"></i> </span>
+                        <div class="recent-search">
+                            <p>최근 검색어</p>
+                            <div class="search-contents">
+                                <p>최근 검색어 내역이 없습니다.</p>
+                            </div>
+                            <div class="saveBtn">
+                                <a href="#">
+                                    검색어 저장 끄기
+                                </a>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="joinLogin">
+                    <button class="borderBtn btn" onclick="location.href='join1.html'">
+                        캐시충전
+                        <i class="fas fa-coins"></i>
+                    </button>
+                    <button class="borderBtn btn" onclick="location.href='login.html'">
+                        내서재
+                    </button>
+                </div>
+            </header>
+            <div class="relative full-input">
+                <input type="text" placeholder="제목, 저자, 출판사 검색" />
+                <span><i class="fas fa-search"></i> </span>
             </div>
-            <div class="joinLogin">
-              <button class="borderBtn btn" onclick="location.href='join1.html'">
-                캐시충전
-                <i class="fas fa-coins"></i>
-
-              </button>
-              <button class="borderBtn btn" onclick="location.href='login.html'">
-                내서재
-              </button>
+            <div class="search-list">
+                <div class="search-input">
+                    <i class="fas fa-arrow-left"></i>
+                    <input type="text" placeholder="제목, 저자, 출판사 검색" />
+                    <span><i class="fas fa-search"></i> </span>
+                </div>
+                <div class="search-wrapper">
+                    <p>최근 검색어</p>
+                    <div class="search-result">
+                        <p>최근 검색어 내역이 없습니다.</p>
+                    </div>
+                    <div class="search-save">
+                        <a href="#">검색어 저장 끄기</a>
+                    </div>
+                </div>
+                <div class="bg-black"></div>
             </div>
-          </header>
-          <div class="relative">
-            <input type="text" placeholder="제목, 저자, 출판사 검색" />
-            <span><i class="fas fa-search"></i> </span>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
-              </li>
-              <li>
-                <a href="alarm.html"><i class="fas fa-bell fa-lg"></i></a>
-              </li>
-              <li>
-                <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
-              </li>
-              <li>
-                <a href="myridi.html"><i class="fas fa-user fa-lg"></i></a>
-              </li>
-            </ul>
-          </nav>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a class="a-active" href="index.html"><i class="fas fa-home fa-lg"></i><span>홈</span></a>
+                    </li>
+                    <li>
+                        <a href="alarm.html"><i class="far fa-bell fa-lg"></i><span>알림</span></a>
+                    </li>
+                    <li>
+                        <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span>카트</span></a>
+                    </li>
+                    <li>
+                        <a href="myridi.html"><i class="far fa-user fa-lg"></i><span>마이리디</span></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="body">
           <div class="sidebar">
