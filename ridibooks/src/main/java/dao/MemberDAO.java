@@ -44,8 +44,11 @@ public class MemberDAO {
 		return instance;
 	}
 
-	public int insert(Member memberDTO) {
-		// 회원 등록
+	/**
+	 * 회원 등록
+	 * @param memberDTO	회원정보
+	 */
+	public void insert(Member memberDTO) {
 		int su = 0;
 
 		Connection conn = null;
@@ -80,11 +83,14 @@ public class MemberDAO {
 				e.printStackTrace();
 			}
 		}
-		return su;
 	}
 
+	/**
+	 * 아이디, 이메일 조회
+	 * @param IDorEmail	아이디 또는 이메일
+	 * @return			조회값이 있으면 true, 없으면 false
+	 */
 	public boolean selectByexist(String IDorEmail) {
-		// 아이디, 이메일 조회
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		boolean result = false;
@@ -129,6 +135,12 @@ public class MemberDAO {
 		return result;
 	}
 
+	/**
+	 * 아이디 또는 이메일 출력
+	 * @param num	아이디 또는 이메일을 구분하기 위한 값
+	 * @param value	아이디 고유값
+	 * @return		해당 아이디 또는 이메일의 값 출력
+	 */
 	public String selectByinfo(int num, int value) {
 		// 아이디 출력 -> 0
 		// 이메일 출력 -> 1
@@ -174,8 +186,14 @@ public class MemberDAO {
 		return result;
 	}
 
+	/**
+	 * 로그인 또는 이메일 확인 후 고유값 전달 
+	 * @param id	아이디
+	 * @param pw	비밀번호
+	 * @param email	이메일
+	 * @return		회원 고유값
+	 */
 	public int selectByIdValue(String id, String pw, String email) {
-		// 아이디, 비밀번호, 이메일 확인 후 고유값 전달
 		// 입력할 값이 없을 땐 null을 입력해줌
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -207,7 +225,6 @@ public class MemberDAO {
 
 			if (rs.next()) {
 				result = rs.getInt("member_value");
-				;
 			}
 
 			rs.close();
@@ -228,6 +245,11 @@ public class MemberDAO {
 		return result;
 	}
 
+	/**
+	 * 탈퇴상태 확인
+	 * @param IDorEmail	아이디 또는 이메일
+	 * @return			0이면 회원상태 1이면 탈퇴상태
+	 */
 	public int selectBystatus(String IDorEmail) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -253,7 +275,6 @@ public class MemberDAO {
 
 			if (rs.next()) {
 				result = rs.getInt("member_status");
-				;
 			}
 
 			rs.close();
@@ -274,8 +295,12 @@ public class MemberDAO {
 		return result;
 	}
 
+	/**
+	 * 로그인 날짜 갱신
+	 * @param date	로그인하는 날짜
+	 * @param value	회원 고유값
+	 */
 	public void loginupdate(LocalDateTime date, int value) {
-		// 로그인 날짜 갱신
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 
@@ -304,8 +329,12 @@ public class MemberDAO {
 		}
 	}
 
+	/**
+	 * 비밀번호 재설정
+	 * @param pw	변경할 비밀번호
+	 * @param value	회원 고유값
+	 */
 	public void changepw(String pw, int value) {
-		// 비밀번호 재설정
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 
@@ -334,8 +363,10 @@ public class MemberDAO {
 		}
 	}
 
+	/**
+	 * 회원 탈퇴 기능
+	 */
 	public void Withdrawal() {
-		// 회원 탈퇴 기능
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 

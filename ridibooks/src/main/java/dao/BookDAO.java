@@ -31,7 +31,12 @@ public class BookDAO {
 
 		return conn;
 	}
-	
+
+	/**
+	 * 도서 작가 이름 조회
+	 * @param i	도서 고유번호
+	 * @return	도서 작가이름
+	 */
 	public String selectByPublisher(int i) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -67,9 +72,15 @@ public class BookDAO {
 
 		return result;
 	}
-
+	
+	/**
+	 * 도서 검색 결과 조회
+	 * @param q	검색어
+	 * @param n	도서 고유번호
+	 * @return	도서 정보
+	 */
 	public ArrayList<BookDTO> bookSearch(String q, int n) {
-		// 도서 검색 결과 조회
+		
 		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -78,12 +89,13 @@ public class BookDAO {
 			
 			conn = getConnection();
 			if(n==0) {
-				String sql = "SELECT * FROM book WHERE b_Name LIKE ?";
+				String sql = "SELECT * FROM book WHERE b_img LIKE ? AND b_Name LIKE ?";
 
 				pstmt = conn.prepareStatement(sql);
 
-				pstmt.setString(1, "%" + q + "%");
-			}else {
+				pstmt.setString(1, "%L.webp%");
+				pstmt.setString(2, "%" + q + "%");
+			} else {
 				String sql = "SELECT * FROM book WHERE b_value=?";
 				
 				pstmt = conn.prepareStatement(sql);
@@ -128,8 +140,14 @@ public class BookDAO {
 		return list;
 	}
 
+	/**
+	 * 카트 또는 위시리스트 해당 아이디와 책이 있는지 조회
+	 * @param value		카트 또는 위시리스트를 구분하기 위한 값
+	 * @param bookvalue	도서 고유번호
+	 * @param id		아이디 고유번호
+	 * @return			조회값이 있으면 false, 없으면 true
+	 */
 	public boolean selectByList(int value, int bookvalue, int id) {
-		// 카트에 해당 아이디와 책이 있는지 조회
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		boolean result = true;
@@ -174,7 +192,12 @@ public class BookDAO {
 		return result;
 	}
 
-	public int bookadd(int value, CartWishDTO cart) {
+	/**
+	 * 카트 또는 위시리스트에 해당 도서 저장
+	 * @param value		카트 또는 위시리스트를 구분하기 위한 값
+	 * @param cartwish	DTO에 저장된 값
+	 */
+	public void bookadd(int value, CartWishDTO cartwish) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		int su = 0;
@@ -193,8 +216,8 @@ public class BookDAO {
 
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setInt(1, cart.getCbook());
-			pstmt.setInt(2, cart.getCid());
+			pstmt.setInt(1, cartwish.getCbook());
+			pstmt.setInt(2, cartwish.getCid());
 
 			su = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -209,11 +232,14 @@ public class BookDAO {
 				e.printStackTrace();
 			}
 		}
-
-		return su;
 	}
 
-	public int bookdelete(int value, CartWishDTO cart) {
+	/**
+	 * 카트 또는 위시리스트에 저장된 데이터 삭제
+	 * @param value	카트 또는 위시리스트를 구분하기 위한 값
+	 * @param cart	DTO에 저장된 값
+	 */
+	public void bookdelete(int value, CartWishDTO cart) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		int su = value;
@@ -248,7 +274,5 @@ public class BookDAO {
 				e.printStackTrace();
 			}
 		}
-
-		return su;
 	}
 }

@@ -26,8 +26,6 @@ public class NotiDAO {
 		return conn;
 	}
 	
-	public 
-	
 	public void checkUpdate() {
 		// 신규 알림 체크
 	}
