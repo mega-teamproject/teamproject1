@@ -6,10 +6,7 @@
 <meta charset="UTF-8" />
 <title>메인</title>
 <link rel="stylesheet" href="../css/index.css" />
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-	crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 </head>
 <body>
@@ -18,8 +15,8 @@
 		<%@ include file="header.jsp"%>
 
 		<div class="relative full-input">
-			<input type="text" placeholder="제목, 저자, 출판사 검색" /> <span><i
-				class="fas fa-search"></i> </span>
+			<input type="text" placeholder="제목, 저자, 출판사 검색" />
+			<span> <i class="fas fa-search"></i> </span>
 		</div>
 		<div class="search-list">
 			<div class="search-input">
@@ -271,20 +268,23 @@
 	<div class="bestseller">
 		<section>
 			<a href="#"><p>베스트 셀러 ></p></a>
-			<c:forEach var="i" begin="0" end="8">
 				<div class="realTimeBookList-wrapper">
+					<c:forEach var="i" begin="0" end="2">
+					<c:set var="num" value="${num+2 }"/>
 					<div class="realTimeBookList">
+						<c:forEach var="j" begin="0" end="2">
 						<ul>
 							<li><a href="#"><img src="${best[i].img }"></a>
-								<strong>${i+1 }</strong>
+								<strong>${i+j+num-1 }</strong>
 								<div class="bookInfo">
 									<a href="#"><p>${best[i].name }</p></a> <a href="#"><span>${best[i].publisher }</span></a>
 								</div>
 							</li>
 						</ul>
+						</c:forEach>
 					</div>
+					</c:forEach>
 				</div>
-			</c:forEach>
 		</section>
 	</div>
 	<div class="weeklyNewSlide">

@@ -1,4 +1,4 @@
-package controller;
+package service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,9 +18,6 @@ public class Main extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html;charset=UTF-8");
-
 		NewBookDAO newbook = new NewBookDAO();
 		ArrayList<NewBook> newBookList1 = new ArrayList<NewBook>();
 		ArrayList<NewBook> newBookList2 = new ArrayList<NewBook>();

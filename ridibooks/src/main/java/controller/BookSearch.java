@@ -1,4 +1,4 @@
-package controller;
+package service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,11 +17,7 @@ import dto.BookDTO;
 public class BookSearch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html;charset=UTF-8");
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		BookDAO bookdao = new BookDAO();
 		String q = request.getParameter("q");
 		ArrayList<BookDTO> list = new ArrayList<BookDTO>();

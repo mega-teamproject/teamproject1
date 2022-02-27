@@ -16,29 +16,19 @@
   <body>
     <div class="container">
       <header>
-        <h3>
-          <a href="index.html">RIDIBOOKS</a>
-        </h3>
+        <h3><a href="index.html">RIDIBOOKS</a></h3>
       </header>
       <section>
         <h4>만 14세 미만 회원가입</h4>
-        <img src="../images/14세 미만.webp" />
+        <img src="../images/14세 미만.webp"/>
         <div>
           <input type="checkbox" name="" id="" />
-          <span>
-            법정 대리인(보호자)로서 피보호자의 리디북스 회원가입에<br />동의합니다.
-          </span>
+          <span>법정 대리인(보호자)로서 피보호자의 리디북스 회원가입에<br>동의합니다.</span>
         </div>
       </section>
       <div class="center">
-        <button class="phoneConfirm btn" type="button">휴대폰 인증</button>
-        <button
-          class="cancel btn"
-          type="button"
-          onclick="location.href='join1.html'"
-        >
-          취소
-        </button>
+        <button class="phoneConfirm btn" type="button" onclick="location.href='join2.jsp'">휴대폰 인증</button>
+        <button class="cancel btn" type="button" onclick="location.href='join1.jsp'">취소</button>
       </div>
       <div class="center">
         <p>개인정보보호법 제39조의3</p>
