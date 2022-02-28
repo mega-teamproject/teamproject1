@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -29,12 +29,12 @@ public class Login extends HttpServlet {
 		int problem = 0;
 
 		if (memberdao.selectByexist(id) || memberdao.selectBystatus(id) == 0) {	// 아이디 존재 및 상태 확인
-				if (value != 0) { // 아이디 & 비밀번호 확인
+				if (value != 0) { // 아이디 & 비밀번호 일치하는지 확인
 					response.setStatus(HttpServletResponse.SC_OK);
 					memberdao.loginupdate(loginDate, value); // 로그인 날짜 갱신
 					session.setAttribute("id", id); // 세션에 아이디값 저장
 					session.setAttribute("email", email); // 세션에 이메일값 저장 - 마이리디에서 사용
-					response.sendRedirect("/jsp/index.jsp"); // 로그인 성공 시 메인 페이지 이동
+					response.sendRedirect("/main/main.jsp"); // 로그인 성공 시 메인 페이지 이동
 				} else {
 					problem = 1;
 				}
@@ -43,8 +43,7 @@ public class Login extends HttpServlet {
 		}
 		
 		if(problem == 1) {
-			response.setStatus(404);
-			System.out.println("아이디 틀림");
+			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			response.sendRedirect("/jsp/login.jsp");
 		}
 	}

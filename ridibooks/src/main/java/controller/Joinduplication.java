@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -80,7 +80,7 @@ public class Joinduplication extends HttpServlet {
 	
 			response.setStatus(HttpServletResponse.SC_OK);
 			memberDAO.insert(member); // 회원정보 DB 저장
-			response.sendRedirect("http://localhost/jsp/index.jsp"); // 회원가입 완료 시 메인 페이지로 이동
+			response.sendRedirect("http://localhost/main/main.jsp"); // 회원가입 완료 시 메인 페이지로 이동
 		} else {
 			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			response.sendRedirect("http://localhost/jsp/join2.jsp");

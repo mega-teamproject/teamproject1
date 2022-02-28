@@ -16,7 +16,7 @@
   <body>
     <div class="container">
        
-       	<%@ include file="header.jsp" %>
+       	<%@ include file="../header/header.jsp"%>
        
         <div class="section">
             <section>
@@ -36,6 +36,7 @@
             </section>
         </div>
 
-        <%@ include file="footer.jsp" %>
+        <%@ include file="../footer/footer.jsp"%>
+     </div>
   </body>
 </html>
