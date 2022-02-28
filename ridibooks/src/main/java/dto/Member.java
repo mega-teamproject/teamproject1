@@ -8,7 +8,7 @@ public class Member {
 	private String pwCheck;
 	private String email;
 	private String name;
-	private String year;
+	private int year;
 	private String sex;
 	private LocalDateTime signDate;
 	private LocalDateTime loginDate;
@@ -53,11 +53,11 @@ public class Member {
 		this.name = name;
 	}
 
-	public String getYear() {
+	public int getYear() {
 		return year;
 	}
 
-	public void setYear(String year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 
