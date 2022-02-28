@@ -20,6 +20,7 @@
         <label for="email">새 비밀번호 설정</label>
         <input type="password" name="pwd" id="pwd" placeholder="새 비밀번호" />
         <input type="password" name="pwd2" id="pwd2" placeholder="새 비밀번호 확인" />
+        <input type="hidden" name="value" value="${param.param }"/>
         <div class="solution">
           <h4>비밀번호 변경 시 유의사항</h4>
           <ul>
