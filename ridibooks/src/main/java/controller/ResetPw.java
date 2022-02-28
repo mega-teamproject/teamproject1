@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import java.io.IOException;
 
@@ -32,12 +32,11 @@ public class ResetPw extends HttpServlet {
 		}
 		
 		if(problem == 0) {
-			response.sendError(HttpServletResponse.SC_FOUND);
-			request.setAttribute("value", value);
+			response.setStatus(HttpServletResponse.SC_FOUND);
 			
-			response.sendRedirect("/jsp/resetpw2.jsp");
+			response.sendRedirect("/jsp/resetpw2.jsp?param=" + value);
 		} else {
-			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 			response.sendRedirect("/jsp/resetpw.jsp");
 		}
 	}

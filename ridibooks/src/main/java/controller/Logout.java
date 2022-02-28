@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -17,9 +17,8 @@ public class Logout extends HttpServlet {
 		if(session.getAttribute("id") != null) {
 			// 로그아웃 시 세션 삭제
 			session.invalidate();
-			System.out.println("로그아웃 성공");
+			
+			response.sendRedirect("/main/main.jsp");	// 메인 페이지로 이동
 		}
-		
-		response.sendRedirect("/jsp/index.jsp");	// 메인 페이지로 이동
 	}
 }

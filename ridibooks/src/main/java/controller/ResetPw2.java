@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -19,10 +19,10 @@ public class ResetPw2 extends HttpServlet {
 		MemberDAO memberdao = MemberDAO.getInstance();
 		BlankDelete blank = new BlankDelete();
 		RegularExpression pwdcheck = new RegularExpression();
-		int value = (int) request.getAttribute("value");
 		
 		String pwd = request.getParameter("pwd");
 		String pwd2 = request.getParameter("pwd2");
+		int value = Integer.parseInt(request.getParameter("value"));
 		
 		blank.StringDelete(pwd);
 		
@@ -30,7 +30,7 @@ public class ResetPw2 extends HttpServlet {
 		memberdao.changepw(pwd, value);
 		response.sendRedirect("/jsp/login.jsp");
 		} else {
-			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			response.sendRedirect("/jsp/resetpw2.jsp");
 		}
 		
