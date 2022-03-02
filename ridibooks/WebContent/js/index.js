@@ -5,7 +5,6 @@ $(".footer-info a").on("click", function() {
     } else {
         show.css("display", "none");
     }
-    
 });
 
 $(".footer-wrapper2 a.a-invisible").on("click", function() {
