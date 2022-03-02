@@ -64,6 +64,7 @@
 				minSlides : 6, // 최소 노출 개수 
 				maxSlides : 6, // 최대 노출 개수 
 				slideMargin : 15, // 슬라이드간의 간격 
+				touchEnabled : (navigator.maxTouchPoints > 0)
 			});
 		});
 		$(document).ready(function() {
@@ -78,11 +79,6 @@
 				slideMargin : 15, // 슬라이드간의 간격 
 			});
 		});
-		
-		
-		function search() {
-			
-		}
 	</script>
 </body>
 </html>
