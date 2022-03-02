@@ -76,7 +76,7 @@ public class BookDAO {
 	/**
 	 * 도서 검색 결과 조회
 	 * @param q	검색어
-	 * @param n	도서 고유번호
+	 * @param n	0->검색기능 / 도서 고유번호
 	 * @return	도서 정보
 	 */
 	public ArrayList<BookDTO> bookSearch(String q, int n) {
