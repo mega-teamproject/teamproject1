@@ -32,7 +32,7 @@ public class NewBookDAO {
 
 	/**
 	 * 신간도서 조회
-	 * @param i	1 -> 방금 나온 신간 2-> 금주의 신간 3->베스트셀러
+	 * @param i	1->방금 나온 신간 2->금주의 신간 3->베스트셀러 4->
 	 * @return	해당 조건에 따른 도서 정보
 	 */
 	public ArrayList<NewBook> NewBookList(int i) {
@@ -43,11 +43,13 @@ public class NewBookDAO {
 		String SQL = null;
 		
 		if(i==1) {
-			SQL = "SELECT * FROM book WHERE b_img LIKE ? ORDER BY b_addDate DESC";
+			SQL = "SELECT * FROM book ORDER BY b_addDate DESC";
 		} else if(i==2) {
-			SQL = "SELECT * FROM book WHERE b_addDate BETWEEN DATE_ADD(NOW(),INTERVAL -1 WEEK ) AND NOW() AND b_img LIKE ? ORDER BY b_addDate DESC";
+			SQL = "SELECT * FROM book WHERE b_addDate BETWEEN DATE_ADD(NOW(),INTERVAL -1 WEEK ) AND NOW() AND ORDER BY b_addDate DESC";
 		} else if(i==3) {
-			SQL = "SELECT * FROM book WHERE b_img LIKE ? ORDER BY b_Purchase DESC";
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC";
+		} else if(i==4) {
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, ";
 		}
 
 		try {
@@ -57,8 +59,6 @@ public class NewBookDAO {
 
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, "%L%");
-			
 			ResultSet rs = pstmt.executeQuery();
 
 			while (rs.next()) {
@@ -67,6 +67,7 @@ public class NewBookDAO {
 				book.setImg(rs.getString("b_img"));
 				book.setName(rs.getString("b_Name"));
 				book.setPublisher(bookDAO.selectByPublisher(rs.getInt("a_value")));
+				book.setValue(rs.getInt("b_value"));
 				newlist.add(book);
 			}
 

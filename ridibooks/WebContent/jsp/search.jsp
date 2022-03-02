@@ -15,10 +15,10 @@
 		<div>
 			<div>
 				<c:forEach var="i" begin="0" end="23">
-				<div class="bookList" id="bookList" value="${list[i].bookvalue }">
-					<div class="img"><img onClick="click()" src="${list[i].bookimg}"></div>
+				<div class="bookList" id="bookList">
+					<div class="img"><img src="${list[i].bookimg}" onclick="click()"></div>
 					<div>
-						<a><span onclick="click()">${list[i].bname }</span></a>
+						<a><span>${list[i].bname }</span></a>
 						<a>${list[i].author}</a>
 						<div>
 							<p>
