@@ -32,7 +32,7 @@ public class NewBookDAO {
 
 	/**
 	 * 신간도서 조회
-	 * @param i	1->방금 나온 신간 2->금주의 신간 3->베스트셀러 4->지금많이읽는책 5->오늘리디의발견 6->추천도서
+	 * @param i	1->방금나온신간 2->지금많이읽는책 3->리디의발견 4->베스트셀러 5->금주의신간 6->인스타그램 추천도서
 	 * @return	해당 조건에 따른 도서 정보
 	 */
 	public ArrayList<NewBook> NewBookList(int i) {
@@ -43,17 +43,23 @@ public class NewBookDAO {
 		String SQL = null;
 		
 		if(i==1) {
+			// 방금 나온 신간
 			SQL = "SELECT * FROM book ORDER BY b_addDate DESC";
 		} else if(i==2) {
-			SQL = "SELECT * FROM book WHERE b_addDate BETWEEN DATE_ADD(NOW(),INTERVAL -1 WEEK ) AND NOW() AND ORDER BY b_addDate DESC";
+			// 사람들이 지금 많이 읽고 있는 책
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, b_sellDate DESC";
 		} else if(i==3) {
-			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC";
+			// 오늘, 리디의 발견
+			SQL = "SELECT * FROM book ORDER BY rand() LIMIT 12";
 		} else if(i==4) {
-			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, "; // 최근 판매 도서 정렬 / 칼럼 만들고 추가할 것
+			// 베스트 셀러
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC";
 		} else if(i==5) {
-			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, "; // 조건 미정 ( 랜덤 )
+			// 금주의 신간
+			SQL = "SELECT * FROM book WHERE b_addDate BETWEEN DATE_ADD(NOW(),INTERVAL -1 WEEK ) AND NOW() ORDER BY b_addDate DESC";
 		} else if(i==6) {
-			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, "; // 조건 미정 ( 랜덤 )
+			// 인스타그램 추천도서
+			SQL = "SELECT * FROM book ORDER BY b_Grade DESC, b_GradeCount DESC";
 		}
 
 		try {
