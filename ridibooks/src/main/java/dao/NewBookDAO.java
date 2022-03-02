@@ -32,7 +32,7 @@ public class NewBookDAO {
 
 	/**
 	 * 신간도서 조회
-	 * @param i	1->방금 나온 신간 2->금주의 신간 3->베스트셀러 4->
+	 * @param i	1->방금 나온 신간 2->금주의 신간 3->베스트셀러 4->지금많이읽는책 5->오늘리디의발견 6->추천도서
 	 * @return	해당 조건에 따른 도서 정보
 	 */
 	public ArrayList<NewBook> NewBookList(int i) {
@@ -49,7 +49,11 @@ public class NewBookDAO {
 		} else if(i==3) {
 			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC";
 		} else if(i==4) {
-			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, ";
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, "; // 최근 판매 도서 정렬 / 칼럼 만들고 추가할 것
+		} else if(i==5) {
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, "; // 조건 미정 ( 랜덤 )
+		} else if(i==6) {
+			SQL = "SELECT * FROM book ORDER BY b_Purchase DESC, "; // 조건 미정 ( 랜덤 )
 		}
 
 		try {
