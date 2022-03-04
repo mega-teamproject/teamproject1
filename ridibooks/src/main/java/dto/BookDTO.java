@@ -4,11 +4,11 @@ public class BookDTO {
 	private int bookvalue; // 도서 고유번호
 	private String bookimg; // 책 이미지
 	private String bname; // 제목
-	private int author; // 저자
+	private String author; // 저자
 	private int bgrade; // 평점
 	private int review; // 리뷰수
 	private String bpublisher; // 출판사
-	private int category; // 장르
+	private String category; // 장르
 	private int total; // 회차
 	private String binfomation; // 내용
 	private int bprice; // 가격
@@ -44,11 +44,11 @@ public class BookDTO {
 		this.bname = bname;
 	}
 
-	public int getAuthor() {
+	public String getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(int author) {
+	public void setAuthor(String author) {
 		this.author = author;
 	}
 
@@ -76,11 +76,11 @@ public class BookDTO {
 		this.bpublisher = bpublisher;
 	}
 
-	public int getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(int category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
