@@ -270,8 +270,14 @@ section .main-info {
   justify-content: center;
 }
 section .main-img {
-  margin-right: 40px;
+  	margin-right: 40px;
 }
+
+.main-img img {
+  	width: 200px;
+  	height: 300px;
+}
+
 section .title-shop a {
   text-decoration: none;
   color: black;
