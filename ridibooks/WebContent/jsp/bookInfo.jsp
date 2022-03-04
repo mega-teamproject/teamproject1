@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>책소개</title>
-<link rel="stylesheet" href="../css/bookInfo.css" />
+	<meta charset="UTF-8">
+	<title>책소개</title>
+	<link rel="stylesheet" href="../css/bookInfo.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
 </head>
@@ -22,20 +22,14 @@
             <div class="main-wrapper">
               <div class="main-info">
                 <div class="main-img">
-                  <img
-                    src="${info[0].bookimg }"
-                    alt="#"
-                  />
+                  <img src="${info[0].bookimg }" alt="#"style="width: 200px; height: 300px; margin-right: 40px;"/>
                 </div>
                 <div class="title-shop">
                   <div class="main-title">
                     <p class="classify">
                       <a href="">소설</a>
                       <span class="detail">></span>
-                      <a href="">영미소설</a>,
-                      <a href="">소설</a>
-                      <span class="detail">></span>
-                      <a href="">해외 판타지 소설</a>
+                      <a href="">${info[0].category }</a>
                     </p>
                     <div class="bookname" id="bookname" value="${info[0].bookvalue }">
                      <h2>${info[0].bname }</h2>
@@ -46,8 +40,7 @@
                       <span>(534명)</span>
                     </div>
                     <div class="author">
-                      <a href="">${info[0].author }</a> 저 | <a href="">강동혁</a> 역
-                      <br />
+                      <a href="">${info[0].author }</a> 저<br>
                       <a href="">${info[0].bpublisher }</a> 츨판
                     </div>
                   </div>
