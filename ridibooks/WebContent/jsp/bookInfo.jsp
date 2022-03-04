@@ -36,8 +36,8 @@
                     </div>
                     <div class="score">
                       <img src="../images/5fullstars.svg" />
-                      <span id="orange">4.8점</span>
-                      <span>(534명)</span>
+                      <span id="orange">${info[0].bgrade }점</span>
+                      <span>(${info[0].review }명)</span>
                     </div>
                     <div class="author">
                       <a href="">${info[0].author }</a> 저<br>
@@ -137,7 +137,21 @@
                       </a>
                     </li>
                     <li>
-                      <img src="../images/마법사의돌s.webp" width="40px" />
+                      <img src="../images/마법사의돌S.webp" width="40px" />
+                      <a href="">
+                        개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
+                        <span><i class="fas fa-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <img src="../images/마법사의돌S.webp" width="40px" />
+                      <a href="">
+                        개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
+                        <span><i class="fas fa-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <img src="../images/마법사의돌S.webp" width="40px" />
                       <a href="">
                         개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
                         <span><i class="fas fa-chevron-right"></i></span>
@@ -151,35 +165,21 @@
                       </a>
                     </li>
                     <li>
-                      <img src="../images/마법사의돌s.webp" width="40px" />
+                      <img src="../images/마법사의돌S.webp" width="40px" />
                       <a href="">
                         개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
                         <span><i class="fas fa-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <img src="../images/마법사의돌s.webp" width="40px" />
+                      <img src="../images/마법사의돌S.webp" width="40px" />
                       <a href="">
                         개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
                         <span><i class="fas fa-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <img src="../images/마법사의돌s.webp" width="40px" />
-                      <a href="">
-                        개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
-                        <span><i class="fas fa-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <img src="../images/마법사의돌s.webp" width="40px" />
-                      <a href="">
-                        개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
-                        <span><i class="fas fa-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <img src="../images/마법사의돌s.webp" width="40px" />
+                      <img src="../images/마법사의돌S.webp" width="40px" />
                       <a href="">
                         개정 번역판 | 해리포터 컴플리트 컬렉션(전 7권)
                         <span><i class="fas fa-chevron-right"></i></span>
