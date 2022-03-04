@@ -74,6 +74,47 @@ public class BookDAO {
 	}
 	
 	/**
+	 * 도서 카테고리
+	 * @param i	도서 고유번호
+	 * @return	카테고리 출력
+	 */
+	public String selectByCategory(int i) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String result = null;
+		
+		try {
+			conn = getConnection();
+
+			String sql = "SELECT * FROM category WHERE ct_value = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, i);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				result = rs.getString("ct_DetailGenre");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return result;
+	}
+	
+	/**
 	 * 도서 검색 결과 조회
 	 * @param q	검색어
 	 * @param n	0->검색기능 / 도서 고유번호
@@ -112,11 +153,11 @@ public class BookDAO {
 				bookdto.setBookvalue(rs.getInt("b_value"));
 				bookdto.setBookimg(rs.getString("b_img"));
 				bookdto.setBname(rs.getString("b_Name"));
-				bookdto.setAuthor(rs.getInt("a_value"));
+				bookdto.setAuthor(selectByPublisher(rs.getInt("a_value")));   
 				bookdto.setBgrade(rs.getInt("b_Grade"));
 				bookdto.setReview(rs.getInt("review_value"));
 				bookdto.setBpublisher(rs.getString("b_Publisher"));
-				bookdto.setCategory(rs.getInt("ct_value"));
+				bookdto.setCategory(selectByCategory(rs.getInt("ct_value")));
 				bookdto.setTotal(rs.getInt("b_Total"));
 				bookdto.setBinfomation(rs.getString("b_Infomation"));
 				bookdto.setBprice(rs.getInt("b_Price"));
