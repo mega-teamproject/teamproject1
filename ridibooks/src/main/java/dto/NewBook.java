@@ -1,10 +1,10 @@
 package dto;
 
 public class NewBook {
-	private String img;			// 이미지
+	private String img;		// 이미지
 	private String name;		// 제목
 	private String publisher;	// 저자
-	private int value;			// 도서 고유값
+	private int value;		// 도서 고유값
 	private int Purchase;		// 도서 구매 수
 
 	public String getImg() {
